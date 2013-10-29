@@ -1,0 +1,412 @@
+﻿.tabs
+{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    min-width: 700px;
+    height: auto;
+    text-align: center;
+}
+.tabs li
+{
+    display: inline;
+    width: 7.5em;
+    height: 27px;
+    text-align: center;
+    vertical-align: middle;
+    float: left;
+    background-image: url(Images/tab.png);
+    background-repeat: no-repeat;
+}
+.tabs li a
+{
+    text-decoration: none;
+    color: Black;
+    vertical-align: middle;
+    padding-top: 3px; /*To keep text in center of tab*/
+}
+
+.tabs li:hover
+{
+    background-image: url(Images/tab-Hover.png);
+    background-repeat: no-repeat;
+    height: 27px;
+}
+.tabs li:hover a
+{
+    color: White;
+}
+
+.tabs li.activeTab
+{
+    background-image: url(Images/tab-Hover.png);
+    background-repeat: no-repeat;
+    height: 27px;
+    color: White;
+}
+
+.tabs li.activeTab a
+{
+    color: White;
+}
+
+/*Project Title*/
+.project-title
+{
+    clear: both;
+    float: left;
+    color: #C10000;
+    font-family: Segoe UI;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.standard-title
+{
+    color: #6E6E6E;
+    font-family: Segoe UI;
+    font-size: 15px;
+    font-weight: bold;
+    height: 50px;
+}
+
+div.standard-title-head
+{
+    float: left;
+    overflow: hidden;
+}
+div.standard-title-desc
+{
+    margin-left: 65px;
+    float: inherit;
+    min-width: 505px;
+}
+
+.element-title
+{
+    color: #5880B3;
+    font-family: Segoe UI;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/*First column (factor sequence cell )*/
+td.cell-sequence
+{
+    vertical-align: top;
+}
+#NCQAPCMHTable
+{
+    clear: both;
+    float: left;
+}
+/*Gap between Each table*/
+table
+{
+    padding-bottom: 3px;
+}
+/*Main Factor Table*/
+.factor-table
+{
+    height: auto;
+    width: 720px;
+}
+
+.factor-table tr.header-row td
+{
+    height: 21px;
+    vertical-align: middle;
+}
+
+/* Factor Notice to users*/
+.factor-notice
+{
+    background-color: #D8D8D8;
+    font-size: smaller;
+    color: #333333;
+    font-weight: bold;
+}
+
+
+/*Factor Parent Header*/
+.factor-parentRow
+{
+    background-color: #5880B3;
+    color: White;
+}
+
+/*Factor Headers*/
+.factor-header01
+{
+    width: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+.factor-header02
+{
+    width: 275px;
+    min-width: 275px;
+    max-width: 275px;
+    text-align: center;
+    vertical-align: middle;
+}
+.factor-header03
+{
+    width: 65px;
+    text-align: center;
+    vertical-align: middle;
+}
+.factor-header04
+{
+    width: 20px;
+    text-align: center;
+    vertical-align: middle;
+}
+.factor-header06
+{
+    width: 20px;
+    text-align: center;
+    vertical-align: middle;
+}
+.factor-header08
+{
+    width: 15px;
+    text-align: center;
+    vertical-align: middle;
+}
+.factor-header10
+{
+    width: 20px;
+    text-align: center;
+    vertical-align: middle;
+}
+.factor-header12
+{
+    width: 20px;
+    text-align: center;
+    vertical-align: middle;
+}
+.factor-header14
+{
+    width: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.factorNotePopUp img
+{
+   /* padding-left: 7px;*/
+}
+.factor-header15
+{
+    width: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/*Factor Control td*/
+.factor-control
+{
+    text-align: center;
+}
+
+.factor-control-important
+{
+    text-align: center;
+    background-color: #e8e8e8;
+}
+
+.factor-control-hightlight
+{
+    text-align: center;
+    background-color: #ffff99;
+}
+
+.factor-control-column03
+{
+    text-align: left;
+}
+
+
+/*Factor Controls*/
+.factor-textbox
+{
+    width: 17px;
+    height: 10px;
+    font-family: "Segoe UI";
+    font-size: 11px;
+    text-align: center;
+    vertical-align: middle;
+    padding-bottom: 4px;
+}
+.factor-label
+{
+    width: 8px;
+    padding-right: 1px;
+}
+
+
+/*Summary */
+
+.summary
+{
+    /*Summary Table Layout*/
+}
+.summary-title-cell
+{
+    background-color: #D8D8D8;
+    min-width: 250px;
+}
+.summary-title-cell2
+{
+    background-color: #D8D8D8;
+    min-width: 242px;
+}
+.summary-title-point
+{
+    background-color: #D8D8D8;
+    text-align: center;
+    min-width: 20px;
+}
+
+.summary-title-notes
+{
+    vertical-align: top;
+    width: 400px;
+    background-color: White;
+}
+
+/*Reviewer Notes*/
+
+.ReviewerNotes
+{
+    width: 390px;
+    margin-left: 45px;
+    height: 130px;
+    background-color: #D8D8D8;
+}
+
+.note-Area
+{
+    /*Add style if you want*/
+}
+
+.note-label
+{
+    width: 250px; /*To add just checkBox text in oneline at PCMH for element*/
+    font-weight: bold;
+}
+
+.note-textbox
+{
+    width: 360px;
+    height: 80px;
+    margin-left: 10px;
+}
+
+.note-checkbox
+{
+    font-weight: bold;
+}
+
+
+/*#################### NQA NOTES #################################################### */
+#note-history
+{
+    width: 100%;
+    max-height: 200px;
+    overflow: auto;
+}
+.NCQA-Note
+{
+    background-repeat: repeat;
+    background-color: /*#5880B3*/ #EDEDDD; /*color:White;*/
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+    margin-top: 8px;
+    font-size: 12px;
+}
+
+.user-info
+{
+    clear: both;
+    float: right;
+    padding-bottom: 5px;
+    font-size: 9px;
+}
+
+.reports-label
+{
+    clear: both;
+    float: left;
+    color: #C10000;
+    font-family: Segoe UI;
+    font-size: 14px;
+    font-weight: bold;
+    
+}
+
+.reports-elements
+{
+    font-size: 11px;
+}
+.unlink
+{
+    text-decoration:underline;
+}
+
+.divTabs
+{
+width:800px;
+position:relative;
+}
+
+.panelTabs
+{
+ width:98.5%;
+ overflow:hidden;
+ overflow-y:hidden;
+ margin-top:-2.3%;
+position:relative;
+}
+
+#navigator{ overflow: auto; width: 100%; margin: 0 auto; height:20px;  } 
+#next
+{
+    float: right;
+    position:relative;
+    top:-16px;
+} 
+
+.prev
+{
+    background-image: url('Images/left1.png');
+    background-repeat: no-repeat;
+    width:16px;
+    height:16px;
+}
+
+.prevDim
+{
+    background-image: url('Images/leftdim.png');
+    background-repeat: no-repeat;
+    width:16px;
+    height:16px;
+}
+
+.next
+{
+    background-image: url('Images/right1.png');
+    background-repeat: no-repeat;
+    width:16px;
+    height:16px;
+}
+
+.nextDim
+{
+    background-image: url('Images/rightdim.png');
+    background-repeat: no-repeat;
+    width:16px;
+    height:16px;
+}

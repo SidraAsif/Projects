@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ExpressAssessmentDS" targetNamespace="http://tempuri.org/ExpressAssessmentDS.xsd" xmlns:mstns="http://tempuri.org/ExpressAssessmentDS.xsd" xmlns="http://tempuri.org/ExpressAssessmentDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ExpressAssessmentDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ExpressAssessmentDS" msprop:Generator_UserDSName="ExpressAssessmentDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ExpressAssessmentDT" msprop:Generator_TableClassName="ExpressAssessmentDTDataTable" msprop:Generator_TableVarName="tableExpressAssessmentDT" msprop:Generator_TablePropName="ExpressAssessmentDT" msprop:Generator_RowDeletingName="ExpressAssessmentDTRowDeleting" msprop:Generator_UserTableName="ExpressAssessmentDT" msprop:Generator_RowChangingName="ExpressAssessmentDTRowChanging" msprop:Generator_RowEvHandlerName="ExpressAssessmentDTRowChangeEventHandler" msprop:Generator_RowDeletedName="ExpressAssessmentDTRowDeleted" msprop:Generator_RowEvArgName="ExpressAssessmentDTRowChangeEvent" msprop:Generator_RowChangedName="ExpressAssessmentDTRowChanged" msprop:Generator_RowClassName="ExpressAssessmentDTRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Question" msprop:Generator_ColumnVarNameInTable="columnQuestion" msprop:Generator_ColumnPropNameInRow="Question" msprop:Generator_ColumnPropNameInTable="QuestionColumn" msprop:Generator_UserColumnName="Question" type="xs:string" minOccurs="0" />
+              <xs:element name="Answer" msprop:Generator_ColumnVarNameInTable="columnAnswer" msprop:Generator_ColumnPropNameInRow="Answer" msprop:Generator_ColumnPropNameInTable="AnswerColumn" msprop:Generator_UserColumnName="Answer" type="xs:string" minOccurs="0" />
+              <xs:element name="Critical" msprop:Generator_ColumnVarNameInTable="columnCritical" msprop:Generator_ColumnPropNameInRow="Critical" msprop:Generator_ColumnPropNameInTable="CriticalColumn" msprop:Generator_UserColumnName="Critical" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="WarningDT" msprop:Generator_TableClassName="WarningDTDataTable" msprop:Generator_TableVarName="tableWarningDT" msprop:Generator_TablePropName="WarningDT" msprop:Generator_RowDeletingName="WarningDTRowDeleting" msprop:Generator_UserTableName="WarningDT" msprop:Generator_RowChangingName="WarningDTRowChanging" msprop:Generator_RowEvHandlerName="WarningDTRowChangeEventHandler" msprop:Generator_RowDeletedName="WarningDTRowDeleted" msprop:Generator_RowEvArgName="WarningDTRowChangeEvent" msprop:Generator_RowChangedName="WarningDTRowChanged" msprop:Generator_RowClassName="WarningDTRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="WarningMessage" msprop:Generator_ColumnVarNameInTable="columnWarningMessage" msprop:Generator_ColumnPropNameInRow="WarningMessage" msprop:Generator_ColumnPropNameInTable="WarningMessageColumn" msprop:Generator_UserColumnName="WarningMessage" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

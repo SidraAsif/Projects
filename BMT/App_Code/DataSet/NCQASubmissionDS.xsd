@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="NCQASubmissionDS" targetNamespace="http://tempuri.org/NCQASubmissionDS.xsd" xmlns:mstns="http://tempuri.org/NCQASubmissionDS.xsd" xmlns="http://tempuri.org/NCQASubmissionDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="NCQASubmissionDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="NCQASubmissionDS" msprop:Generator_UserDSName="NCQASubmissionDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="NCQAStandardDT" msprop:Generator_TableClassName="NCQAStandardDTDataTable" msprop:Generator_TableVarName="tableNCQAStandardDT" msprop:Generator_TablePropName="NCQAStandardDT" msprop:Generator_RowDeletingName="NCQAStandardDTRowDeleting" msprop:Generator_UserTableName="NCQAStandardDT" msprop:Generator_RowChangingName="NCQAStandardDTRowChanging" msprop:Generator_RowEvHandlerName="NCQAStandardDTRowChangeEventHandler" msprop:Generator_RowDeletedName="NCQAStandardDTRowDeleted" msprop:Generator_RowEvArgName="NCQAStandardDTRowChangeEvent" msprop:Generator_RowChangedName="NCQAStandardDTRowChanged" msprop:Generator_RowClassName="NCQAStandardDTRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="StandardSequence" msprop:Generator_ColumnVarNameInTable="columnStandardSequence" msprop:Generator_ColumnPropNameInRow="StandardSequence" msprop:Generator_ColumnPropNameInTable="StandardSequenceColumn" msprop:Generator_UserColumnName="StandardSequence" type="xs:string" minOccurs="0" />
+              <xs:element name="ElementSequence" msprop:Generator_ColumnVarNameInTable="columnElementSequence" msprop:Generator_ColumnPropNameInRow="ElementSequence" msprop:Generator_ColumnPropNameInTable="ElementSequenceColumn" msprop:Generator_UserColumnName="ElementSequence" type="xs:string" minOccurs="0" />
+              <xs:element name="Title" msprop:Generator_ColumnVarNameInTable="columnTitle" msprop:Generator_ColumnPropNameInRow="Title" msprop:Generator_ColumnPropNameInTable="TitleColumn" msprop:Generator_UserColumnName="Title" type="xs:string" minOccurs="0" />
+              <xs:element name="MaxPoints" msprop:Generator_ColumnVarNameInTable="columnMaxPoints" msprop:Generator_ColumnPropNameInRow="MaxPoints" msprop:Generator_ColumnPropNameInTable="MaxPointsColumn" msprop:Generator_UserColumnName="MaxPoints" type="xs:string" minOccurs="0" />
+              <xs:element name="EarnedPoints" msprop:Generator_ColumnVarNameInTable="columnEarnedPoints" msprop:Generator_ColumnPropNameInRow="EarnedPoints" msprop:Generator_ColumnPropNameInTable="EarnedPointsColumn" msprop:Generator_UserColumnName="EarnedPoints" type="xs:string" minOccurs="0" />
+              <xs:element name="MustPass" msprop:Generator_ColumnVarNameInTable="columnMustPass" msprop:Generator_ColumnPropNameInRow="MustPass" msprop:Generator_ColumnPropNameInTable="MustPassColumn" msprop:Generator_UserColumnName="MustPass" type="xs:string" minOccurs="0" />
+              <xs:element name="DocsRequired" msprop:Generator_ColumnVarNameInTable="columnDocsRequired" msprop:Generator_ColumnPropNameInRow="DocsRequired" msprop:Generator_ColumnPropNameInTable="DocsRequiredColumn" msprop:Generator_UserColumnName="DocsRequired" type="xs:string" minOccurs="0" />
+              <xs:element name="DocsUploaded" msprop:Generator_ColumnVarNameInTable="columnDocsUploaded" msprop:Generator_ColumnPropNameInRow="DocsUploaded" msprop:Generator_ColumnPropNameInTable="DocsUploadedColumn" msprop:Generator_UserColumnName="DocsUploaded" type="xs:string" minOccurs="0" />
+              <xs:element name="Notes" msprop:Generator_ColumnVarNameInTable="columnNotes" msprop:Generator_ColumnPropNameInRow="Notes" msprop:Generator_ColumnPropNameInTable="NotesColumn" msprop:Generator_UserColumnName="Notes" type="xs:string" minOccurs="0" />
+              <xs:element name="Complete" msprop:Generator_ColumnVarNameInTable="columnComplete" msprop:Generator_ColumnPropNameInRow="Complete" msprop:Generator_ColumnPropNameInTable="CompleteColumn" msprop:Generator_UserColumnName="Complete" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:NCQAStandardDT" />
+      <xs:field xpath="mstns:StandardSequence" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

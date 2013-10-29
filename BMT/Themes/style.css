@@ -1,0 +1,1816 @@
+/* CSS Document */
+body
+{
+    background: #fff;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    color: #333333;
+    font-family: "Trebuchet MS";
+    line-height: 18px;
+    text-align: left;
+    font-size: 12px;
+    height: 646px;
+}
+
+/***********************General start********************************/
+
+p
+{
+    margin: 0px 0px 10px 0px;
+    font-size: 12px;
+    line-height: 21px;
+    font-family: "Trebuchet MS"; /*font-family:"Myriad Pro" tahoma;*/
+}
+
+/* RESET ELEMENTS */
+h1, h2, h3, h4, h5, h6
+{
+    margin: 0;
+    padding: 0;
+}
+
+.clear
+{
+    border: medium none;
+    clear: both;
+    float: none;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+}
+
+.wrapper
+{
+    border: #5880b3 solid 1px;
+    width: 1000px;
+    margin: 0px auto 0px auto;
+    padding: 0px 0px 0px 0px;
+}
+
+
+/***********************General start********************************/
+
+/**********************Login page start here***************************/
+
+.login-top-header-wrapper
+{
+    background: url(images/top-header-wrapper-bg.png) repeat-x;
+    width: auto;
+    height: 55px;
+    margin: 0px auto 0px auto;
+    padding: 0px 0px 0px 0px;
+}
+
+.login-top-header-container
+{
+    width: 960px;
+    height: 55px;
+    margin: 0px auto 0px auto;
+    padding: 0px 0px 0px 0px;
+}
+.ehr-logo
+{
+    float: right;
+    margin: 20px 25px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+
+
+.bizmed-logo-container
+{
+    width: 960px;
+    background: #333366;
+    height: auto;
+    margin: 0px auto 0px auto;
+    padding: 0px 0px 0px 0px;
+}
+.bizmed-logo
+{
+    float: left;
+    margin: 30px 0px 10px 140px;
+    padding: 0px 0px 0px 0px;
+}
+
+.logig-form-container
+{
+    width: 500px;
+    height: 400px;
+    margin: 0px auto 0px auto;
+    padding: 0px 0px 0px 0px;
+}
+
+
+.menu
+{
+    width: 240px;
+    float: right;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+.menu-bg
+{
+    float: right;
+    padding: 0;
+    margin: 0px 0px 0px 0px;
+}
+
+.menu-bg ul
+{
+    display: inline;
+    background: #333300;
+    font-size: 15px;
+    font-family: "Trebuchet MS";
+    margin: 0;
+    padding: 0;
+}
+
+.menu-bg ul li
+{
+    margin: 0px 0px 0px 0px;
+    padding: 0px px 0px 0px;
+    list-style: none;
+    display: inline;
+}
+
+.menu-bg ul li a
+{
+    background: url(images/tab-01.png) no-repeat;
+    display: block;
+    float: left;
+    color: #38557a;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 0px 0px 0px;
+    margin: 0px 0 0 0;
+    height: 25px;
+    margin-top: 0px;
+    width: 120px;
+}
+
+.menu-bg ul li a:hover
+{
+    background: url(images/tab-02.png) no-repeat;
+}
+
+.menu-bg ul li a.active
+{
+    background: url(images/tab-02.png) no-repeat;
+}
+
+
+
+.header-menu-wrapper
+{
+    background: url(images/header-menu-wrapper-bg.png) repeat-x;
+    width: auto;
+    height: 73px;
+    margin: 0px auto 0px auto;
+    padding: 0px 0px 0px 0px;
+}
+
+.header-menu-container
+{
+    background: url(images/header-menu-container-bg.png);
+    width: 960px;
+    height: 73px;
+    margin: 0px auto 0px auto;
+    padding: 0px 0px 0px 0px;
+}
+
+.top-header-container
+{
+    width: 900px;
+    height: 111px;
+    background: url(images/top_header_bg.png);
+    margin: 0px auto 0px auto;
+    padding: 0px 0px 0px 0px;
+}
+
+.logo
+{
+    float: left;
+    margin: 20px 0px 0px 25px;
+    padding: 0px 0px 0px 0px;
+}
+.right-search
+{
+    float: right;
+    margin: 48px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+
+.main-form-heading
+{
+    float: left;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+.main-form-heading h1
+{
+    color: #38557a;
+    font-size: 18px;
+    float: left;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+
+.footer-version-text
+{
+    font-family: "Trebuchet MS";
+    font-size: 11px;
+    color: #595959;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+.text-field
+{
+    border: #727272 solid 1px;
+    background: #eaeff5;
+    margin: 0px 0px 0px 0px;
+    padding: 1px 0px 1px 0px;
+}
+
+.login-but
+{
+    width: 80px;
+    margin: 0px 0px 0px 0px;
+    padding: 1px 0px 1px 0px;
+}
+
+/**********************Login page close here***************************/
+
+
+
+/**********************Inner page start here***************************/
+
+/*===== header and menu start here =====*/
+
+.inner-header-container
+{
+    width: 980px;
+    height: 45px;
+    margin: 0px auto 0px auto;
+    padding: 0px 0px 0px 0px;
+}
+.inner-logo
+{
+    background: url(Images/logo-bizmed02.png) no-repeat;
+    width: 369px;
+    height: 75px;
+    float: left;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+
+.powered-by-logo
+{
+    background: url(Images/powered-by-logo.png) no-repeat;
+    position: relative;
+    width: 150px;
+    height: 40px;
+    left: 180px;
+    top: 39px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    float: right;
+}
+
+.right-top-text-container
+{
+    width: 300px;
+    float: right;
+    margin: 5px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+.right-top-text
+{
+    text-align: right;
+    color: #5880b3;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+.right-top-text a
+{
+    text-align: right;
+    color: #5880b3;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.right-top-text a:hover
+{
+    color: #c83734;
+    text-decoration: none;
+}
+
+
+.inner-menu-header-container
+{
+    background: #d8d8d8;
+    width: 1000px;
+    height: 40px;
+    margin: 10px auto 0px auto;
+    padding: 0px 0px 0px 0px;
+}
+
+
+/*===== menu  =====*/
+
+.inner-icon-menu
+{
+    float: left;
+    width: 780px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+/*===== menu Home =====*/
+
+.inner-icon-menu-home
+{
+    float: left;
+    margin: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    position: relative;
+}
+.inner-icon-menu-home ul
+{
+    display: inline;
+    font-size: 16px;
+    color: #ffffff;
+    font-family: "Segoe UI";
+    margin: 0;
+    padding: 0;
+}
+
+.inner-icon-menu-home ul li
+{
+    margin: 0px 0px 0px 0px;
+    padding: 0px px 0px 0px;
+    list-style: none;
+    display: inline;
+}
+
+.inner-icon-menu-home li
+{
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    list-style: none;
+    display: inline;
+}
+.inner-icon-menu-home li a
+{
+    background: url(images/icon-home.png) no-repeat;
+    display: block;
+    float: left;
+    color: #151515;
+    width: 150px;
+    height: 30px;
+    text-decoration: none;
+    text-align: left;
+    text-indent: 60px;
+    padding: 10px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+}
+.inner-icon-menu-home li a:hover
+{
+    background: url(images/icon-home-hover.png) no-repeat;
+    color: #FFFFFF;
+}
+.inner-icon-menu-home li a.active
+{
+    background: url(images/icon-home-hover.png) no-repeat;
+    color: #FFFFFF;
+}
+
+.inner-icon-menu-home li ul
+{
+    display: none;
+    top: 40px;
+    position: absolute;
+}
+
+
+.inner-icon-menu-home li:hover ul
+{
+    display: block;
+    font-size: 14px;
+    color: #ffffff;
+    font-family: "Segoe UI";
+    margin: 0;
+    padding: 0;
+}
+.inner-icon-menu-home li:hover ul li
+{
+    margin: 0px 0px 0px 0px;
+    padding: 0px px 0px 0px;
+    list-style: none;
+    display: inline;
+}
+.inner-icon-menu-home li:hover ul li.dashboard-menu a
+{
+    background: url(images/dashboard.png) no-repeat;
+    background-color: #D8D8D8;
+    display: block;
+    float: left;
+    color: #151515;
+    width: 150px;
+    height: 30px;
+    text-indent: 60px;
+    text-decoration: none;
+    text-align: left;
+}
+.inner-icon-menu-home li:hover ul li.dashboard-menu a:hover
+{
+    background: url(images/dashboard-hover.png) no-repeat;
+    color: #FFFFFF;
+}
+
+.inner-icon-menu-home li:hover ul li.report-menu a
+{
+    background: url(images/report.png) no-repeat;
+    background-color: #D8D8D8;
+    display: block;
+    float: left;
+    color: #151515;
+    width: 150px;
+    height: 30px;
+    text-indent: 60px;
+    text-decoration: none;
+    text-align: left;
+}
+.inner-icon-menu-home li:hover ul li.report-menu a:hover
+{
+    background: url(images/report-hover.png) no-repeat;
+    color: #FFFFFF;
+}
+
+/*===== menu home =====*/
+
+/*===== menu projects =====*/
+
+.inner-icon-menu-projects
+{
+    float: left;
+    margin: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+}
+
+.inner-icon-menu-projects ul
+{
+    display: inline;
+    font-size: 16px;
+    color: #ffffff;
+    font-family: "Segoe UI";
+    margin: 0;
+    padding: 0;
+}
+
+.inner-icon-menu-projects ul li
+{
+    margin: 0px 0px 0px 0px;
+    padding: 0px px 0px 0px;
+    list-style: none;
+    display: inline;
+}
+
+.inner-icon-menu-projects ul li a
+{
+    background: url(images/icon-projects.png) no-repeat;
+    display: block;
+    float: left;
+    color: #151515;
+    width: 156px;
+    height: 30px;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+}
+
+.inner-icon-menu-projects ul li a:hover
+{
+    background: url(images/icon-projects-hover.png) no-repeat;
+    color: #FFFFFF;
+}
+
+.inner-icon-menu-projects ul li a.active
+{
+    background: url(images/icon-projects-hover.png) no-repeat;
+    color: #FFFFFF;
+}
+/*===== menu projects =====*/
+
+/*===== menu toolbox =====*/
+
+.inner-icon-menu-toolbox
+{
+    float: left;
+    margin: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+}
+
+.inner-icon-menu-toolbox ul
+{
+    display: inline;
+    font-size: 16px;
+    color: #ffffff;
+    font-family: "Segoe UI";
+    margin: 0;
+    padding: 0;
+}
+
+.inner-icon-menu-toolbox ul li
+{
+    margin: 0px 0px 0px 0px;
+    padding: 0px px 0px 0px;
+    list-style: none;
+    display: inline;
+}
+
+.inner-icon-menu-toolbox ul li a
+{
+    background: url(images/icon-toolbox.png) no-repeat;
+    display: block;
+    float: left;
+    color: #151515;
+    width: 156px;
+    height: 30px;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+}
+
+.inner-icon-menu-toolbox ul li a:hover
+{
+    background: url(images/icon-toolbox-hover.png) no-repeat;
+    color: #FFFFFF;
+}
+
+.inner-icon-menu-toolbox ul li a.active
+{
+    background: url(images/icon-toolbox-hover.png) no-repeat;
+    color: #FFFFFF;
+}
+
+/*===== menu toolbox =====*/
+
+/*===== menu library =====*/
+
+.inner-icon-menu-library
+{
+    float: left;
+    margin: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+}
+
+.inner-icon-menu-library ul
+{
+    display: inline;
+    font-size: 16px;
+    color: #ffffff;
+    font-family: "Segoe UI";
+    margin: 0;
+    padding: 0;
+}
+
+.inner-icon-menu-library ul li
+{
+    margin: 0px 0px 0px 0px;
+    padding: 0px px 0px 0px;
+    list-style: none;
+    display: inline;
+}
+
+.inner-icon-menu-library ul li a
+{
+    background: url(images/icon-library.png) no-repeat;
+    display: block;
+    float: left;
+    color: #151515;
+    width: 156px;
+    height: 30px;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+}
+
+.inner-icon-menu-library ul li a:hover
+{
+    background: url(images/icon-library-hover.png) no-repeat;
+    color: #FFFFFF;
+}
+
+.inner-icon-menu-library ul li a.active
+{
+    background: url(images/icon-library-hover.png) no-repeat;
+    color: #FFFFFF;
+}
+
+/*===== menu library =====*/
+
+/*===== menu settings =====*/
+
+.inner-icon-menu-settings
+{
+    float: left;
+    margin: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+}
+
+.inner-icon-menu-settings ul
+{
+    display: inline;
+    font-size: 16px;
+    color: #ffffff;
+    font-family: "Segoe UI";
+    margin: 0;
+    padding: 0;
+}
+
+.inner-icon-menu-settings ul li
+{
+    margin: 0px 0px 0px 0px;
+    padding: 0px px 0px 0px;
+    list-style: none;
+    display: inline;
+}
+
+.inner-icon-menu-settings ul li a
+{
+    background: url(images/icon-settings.png) no-repeat;
+    display: block;
+    float: left;
+    color: #151515;
+    width: 156px;
+    height: 30px;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+}
+
+.inner-icon-menu-settings ul li a:hover
+{
+    background: url(images/icon-settings-hover.png) no-repeat;
+    color: #FFFFFF;
+}
+
+.inner-icon-menu-settings ul li a.active
+{
+    background: url(images/icon-settings-hover.png) no-repeat;
+    color: #FFFFFF;
+}
+
+/*===== menu settings =====*/
+
+/*===== menu Admin =====*/
+
+.inner-icon-menu-admin
+{
+    float: left;
+    margin: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+}
+.inner-icon-menu-admin ul
+{
+    position: absolute;
+    list-style-type: none;
+    display: inline;
+    font-size: 16px;
+    color: #ffffff;
+    font-family: "Segoe UI";
+    margin: 0;
+    padding: 0;
+}
+.inner-icon-menu-admin li
+{
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    list-style: none;
+    display: inline;
+}
+.inner-icon-menu-admin li a
+{
+    background: url(images/admin-menu.png) no-repeat;
+    display: block;
+    float: left;
+    color: #151515;
+    width: 200px;
+    height: 30px;
+    text-decoration: none;
+    text-align: left;
+    text-indent: 50px;
+    padding: 10px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+}
+.inner-icon-menu-admin li a:hover
+{
+    background: url(images/admin-menu-hover.png) no-repeat;
+    color: #FFFFFF;
+}
+.inner-icon-menu-admin li a.active
+{
+    background: url(images/admin-menu-hover.png) no-repeat;
+    color: #FFFFFF;
+}
+
+.inner-icon-menu-admin li ul
+{
+    display: none;
+    top: 40px;
+    position: absolute;
+    list-style-type: none;
+    font-size: 16px;
+    color: #ffffff;
+    font-family: "Segoe UI";
+    margin: 0;
+    padding: 0;
+    z-index:1;
+}
+
+
+.inner-icon-menu-admin li:hover ul
+{
+    display: block;
+    font-size: 14px;
+    color: #ffffff;
+    font-family: "Segoe UI";
+    margin: 0;
+    padding: 0;
+}
+.inner-icon-menu-admin li:hover ul li
+{
+    margin: 0px 0px 0px 0px;
+    padding: 0px px 0px 0px;
+    list-style: none;
+    display: inline;
+}
+.inner-icon-menu-admin li:hover ul li.cms-menu a
+{
+    background: url(images/cms-menu.png) no-repeat;
+    display: block;
+    float: left;
+    color: #151515;
+    width: 200px;
+    height: 30px;
+    text-indent: 60px;
+    text-decoration: none;
+    text-align: left;
+}
+.inner-icon-menu-admin li:hover ul li.cms-menu a:hover
+{
+    background: url(images/cms-menu-hover.png) no-repeat;
+    color: #FFFFFF;
+}
+
+.inner-icon-menu-admin li:hover ul li.consultant-menu a
+{
+    background: url(images/consultant-simple.png) no-repeat;
+    display: block;
+    float: left;
+    color: #151515;
+    width: 200px;
+    height: 30px;
+    text-indent: 60px;
+    text-decoration: none;
+    text-align: left;
+}
+.inner-icon-menu-admin li:hover ul li.consultant-menu a:hover
+{
+    background: url(images/consultant-hover.png) no-repeat;
+    color: #FFFFFF;
+}
+
+
+.inner-icon-menu-admin li:hover ul li.submission-menu a
+{
+    background: url(images/submission-simple.png) no-repeat;
+    display: block;
+    float: left;
+    color: #151515;
+    width: 200px;
+    height: 30px;
+    text-indent: 60px;
+    text-decoration: none;
+    text-align: left;
+}
+.inner-icon-menu-admin li:hover ul li.submission-menu a:hover
+{
+    background: url(images/submission-hover.png) no-repeat;
+    color: #FFFFFF;
+}
+
+
+.inner-icon-menu-admin li:hover ul li.template-menu a
+{
+    background: url(images/Template.png) no-repeat;
+    display: block;
+    float: left;
+    color: #151515;
+    width: 200px;
+    height: 30px;
+    text-indent: 60px;
+    text-decoration: none;
+    text-align: left;
+}
+.inner-icon-menu-admin li:hover ul li.template-menu a:hover
+{
+    background: url(images/Template-hover.png) no-repeat;
+    color: #FFFFFF;
+}
+/*===== menu Admin =====*/
+
+
+
+.right-welcome-text
+{
+    width: 200px;
+    float: right;
+    text-align: right;
+    margin: 10px 10px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+.text-field02
+{
+    border: #727272 solid 1px;
+    margin: 0px 0px 0px 0px;
+    padding: 1px 0px 1px 0px;
+}
+/*===== header and menu start here =====*/
+
+
+
+/*===== body start here =====*/
+
+.body-container
+{
+    width: 980px;
+    margin: 0px auto 0px auto;
+    padding: 0px 0px 0px 0px;
+}
+.body-container-left
+{
+    width: 235px;
+    float: left;
+    margin: 0px 0px 0px 0px;
+    padding: 15px 0px 15px 15px;
+    height: 2020px;
+    border-right-width: 1px;
+}
+
+.body-container-left-tree
+{
+    border-right: 1px solid #CCCCCC;
+    float: left;
+    height: auto;
+    margin: 0;
+    overflow: auto;
+    padding: 15px 0 15px 10px;
+    width: 245px;
+}
+
+.left-settings-menu
+{
+    text-align: left;
+    font-family: "Segoe UI";
+    margin: 0px 0px 15px 0px;
+    padding: 0px 0px 0px 0px;
+    text-decoration: none;
+}
+
+.left-settings-menu a
+{
+    text-align: left;
+    color: #282828;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.left-settings-menu a:hover
+{
+    color: #0000ff;
+    text-decoration: none;
+}
+.left-settings-menu a.active
+{
+    color: #0000ff;
+    text-decoration: none;
+}
+.body-container-right
+{
+    width: 732px;
+    float: right;
+    margin: 0px auto 0px auto;
+    padding: 10px 0px 0px 10px;
+    height: auto;
+}
+.inner-menu-hover-container-left-combo
+{
+    float: left;
+    width: 680px;
+    margin: 0px 0px 0px 20px;
+    padding: 3px 0px 0px 0px;
+}
+
+.inner-menu-hover-container-right-combo
+{
+    float: right;
+    height: 25px;
+    margin: 0px 20px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+.inner-menu-hover-container-left
+{
+    float: left;
+    width: 350px;
+    margin: 0px 0px 0px 20px;
+    padding: 3px 0px 0px 0px;
+}
+.inner-menu-hover-container-right
+{
+    float: right;
+    width: 500px;
+    height: 25px;
+    margin: 0px 20px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+.body-hover-combo
+{
+    font-size: 12px;
+    font-weight: bold;
+    font-family: "Segoe UI";
+    border: #727272 solid 1px;
+    margin: 0px 0px 0px 0px;
+    padding: 1px 0px 1px 0px;
+}
+.top-button-gray
+{
+    background: url(images/but-bg.png);
+    font-family: "Segoe UI";
+    color: #000000;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    border-radius: 4px 4px 4px 4px;
+    border: #666666 1px solid;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 2px 0px;
+    height: 25px;
+}
+.top-button-yollaw
+{
+    background: url(images/but-bg02.png);
+    font-family: "Segoe UI";
+    color: #000000;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    border-radius: 4px 4px 4px 4px;
+    border: #666666 1px solid;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 2px 0px;
+    height: 25px;
+}
+
+.top-button-yollaw-disable
+{
+    background: url(images/but-bg02.png);
+    background-color: rgb(236,233,216);
+    font-family: "Segoe UI";
+    color: #a0a0a0;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    border-radius: 4px 4px 4px 4px;
+    border: #666666 1px solid;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 2px 0px;
+    height: 25px;
+}
+.bodytxt-field
+{
+    font-size: 12px;
+    font-family: "Segoe UI";
+    border: #727272 solid 1px;
+    margin: 0px 0px 0px 0px;
+    padding: 1px 5px 1px 5px;
+}
+.bodytxt-fieldlabel0
+{
+    width: 70px;
+    font-family: "Segoe UI";
+    float: left;
+    margin: 0px 10px 0px 10px;
+}
+.bodytxt-fieldlabel
+{
+    width: 120px;
+    font-family: "Segoe UI";
+    float: left;
+    margin: 0px 10px 0px 10px;
+}
+.bodytxt-fieldlabel02
+{
+    width: 150px;
+    font-family: "Segoe UI";
+    float: left;
+    margin: 0px 10px 0px 10px;
+}
+.bodytxt-fieldlabel03
+{
+    width: 110px;
+    font-family: "Segoe UI";
+    float: left;
+    margin: 0px 10px 0px 5px;
+}
+.bodytxt-fieldlabel04
+{
+    width: 120px;
+    font-family: "Segoe UI";
+    float: left;
+    margin: 0px 10px 0px 5px;
+}
+.bodytxt-fieldlabel05
+{
+    width: 175px;
+    font-family: "Segoe UI";
+    float: left;
+    margin: 0px 10px 0px 10px;
+}
+.bodytxt-fieldlabel06
+{
+    width: 90px;
+    font-family: "Segoe UI";
+    float: left;
+    margin: 0px 10px 0px 10px;
+}
+.bodytxt-fieldlabel07
+{
+    width: 150px;
+    font-family: "Segoe UI";
+    float: left;
+    margin: 0px 10px 0px 0px;
+}
+/*===== body close here =====*/
+
+/*===== toolbox start here =====*/
+
+
+
+/*===== toolbox close here =====*/
+
+/*===== footer start here =====*/
+/*Master page footer*/
+.footer-container
+{
+    background-color: White;
+    width: 100%;
+    height: 80px;
+    border-top: #5880b3 1px solid;
+    margin: 0px 0px 0px auto;
+    padding: 0px 0px 0px 0px;
+}
+.footer-text
+{
+    text-align: center;
+    margin: 0px 0px 0px auto;
+    padding: 0px 0px 0px 0px;
+    vertical-align: top;
+}
+.footer-text span
+{
+    vertical-align: top;
+}
+
+/*Account page footer*/
+
+.account-footer-container
+{
+    background: #d8d8d8;
+    width: 100%;
+    height: 80px;
+    border-top: #5880b3 1px solid;
+    margin: 0px 0px 0px auto;
+    padding: 0px 0px 0px 0px;
+}
+.account-footer-text
+{
+    text-align: center;
+    margin: 25px 0px 0px auto;
+    padding: 0px 0px 0px 0px;
+    vertical-align: top;
+}
+.account-footer-text span
+{
+    vertical-align: top;
+}
+
+/*===== footer close here =====*/
+
+/*===== dialog start here =====*/
+.dialog-box-container
+{
+    width: 560px;
+    height: 330px;
+    border: #000000 1px solid;
+    margin: 0px auto 0px auto;
+    padding: 0px 0px 0px 0px;
+}
+.dialog-box-header
+{
+    width: 560px;
+    height: 35px;
+    background: #5880b3;
+    border-bottom: #000000 1px solid;
+    margin: 0px auto 0px auto;
+    padding: 0px 0px 0px 0px;
+}
+.dialog-box-header h1
+{
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFFFFF;
+    font-family: "Segoe UI";
+    margin: 0px auto 0px auto;
+    padding: 5px 0px 0px 5px;
+}
+
+.dialog-box-inner-container
+{
+    width: 530px;
+    height: 295px;
+    margin: 0px auto 0px auto;
+    padding: 15px 0px 15px 0px;
+}
+
+.dialog-box-text-top
+{
+    width: 523px;
+    height: 20px;
+    background: #d8d8d8;
+    color: #000;
+    font-size: 13px;
+    font-family: "Segoe UI";
+    font-weight: bold;
+    margin: 0px auto 35px auto;
+    padding: 0px 0px 0px 7px;
+}
+.dialog-box-text-top02
+{
+    width: 523px;
+    height: 20px;
+    background: #d8d8d8;
+    color: #000;
+    font-size: 13px;
+    font-family: "Segoe UI";
+    font-weight: bold;
+    margin: 0px auto 0px auto;
+    padding: 0px 0px 0px 7px;
+}
+.text-field-div
+{
+    width: 500px;
+    height: 45px;
+    font-size: 12px;
+    margin: 0px auto 0px auto;
+    padding: 0px 0px 0px 0px;
+}
+.text-label
+{
+    float: left;
+    width: 150px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+.text-filed-box
+{
+    float: left;
+    width: 300px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+.dialog-box-field
+{
+    font-size: 12px;
+    font-family: "Segoe UI";
+    border: #727272 solid 1px;
+    margin: 0px 0px 0px 0px;
+    padding: 1px 0px 1px 0px;
+}
+
+.dialog-but
+{
+    width: auto;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+.dialog-textarea
+{
+    width: 517px;
+    height: 65px;
+    font-size: 12px;
+    font-family: "Segoe UI";
+    border: #727272 solid 1px;
+    margin: 0px 0px 0px 0px;
+    padding: 10px 0px 0px 10px;
+}
+
+/*===== dialog close here =====*/
+
+
+/*======= Fields start here ======*/
+
+.checkbox-label
+{
+    font-size: 5px;
+    font-family: "Trebuchet MS"; /*font-family:"Myriad Pro" tahoma;*/
+}
+
+
+.validator
+{
+    width: 35px;
+    float: left;
+    display: inline;
+    margin-left: 3px;
+}
+.datePicker
+{
+    width: 70px;
+}
+
+/*============ Dynamics class of jQuery date picker control ===========*/
+.ui-datepicker-trigger
+{
+    margin-left: 3px;
+    vertical-align: top;
+}
+
+/*====== Fields close here ========*/
+
+/*======  Questionnaire control Start here ================*/
+
+.QuestionnaireTitle
+{
+    font-family: Segoe UI;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.QuestionTitle
+{
+    font-family: Segoe UI;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.questionSubmit
+{
+    margin-left: 200px;
+}
+/*===== Questionnaire control close here ==================*/
+
+
+/**********************Inner page close here***************************/
+
+.referencedesc
+{
+    font-family: Arial;
+    font-size: 10px;
+    color: Black;
+    vertical-align: top;
+    line-height: 12px;
+}
+
+.multifeedlink
+{
+    color: Black;
+    vertical-align: top;
+    text-decoration: none;
+    font-family: Calibri;
+}
+
+.feedlink
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    font-family: Arial;
+    font-size: medium;
+    color: Black;
+    vertical-align: top;
+}
+.feedlink:hover
+{
+    color: #557CD1;
+}
+
+.feeddesc
+{
+    font-family: Verdana;
+    font-size: 10px;
+    color: Gray;
+    vertical-align: top;
+}
+
+.multitable1
+{
+    width: 237px;
+    display: block;
+}
+.multitable1 td
+{
+    height: 27px;
+}
+.multitable1:hover
+{
+    background-color: #EAEAEA;
+}
+
+.table1
+{
+    width: 100%;
+    min-width: 700px;
+    display: block;
+}
+.table1 td
+{
+    height: 27px;
+}
+.table1:hover
+{
+    background-color: #EAEAEA;
+}
+.feedimage
+{
+    position: relative;
+    top: 0px;
+    right: 0px;
+    vertical-align: bottom;
+    width: auto;
+    height: auto;
+}
+.normal
+{
+    width: 100px;
+    min-width: 100px;
+}
+
+.normalTemplatesPagePopup
+{
+    width: 100px;
+    min-width: 70px;
+}
+/*****************************************************************/
+/* *********************** DASH BOARD PAGE ***********************/
+/*****************************************************************/
+#dashboardwrapper
+{
+    width: 95%;
+    margin: 20px auto 0px auto;
+    height: auto;
+    padding-bottom: 20px;
+}
+
+h1
+{
+    color: #3f3f3f;
+}
+h2
+{
+    margin: 20px auto 0px auto;
+    color: #cf7972;
+}
+
+/**********************************************************/
+/* ********************** CONTROLS ************************/
+/**********************************************************/
+.grid
+{
+    margin: 20px auto 0px auto;
+    width: 100%;
+}
+.grid td
+{
+    padding-left: 10px;
+}
+
+.grid tr:hover
+{
+    background-color: #F2F2F2;
+    cursor: pointer;
+}
+tr.gridAlternateRow
+{
+    background-color: #dbeef3;
+}
+tr.gridAlternateRow:hover
+{
+    background-color: #F2F2F2;
+    cursor: pointer;
+}
+
+tr.grid-header a
+{
+    text-decoration: none;
+}
+
+
+.img-delete
+{
+    height: 12px;
+    cursor: pointer;
+}
+img
+{
+    border: none;
+}
+
+
+.submission-grid
+{
+    margin: 20px auto 0px auto;
+    width: 100%;
+}
+.submission-grid td
+{
+    padding-left: 2px;
+}
+
+/********************************css hover tooltip ****************************/
+a.dynamicComment:hover
+{
+    background: #ffffff;
+    text-decoration: none;
+}
+/*BG color is a must for IE6*/
+a.dynamicComment span
+{
+    display: none;
+    padding: 2px 3px;
+    margin-left: 8px;
+    width: 130px;
+}
+a.dynamicComment:hover span
+{
+    display: inline;
+    position: absolute;
+    border: 1px solid #cccccc;
+    background: #ffffff;
+    color: #6c6c6c;
+}
+/******************  End css hover tooltip ********************************/
+
+/****************** Bubble ToolTip ****************************************/
+
+span.notice
+{
+    display: none;
+}
+a.tt
+{
+    position: relative;
+    z-index: 24;
+    color: #3CA3FF;
+    font-weight: bold;
+    text-decoration: none;
+}
+a.tt span
+{
+    display: none;
+}
+
+/*background:; ie hack, something must be changed in a for ie to execute it*/
+a.tt:hover
+{
+    z-index: 25;
+    color: #aaaaff;
+}
+a.tt:hover span.tooltip
+{
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    padding: 15px 0 0 0;
+    width: 400px;
+    color: #333333;
+    text-align: left;
+    filter: alpha(opacity:90);
+    khtmlopacity: 0.90;
+    mozopacity: 0.90;
+    opacity: 0.90;
+}
+a.tt:hover span.notice
+{
+    display: block;
+    font-size: smaller;
+}
+a.tt:hover span.top
+{
+    display: block;
+    padding: 30px 8px 0;
+    background: url(Images/bubble-1b.gif) no-repeat top;
+}
+a.tt:hover span.middle
+{
+    /* different middle bg for stretch */
+    display: block;
+    padding: 0 8px;
+    background: url(Images/bubble_filler-1b.gif) repeat bottom;
+}
+a.tt:hover span.bottom
+{
+    display: block;
+    padding: 3px 8px 10px;
+    color: #548912;
+    background: url(Images/bubble-1b.gif) no-repeat bottom;
+}
+
+/****************** End Bubble ToolTip ************************************/
+
+/****************** Document table formating ******************************/
+.docTable
+{
+    border: 1px solid #D8D8D8;
+}
+
+/***************** Tree Css **************************/
+.treeView
+{
+    clear: left;
+}
+
+.groupDescription
+{
+    font-size: 12px;
+    color: red;
+    font-weight: bold;
+}
+
+
+.sessionWarning-popup
+{
+    font-family: Century Gothic, sans-serif;
+    color: #444;
+    margin: 0;
+    padding: 0;
+}
+
+.corporatePopUp
+{
+    line-height: 13px;
+}
+.MOReTree
+{
+    margin-left: 25px;
+    margin-top: 5px;
+    display: none;
+}
+
+a.manageTreeHover
+{
+    font-weight: bold;
+}
+a.manageTreeHover:hover
+{
+    color: black;
+    text-decoration: none;
+}
+a.TemplateTree
+{
+    color: black;
+    text-decoration: none;
+}
+a.TemplateTree:hover
+{
+    color: black;
+}
+.TempLink
+{
+    color: blue;
+    text-decoration: underline;
+}
+
+.pnlHeader
+{
+    height: 200px;
+    width: 450px;
+    border: 2px solid black;
+    overflow-y: scroll;
+    display: block;
+}
+a.ttt
+{
+    position: relative;
+    z-index: 24;
+    color: #3CA3FF;
+    font-weight: bold;
+    text-decoration: none;
+}
+a.ttt span
+{
+    display: none;
+}
+
+/*background:; ie hack, something must be changed in a for ie to execute it*/
+a.ttt:hover
+{
+    z-index: 25;
+    color: #aaaaff;
+}
+a.ttt:hover span.tooltip
+{
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    padding: 15px 0 0 0;
+    width: 83px;
+    color: #333333;
+    text-align: left;
+    filter: alpha(opacity:90);
+    khtmlopacity: 0.90;
+    mozopacity: 0.90;
+    opacity: 0.90;
+}
+a.ttt:hover span.notice
+{
+    display: block;
+    font-size: smaller;
+}
+a.ttt:hover span.top
+{
+    display: block;
+    padding: 30px 8px 0;
+    background: url(Images/bubble-1ab.gif) no-repeat top;
+    background-size: 83px;
+}
+a.ttt:hover span.middle
+{
+    /* different middle bg for stretch */
+    display: block;
+    padding: 0 0px;
+    background: url(Images/bubble_filler-1ab.gif) repeat bottom;
+    background-size: 83px;
+}
+a.ttt:hover span.bottom
+{
+    display: block;
+    padding: 3px 8px 10px;
+    color: #548912;
+    background: url(Images/bubble-1ab.gif) no-repeat bottom;
+    background-size: 83px;
+}
+
+.descriptionValidator
+{
+    float: right;
+    font-size: 10px;
+}
+
+.validator2
+{
+    width: 5px;
+    float: left;
+    display: inline;
+    margin-left: 3px;
+}
+
+table.fixed
+{
+    table-layout: fixed;
+    width: 720px;
+}
+
+table.fixed td
+{
+    break-word: word-wrap;
+}
+.practiceSave
+{
+    display: none;
+}
+.indentedList
+{
+    margin-left: 25px;
+}
+.is-disabled
+{
+    background-color: #FFFFFF; /*color: Gray;   */
+}
+
+.CorpMessage
+{
+    font-size: 11px;
+    height: 25px;
+    font-style: italic;
+    color: #FF0000;
+    margin: 0px 132px 0px 0px;
+    float: right;
+    display: none;
+}
+.subHeader
+{
+    margin-top: -2px;
+}
+.txt-fields
+{
+    margin-top: 3px;
+}
+.icon-search
+{
+    margin-top: -3px;
+}
+textarea
+{
+    overflow: auto;
+}
+.child-title
+{
+    color: #6E6E6E;
+    font-family: Segoe UI;
+    font-size: 15px;
+    font-weight: bold;
+    height: 20px;
+}
+
+a.ttm
+{
+    position: relative;
+    z-index: 24;
+    color: Blue;
+   /* font-weight: bold;*/
+    text-decoration: none;
+    line-height:18px;
+}
+a.ttm span
+{
+    display: none;
+}
+a.ttm:hover
+{
+    z-index: 25;
+    color: Blue;
+}
+a.ttm:hover span.tooltip
+{
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    padding: 15px 0 0 0;
+    width: 200px;
+    color: #333333;
+    text-align: left;
+    filter: alpha(opacity:90);
+    khtmlopacity: 0.90;
+    mozopacity: 0.90;
+    opacity: 0.90;
+}
+a.ttm:hover span.notice
+{
+    display: block;
+    font-size: smaller;
+}
+a.ttm:hover span.top
+{
+    display: block;
+    padding: 30px 8px 0;
+    background: url(Images/bubble-1aa.gif) no-repeat top;
+}
+a.ttm:hover span.middle
+{
+    /* different middle bg for stretch */
+    display: block;
+    padding: 0 0px;
+    background: url(Images/bubble_filler-1aa.gif) repeat bottom;
+}
+a.ttm:hover span.bottom
+{
+    display: block;
+    padding: 3px 8px 10px;
+    color: #548912;
+    background: url(Images/bubble-1aa.gif) no-repeat bottom;
+}
+.grid-border
+{
+    border:1px solid Transparent;
+}
+.header-border
+{
+    border:1px solid #5880B3;
+}

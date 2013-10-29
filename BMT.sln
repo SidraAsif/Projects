@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BMT", "BMT\BMT.csproj", "{A7041BE8-730F-4E76-A904-8FAE642DAC70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BMTBLL", "BMTBLL\BMTBLL.csproj", "{90CFB600-DDD5-4BE1-8B89-73CD98934D5F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A7041BE8-730F-4E76-A904-8FAE642DAC70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7041BE8-730F-4E76-A904-8FAE642DAC70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7041BE8-730F-4E76-A904-8FAE642DAC70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7041BE8-730F-4E76-A904-8FAE642DAC70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90CFB600-DDD5-4BE1-8B89-73CD98934D5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90CFB600-DDD5-4BE1-8B89-73CD98934D5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90CFB600-DDD5-4BE1-8B89-73CD98934D5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90CFB600-DDD5-4BE1-8B89-73CD98934D5F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

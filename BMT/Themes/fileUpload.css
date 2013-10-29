@@ -1,0 +1,36 @@
+﻿a
+{
+    color: white;
+}
+#text
+{
+    margin: 3px; /*Default is 25px*/
+}
+ul
+{
+    list-style: none; /*Default is none;*/
+    float: left;
+    margin: 0 auto;
+}
+
+.uploadcontainer
+{
+    padding: 0;
+    margin: 0 auto;
+    width: auto;
+    height: auto;
+}
+
+table tr td.normal
+{
+    vertical-align: middle;
+    text-align: left;
+    padding-left:18px;
+}
+tr.user-notice td div.user-notice
+{
+    float: right;
+    font-weight: bold;
+    font-size: 10px;
+    padding-bottom: 3px;
+}

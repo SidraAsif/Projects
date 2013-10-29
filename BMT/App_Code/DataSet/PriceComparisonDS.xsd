@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PriceComparisonDS" targetNamespace="http://tempuri.org/PriceComparisonDS.xsd" xmlns:mstns="http://tempuri.org/PriceComparisonDS.xsd" xmlns="http://tempuri.org/PriceComparisonDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PriceComparisonDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="PriceComparisonDS" msprop:Generator_UserDSName="PriceComparisonDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PriceComparisonDT" msprop:Generator_TableClassName="PriceComparisonDTDataTable" msprop:Generator_TableVarName="tablePriceComparisonDT" msprop:Generator_TablePropName="PriceComparisonDT" msprop:Generator_RowDeletingName="PriceComparisonDTRowDeleting" msprop:Generator_UserTableName="PriceComparisonDT" msprop:Generator_RowChangingName="PriceComparisonDTRowChanging" msprop:Generator_RowEvHandlerName="PriceComparisonDTRowChangeEventHandler" msprop:Generator_RowDeletedName="PriceComparisonDTRowDeleted" msprop:Generator_RowEvArgName="PriceComparisonDTRowChangeEvent" msprop:Generator_RowChangedName="PriceComparisonDTRowChanged" msprop:Generator_RowClassName="PriceComparisonDTRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SystemSequence" msprop:Generator_ColumnVarNameInTable="columnSystemSequence" msprop:Generator_ColumnPropNameInRow="SystemSequence" msprop:Generator_ColumnPropNameInTable="SystemSequenceColumn" msprop:Generator_UserColumnName="SystemSequence" type="xs:string" minOccurs="0" />
+              <xs:element name="SystemName" msprop:Generator_ColumnVarNameInTable="columnSystemName" msprop:Generator_ColumnPropNameInRow="SystemName" msprop:Generator_ColumnPropNameInTable="SystemNameColumn" msprop:Generator_UserColumnName="SystemName" type="xs:string" minOccurs="0" />
+              <xs:element name="PurchaseModel" msprop:Generator_ColumnVarNameInTable="columnPurchaseModel" msprop:Generator_ColumnPropNameInRow="PurchaseModel" msprop:Generator_ColumnPropNameInTable="PurchaseModelColumn" msprop:Generator_UserColumnName="PurchaseModel" type="xs:string" minOccurs="0" />
+              <xs:element name="YearOne" msprop:Generator_ColumnVarNameInTable="columnYearOne" msprop:Generator_ColumnPropNameInRow="YearOne" msprop:Generator_ColumnPropNameInTable="YearOneColumn" msprop:Generator_UserColumnName="YearOne" type="xs:string" minOccurs="0" />
+              <xs:element name="YearTwoToFive" msprop:Generator_ColumnVarNameInTable="columnYearTwoToFive" msprop:Generator_ColumnPropNameInRow="YearTwoToFive" msprop:Generator_ColumnPropNameInTable="YearTwoToFiveColumn" msprop:Generator_UserColumnName="YearTwoToFive" type="xs:string" minOccurs="0" />
+              <xs:element name="TOCYearTwo" msprop:Generator_ColumnVarNameInTable="columnTOCYearTwo" msprop:Generator_ColumnPropNameInRow="TOCYearTwo" msprop:Generator_ColumnPropNameInTable="TOCYearTwoColumn" msprop:Generator_UserColumnName="TOCYearTwo" type="xs:string" minOccurs="0" />
+              <xs:element name="TOCYearThree" msprop:Generator_ColumnVarNameInTable="columnTOCYearThree" msprop:Generator_ColumnPropNameInRow="TOCYearThree" msprop:Generator_ColumnPropNameInTable="TOCYearThreeColumn" msprop:Generator_UserColumnName="TOCYearThree" type="xs:string" minOccurs="0" />
+              <xs:element name="TOCYearFour" msprop:Generator_ColumnVarNameInTable="columnTOCYearFour" msprop:Generator_ColumnPropNameInRow="TOCYearFour" msprop:Generator_ColumnPropNameInTable="TOCYearFourColumn" msprop:Generator_UserColumnName="TOCYearFour" type="xs:string" minOccurs="0" />
+              <xs:element name="TOCYearFive" msprop:Generator_ColumnVarNameInTable="columnTOCYearFive" msprop:Generator_ColumnPropNameInRow="TOCYearFive" msprop:Generator_ColumnPropNameInTable="TOCYearFiveColumn" msprop:Generator_UserColumnName="TOCYearFive" type="xs:string" minOccurs="0" />
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PriceComparisonGraphDT" msprop:Generator_TableClassName="PriceComparisonGraphDTDataTable" msprop:Generator_TableVarName="tablePriceComparisonGraphDT" msprop:Generator_TablePropName="PriceComparisonGraphDT" msprop:Generator_RowDeletingName="PriceComparisonGraphDTRowDeleting" msprop:Generator_UserTableName="PriceComparisonGraphDT" msprop:Generator_RowChangingName="PriceComparisonGraphDTRowChanging" msprop:Generator_RowEvHandlerName="PriceComparisonGraphDTRowChangeEventHandler" msprop:Generator_RowDeletedName="PriceComparisonGraphDTRowDeleted" msprop:Generator_RowEvArgName="PriceComparisonGraphDTRowChangeEvent" msprop:Generator_RowChangedName="PriceComparisonGraphDTRowChanged" msprop:Generator_RowClassName="PriceComparisonGraphDTRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SystemSequence" msprop:Generator_ColumnVarNameInTable="columnSystemSequence" msprop:Generator_ColumnPropNameInRow="SystemSequence" msprop:Generator_ColumnPropNameInTable="SystemSequenceColumn" msprop:Generator_UserColumnName="SystemSequence" type="xs:string" minOccurs="0" />
+              <xs:element name="SystemName" msprop:Generator_ColumnVarNameInTable="columnSystemName" msprop:Generator_ColumnPropNameInRow="SystemName" msprop:Generator_ColumnPropNameInTable="SystemNameColumn" msprop:Generator_UserColumnName="SystemName" type="xs:string" minOccurs="0" />
+              <xs:element name="PurchaseModel" msprop:Generator_ColumnVarNameInTable="columnPurchaseModel" msprop:Generator_ColumnPropNameInRow="PurchaseModel" msprop:Generator_ColumnPropNameInTable="PurchaseModelColumn" msprop:Generator_UserColumnName="PurchaseModel" type="xs:string" minOccurs="0" />
+              <xs:element name="Year" msprop:Generator_ColumnVarNameInTable="columnYear" msprop:Generator_ColumnPropNameInRow="Year" msprop:Generator_ColumnPropNameInTable="YearColumn" msprop:Generator_UserColumnName="Year" type="xs:string" minOccurs="0" />
+              <xs:element name="Value" msprop:Generator_ColumnVarNameInTable="columnValue" msprop:Generator_ColumnPropNameInRow="Value" msprop:Generator_ColumnPropNameInTable="ValueColumn" msprop:Generator_UserColumnName="Value" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="PriceComparisonDTKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PriceComparisonDT" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

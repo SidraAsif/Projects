@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SRAFindingsDS" targetNamespace="http://tempuri.org/SRAFindingsDS.xsd" xmlns:mstns="http://tempuri.org/SRAFindingsDS.xsd" xmlns="http://tempuri.org/SRAFindingsDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SRAFindingsDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="SRAFindingsDS" msprop:Generator_UserDSName="SRAFindingsDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SRAFindingsDT" msprop:Generator_TableClassName="SRAFindingsDTDataTable" msprop:Generator_TableVarName="tableSRAFindingsDT" msprop:Generator_TablePropName="SRAFindingsDT" msprop:Generator_RowDeletingName="SRAFindingsDTRowDeleting" msprop:Generator_UserTableName="SRAFindingsDT" msprop:Generator_RowChangingName="SRAFindingsDTRowChanging" msprop:Generator_RowEvHandlerName="SRAFindingsDTRowChangeEventHandler" msprop:Generator_RowDeletedName="SRAFindingsDTRowDeleted" msprop:Generator_RowEvArgName="SRAFindingsDTRowChangeEvent" msprop:Generator_RowChangedName="SRAFindingsDTRowChanged" msprop:Generator_RowClassName="SRAFindingsDTRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ThreatVulnerability" msprop:Generator_ColumnVarNameInTable="columnThreatVulnerability" msprop:Generator_ColumnPropNameInRow="ThreatVulnerability" msprop:Generator_ColumnPropNameInTable="ThreatVulnerabilityColumn" msprop:Generator_UserColumnName="ThreatVulnerability" type="xs:string" minOccurs="0" />
+              <xs:element name="RecommendedControlMeasure" msprop:Generator_ColumnVarNameInTable="columnRecommendedControlMeasure" msprop:Generator_ColumnPropNameInRow="RecommendedControlMeasure" msprop:Generator_ColumnPropNameInTable="RecommendedControlMeasureColumn" msprop:Generator_UserColumnName="RecommendedControlMeasure" type="xs:string" minOccurs="0" />
+              <xs:element name="ExistingControlMeasuresApplied" msprop:Generator_ColumnVarNameInTable="columnExistingControlMeasuresApplied" msprop:Generator_ColumnPropNameInRow="ExistingControlMeasuresApplied" msprop:Generator_ColumnPropNameInTable="ExistingControlMeasuresAppliedColumn" msprop:Generator_UserColumnName="ExistingControlMeasuresApplied" type="xs:string" minOccurs="0" />
+              <xs:element name="RiskRating" msprop:Generator_ColumnVarNameInTable="columnRiskRating" msprop:Generator_ColumnPropNameInRow="RiskRating" msprop:Generator_ColumnPropNameInTable="RiskRatingColumn" msprop:Generator_UserColumnName="RiskRating" type="xs:string" minOccurs="0" />
+              <xs:element name="RiskTitle" msprop:Generator_ColumnVarNameInTable="columnRiskTitle" msprop:Generator_ColumnPropNameInRow="RiskTitle" msprop:Generator_ColumnPropNameInTable="RiskTitleColumn" msprop:Generator_UserColumnName="RiskTitle" type="xs:string" minOccurs="0" />
+              <xs:element name="RiskType" msprop:Generator_ColumnVarNameInTable="columnRiskType" msprop:Generator_ColumnPropNameInRow="RiskType" msprop:Generator_ColumnPropNameInTable="RiskTypeColumn" msprop:Generator_UserColumnName="RiskType" type="xs:string" minOccurs="0" />
+              <xs:element name="Owner" msprop:Generator_ColumnVarNameInTable="columnOwner" msprop:Generator_ColumnPropNameInRow="Owner" msprop:Generator_ColumnPropNameInTable="OwnerColumn" msprop:Generator_UserColumnName="Owner" type="xs:string" minOccurs="0" />
+              <xs:element name="RemediationSteps" msprop:Generator_ColumnVarNameInTable="columnRemediationSteps" msprop:Generator_ColumnPropNameInRow="RemediationSteps" msprop:Generator_ColumnPropNameInTable="RemediationStepsColumn" msprop:Generator_UserColumnName="RemediationSteps" type="xs:string" minOccurs="0" />
+              <xs:element name="Date" msprop:Generator_ColumnVarNameInTable="columnDate" msprop:Generator_ColumnPropNameInRow="Date" msprop:Generator_ColumnPropNameInTable="DateColumn" msprop:Generator_UserColumnName="Date" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

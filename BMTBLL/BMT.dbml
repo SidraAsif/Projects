@@ -1,0 +1,1049 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BMT" Class="BMTDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\sqlexpress;Initial Catalog=BMT;Persist Security Info=True;User ID=sa" SettingsObjectName="BMTBLL.Properties.Settings" SettingsPropertyName="BMTConnectionString9" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.AccessLevel" Member="AccessLevels">
+    <Type Name="AccessLevel">
+      <Column Name="AccessLevelId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AccessLevelName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="AccessLevel_Form" Member="Forms" ThisKey="AccessLevelId" OtherKey="AccessLevelId" Type="Form" />
+      <Association Name="AccessLevel_KnowledgeBase" Member="KnowledgeBases" ThisKey="AccessLevelId" OtherKey="AccessId" Type="KnowledgeBase" />
+      <Association Name="AccessLevel_Project" Member="Projects" ThisKey="AccessLevelId" OtherKey="AccessLevelId" Type="Project" />
+      <Association Name="AccessLevel_ProjectSection" Member="ProjectSections" ThisKey="AccessLevelId" OtherKey="AccessLevelId" Type="ProjectSection" />
+      <Association Name="AccessLevel_Template" Member="Templates" ThisKey="AccessLevelId" OtherKey="AccessLevelId" Type="Template" />
+      <Association Name="AccessLevel_TemplateOption" Member="TemplateOptions" ThisKey="AccessLevelId" OtherKey="AccessLevelId" Type="TemplateOption" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[User]" Member="Users">
+    <Type Name="User">
+      <Column Name="UserId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LastActivitydate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="RoleId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsDisclaimerPass" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsSRADisclaimerPass" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="HomeDashboard" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Preferences" Type="System.Xml.Linq.XElement" DbType="Xml" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="User_ConsultingUserAccess" Member="ConsultingUserAccesses" ThisKey="UserId" OtherKey="UserId" Type="ConsultingUserAccess" />
+      <Association Name="User_FilledAnswer" Member="FilledAnswers" ThisKey="UserId" OtherKey="UpdatedBy" Type="FilledAnswer" />
+      <Association Name="User_LoginRecord" Member="LoginRecords" ThisKey="UserId" OtherKey="UserId" Type="LoginRecord" />
+      <Association Name="User_NCQASubmissionRequest" Member="NCQASubmissionRequests" ThisKey="UserId" OtherKey="updatedby" Type="NCQASubmissionRequest" />
+      <Association Name="User_PracticeSiteSubmission" Member="PracticeSiteSubmissions" ThisKey="UserId" OtherKey="updatedby" Type="PracticeSiteSubmission" />
+      <Association Name="User_PracticeUser" Member="PracticeUser" ThisKey="UserId" OtherKey="UserId" Type="PracticeUser" Cardinality="One" />
+      <Association Name="Role_User" Member="Role" ThisKey="RoleId" OtherKey="RoleId" Type="Role" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Address" Member="Addresses">
+    <Type Name="Address">
+      <Column Name="AddressId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PrimaryAddress" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SecondaryAddress" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="State" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="ZipCode" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Telephone" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Mobile" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Fax" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Address_Enterprise" Member="Enterprises" ThisKey="AddressId" OtherKey="AddressId" Type="Enterprise" />
+      <Association Name="Address_MedicalGroup" Member="MedicalGroups" ThisKey="AddressId" OtherKey="AddressId" Type="MedicalGroup" />
+      <Association Name="Address_Practice" Member="Practices" ThisKey="AddressId" OtherKey="AddressId" Type="Practice" />
+      <Association Name="Address_PracticeSite" Member="PracticeSites" ThisKey="AddressId" OtherKey="AddressId" Type="PracticeSite" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AnswerType" Member="AnswerTypes">
+    <Type Name="AnswerType">
+      <Column Name="AnswerTypeId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AnswerType" Member="AnswerType1" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="AnswerType_AnswerTypeEnum" Member="AnswerTypeEnums" ThisKey="AnswerTypeId" OtherKey="AnswerTypeId" Type="AnswerTypeEnum" />
+      <Association Name="AnswerType_KnowledgeBaseTemplate" Member="KnowledgeBaseTemplates" ThisKey="AnswerTypeId" OtherKey="AnswerTypeId" Type="KnowledgeBaseTemplate" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AnswerTypeEnum" Member="AnswerTypeEnums">
+    <Type Name="AnswerTypeEnum">
+      <Column Name="AnswerTypeEnumId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AnswerTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DiscreteValue" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Association Name="AnswerTypeEnum_AnswerTypeWeightage" Member="AnswerTypeWeightages" ThisKey="AnswerTypeEnumId" OtherKey="AnswerTypeEnumId" Type="AnswerTypeWeightage" />
+      <Association Name="AnswerTypeEnum_FilledAnswer" Member="FilledAnswers" ThisKey="AnswerTypeEnumId" OtherKey="AnswerTypeEnumId" Type="FilledAnswer" />
+      <Association Name="AnswerType_AnswerTypeEnum" Member="AnswerType" ThisKey="AnswerTypeId" OtherKey="AnswerTypeId" Type="AnswerType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AnswerTypeWeightage" Member="AnswerTypeWeightages">
+    <Type Name="AnswerTypeWeightage">
+      <Column Name="AnswerTypeWeightageId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AnswerTypeEnumId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="KnowledgeBaseTemplateId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Weightage" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="AnswerTypeEnum_AnswerTypeWeightage" Member="AnswerTypeEnum" ThisKey="AnswerTypeEnumId" OtherKey="AnswerTypeEnumId" Type="AnswerTypeEnum" IsForeignKey="true" />
+      <Association Name="KnowledgeBaseTemplate_AnswerTypeWeightage" Member="KnowledgeBaseTemplate" ThisKey="KnowledgeBaseTemplateId" OtherKey="KnowledgeBaseTemplateId" Type="KnowledgeBaseTemplate" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AssetType" Member="AssetTypes">
+    <Type Name="AssetType">
+      <Column Name="AssetTypeId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AssetParentId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AssetCategoryId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ValueKey" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ConsultantType" Member="ConsultantTypes">
+    <Type Name="ConsultantType">
+      <Column Name="ConsultantTypeId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="ConsultantType_ConsultantUser" Member="ConsultantUsers" ThisKey="ConsultantTypeId" OtherKey="ConsultantTypeId" Type="ConsultantUser" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ConsultantUser" Member="ConsultantUsers">
+    <Type Name="ConsultantUser">
+      <Column Name="UserId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ConsultantTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Featured" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Website" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="LogoPath" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Organization" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="AddressId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ServiceArea" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="ConsultantType_ConsultantUser" Member="ConsultantType" ThisKey="ConsultantTypeId" OtherKey="ConsultantTypeId" Type="ConsultantType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ConsultingUserAccess" Member="ConsultingUserAccesses">
+    <Type Name="ConsultingUserAccess">
+      <Column Name="ConsultingUserAccessId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PracticeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="User_ConsultingUserAccess" Member="User" ThisKey="UserId" OtherKey="UserId" Type="User" IsForeignKey="true" />
+      <Association Name="Practice_ConsultingUserAccess" Member="Practice" ThisKey="PracticeId" OtherKey="PracticeId" Type="Practice" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CorporateElementList" Member="CorporateElementLists">
+    <Type Name="CorporateElementList">
+      <Column Name="CorporateElementId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ElementName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ElementDescription" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Association Name="CorporateElementList_CorporateElementSubmission" Member="CorporateElementSubmissions" ThisKey="CorporateElementId" OtherKey="CorporateElementId" Type="CorporateElementSubmission" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CorporateElementSubmission" Member="CorporateElementSubmissions">
+    <Type Name="CorporateElementSubmission">
+      <Column Name="SubmissionId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PracticeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CorporateElementId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="CorporateElementList_CorporateElementSubmission" Member="CorporateElementList" ThisKey="CorporateElementId" OtherKey="CorporateElementId" Type="CorporateElementList" IsForeignKey="true" />
+      <Association Name="Practice_CorporateElementSubmission" Member="Practice" ThisKey="PracticeId" OtherKey="PracticeId" Type="Practice" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CorporateKnowledgeBaseElement" Member="CorporateKnowledgeBaseElements">
+    <Type Name="CorporateKnowledgeBaseElement">
+      <Column Name="CorporateKnowledgeBaseElementId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PracticeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="KnowledgeBaseTemplateId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="KnowledgeBaseTemplate_CorporateKnowledgeBaseElement" Member="KnowledgeBaseTemplate" ThisKey="KnowledgeBaseTemplateId" OtherKey="KnowledgeBaseTemplateId" Type="KnowledgeBaseTemplate" IsForeignKey="true" />
+      <Association Name="Practice_CorporateKnowledgeBaseElement" Member="Practice" ThisKey="PracticeId" OtherKey="PracticeId" Type="Practice" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Credential" Member="Credentials">
+    <Type Name="Credential">
+      <Column Name="CredentialId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Credential_PracticeUser" Member="PracticeUsers" ThisKey="CredentialId" OtherKey="CredentialId" Type="PracticeUser" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CustomReport" Member="CustomReports">
+    <Type Name="CustomReport">
+      <Column Name="CostumReportId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ReportSectionId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="XML" Type="System.Xml.Linq.XElement" DbType="Xml NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DocumentTypeMapping" Member="DocumentTypeMappings">
+    <Type Name="DocumentTypeMapping">
+      <Column Name="DocumentTypeMappingId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DocumentType" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MappingName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Enterprise" Member="Enterprises">
+    <Type Name="Enterprise">
+      <Column Name="EnterpriseId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="AddressId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Enterprise_EnterpriseLibrarySection" Member="EnterpriseLibrarySections" ThisKey="EnterpriseId" OtherKey="EnterpriseId" Type="EnterpriseLibrarySection" />
+      <Association Name="Enterprise_EnterpriseReportSection" Member="EnterpriseReportSections" ThisKey="EnterpriseId" OtherKey="EnterpriseId" Type="EnterpriseReportSection" />
+      <Association Name="Enterprise_EnterpriseToolSection" Member="EnterpriseToolSections" ThisKey="EnterpriseId" OtherKey="EnterpriseId" Type="EnterpriseToolSection" />
+      <Association Name="Enterprise_Form" Member="Forms" ThisKey="EnterpriseId" OtherKey="fkEnterpriseId" Type="Form" />
+      <Association Name="Enterprise_MedicalGroup" Member="MedicalGroups" ThisKey="EnterpriseId" OtherKey="EnterpriseId" Type="MedicalGroup" />
+      <Association Name="Enterprise_Page" Member="Pages" ThisKey="EnterpriseId" OtherKey="EnterpriseId" Type="Page" />
+      <Association Name="Enterprise_ProjectAssignment" Member="ProjectAssignments" ThisKey="EnterpriseId" OtherKey="EnterpriseId" Type="ProjectAssignment" />
+      <Association Name="Enterprise_SystemInfo" Member="SystemInfos" ThisKey="EnterpriseId" OtherKey="EnterpriseId" Type="SystemInfo" />
+      <Association Name="Enterprise_Template" Member="Templates" ThisKey="EnterpriseId" OtherKey="EnterpriseId" Type="Template" />
+      <Association Name="Enterprise_TemplateOptionAssignment" Member="TemplateOptionAssignments" ThisKey="EnterpriseId" OtherKey="EnterpriseId" Type="TemplateOptionAssignment" />
+      <Association Name="Address_Enterprise" Member="Address" ThisKey="AddressId" OtherKey="AddressId" Type="Address" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EnterpriseLibrarySection" Member="EnterpriseLibrarySections">
+    <Type Name="EnterpriseLibrarySection">
+      <Column Name="LibrarySectionId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MedicalGroupId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EnterpriseId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EnterpriseLibrarySectionId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Association Name="Enterprise_EnterpriseLibrarySection" Member="Enterprise" ThisKey="EnterpriseId" OtherKey="EnterpriseId" Type="Enterprise" IsForeignKey="true" />
+      <Association Name="LibrarySection_EnterpriseLibrarySection" Member="LibrarySection" ThisKey="LibrarySectionId" OtherKey="LibrarySectionId" Type="LibrarySection" IsForeignKey="true" />
+      <Association Name="MedicalGroup_EnterpriseLibrarySection" Member="MedicalGroup" ThisKey="MedicalGroupId" OtherKey="MedicalGroupId" Type="MedicalGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EnterpriseReportSection" Member="EnterpriseReportSections">
+    <Type Name="EnterpriseReportSection">
+      <Column Name="ReportSectionId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MedicalGroupId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EnterpriseId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EnterpriseReportSectionId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Association Name="Enterprise_EnterpriseReportSection" Member="Enterprise" ThisKey="EnterpriseId" OtherKey="EnterpriseId" Type="Enterprise" IsForeignKey="true" />
+      <Association Name="MedicalGroup_EnterpriseReportSection" Member="MedicalGroup" ThisKey="MedicalGroupId" OtherKey="MedicalGroupId" Type="MedicalGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EnterpriseToolSection" Member="EnterpriseToolSections">
+    <Type Name="EnterpriseToolSection">
+      <Column Name="ToolSectionId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MedicalGroupId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EnterpriseId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EnterpriseToolSectionId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Association Name="Enterprise_EnterpriseToolSection" Member="Enterprise" ThisKey="EnterpriseId" OtherKey="EnterpriseId" Type="Enterprise" IsForeignKey="true" />
+      <Association Name="MedicalGroup_EnterpriseToolSection" Member="MedicalGroup" ThisKey="MedicalGroupId" OtherKey="MedicalGroupId" Type="MedicalGroup" IsForeignKey="true" />
+      <Association Name="ToolSection_EnterpriseToolSection" Member="ToolSection" ThisKey="ToolSectionId" OtherKey="ToolSectionId" Type="ToolSection" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FilledAnswers" Member="FilledAnswers">
+    <Type Name="FilledAnswer">
+      <Column Name="FilledAnswersId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="KnowledgeBaseTemplateId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AnswerTypeEnumId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastUpdated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UpdatedBy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Complete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DataBoxComments" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DefaultScore" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="PoliciesDocumentCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ReportsDocumentCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ScreenShotsDocumentCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LogsOrToolsDocumentCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OtherDocumentsCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PrivateNotes" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ReviewNotes" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="EvaluationNotes" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ProjectUsageId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PracticeSiteId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="FilledAnswer_FilledTemplateDocument" Member="FilledTemplateDocuments" ThisKey="FilledAnswersId" OtherKey="FilledAnswerId" Type="FilledTemplateDocument" />
+      <Association Name="AnswerTypeEnum_FilledAnswer" Member="AnswerTypeEnum" ThisKey="AnswerTypeEnumId" OtherKey="AnswerTypeEnumId" Type="AnswerTypeEnum" IsForeignKey="true" />
+      <Association Name="User_FilledAnswer" Member="User" ThisKey="UpdatedBy" OtherKey="UserId" Type="User" IsForeignKey="true" />
+      <Association Name="KnowledgeBaseTemplate_FilledAnswer" Member="KnowledgeBaseTemplate" ThisKey="KnowledgeBaseTemplateId" OtherKey="KnowledgeBaseTemplateId" Type="KnowledgeBaseTemplate" IsForeignKey="true" />
+      <Association Name="PracticeSite_FilledAnswer" Member="PracticeSite" ThisKey="PracticeSiteId" OtherKey="PracticeSiteId" Type="PracticeSite" IsForeignKey="true" />
+      <Association Name="ProjectUsage_FilledAnswer" Member="ProjectUsage" ThisKey="ProjectUsageId" OtherKey="ProjectUsageId" Type="ProjectUsage" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FilledAnswersOptions" Member="FilledAnswersOptions">
+    <Type Name="FilledAnswersOption">
+      <Column Name="pkFilledAnswersOptionId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OptionId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="KnowledgebaseTemplateId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AnswerTypeEnumId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Complete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DataBoxComments" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DefaultScore" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="PoliciesDocumentCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ReportsDocumentCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ScreenShotsDocumentCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LogsOrToolsDocumentCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OtherDocumentsCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PrivateNotes" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ReviewNotes" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="EvaluationNotes" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="KnowledgeBaseTemplate_FilledAnswersOption" Member="KnowledgeBaseTemplate" ThisKey="KnowledgebaseTemplateId" OtherKey="KnowledgeBaseTemplateId" Type="KnowledgeBaseTemplate" IsForeignKey="true" />
+      <Association Name="TemplateOption_FilledAnswersOption" Member="TemplateOption" ThisKey="OptionId" OtherKey="TemplateOptionId" Type="TemplateOption" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FilledQuestionnaire" Member="FilledQuestionnaires">
+    <Type Name="FilledQuestionnaire">
+      <Column Name="FilledQuestionnareId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FormId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProjectUsageId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PracticeSiteId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Answers" Type="System.Xml.Linq.XElement" DbType="Xml NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="LastUpdated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdatedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Form_FilledQuestionnaire" Member="Form" ThisKey="FormId" OtherKey="FormId" Type="Form" IsForeignKey="true" />
+      <Association Name="PracticeSite_FilledQuestionnaire" Member="PracticeSite" ThisKey="PracticeSiteId" OtherKey="PracticeSiteId" Type="PracticeSite" IsForeignKey="true" />
+      <Association Name="ProjectUsage_FilledQuestionnaire" Member="ProjectUsage" ThisKey="ProjectUsageId" OtherKey="ProjectUsageId" Type="ProjectUsage" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FilledTemplateDocument" Member="FilledTemplateDocuments">
+    <Type Name="FilledTemplateDocument">
+      <Column Name="FilledDocumentId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FilledAnswerId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DocumentId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="KnowledgeBaseTemplateId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="FilledAnswer_FilledTemplateDocument" Member="FilledAnswer" ThisKey="FilledAnswerId" OtherKey="FilledAnswersId" Type="FilledAnswer" IsForeignKey="true" />
+      <Association Name="KnowledgeBaseTemplate_FilledTemplateDocument" Member="KnowledgeBaseTemplate" ThisKey="KnowledgeBaseTemplateId" OtherKey="KnowledgeBaseTemplateId" Type="KnowledgeBaseTemplate" IsForeignKey="true" />
+      <Association Name="TemplateDocument_FilledTemplateDocument" Member="TemplateDocument" ThisKey="DocumentId" OtherKey="DocumentId" Type="TemplateDocument" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Form" Member="Forms">
+    <Type Name="Form">
+      <Column Name="FormId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Type" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Questionnaire" Type="System.Xml.Linq.XElement" DbType="Xml NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="AccessLevelId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ToolLevelId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="fkMedicalGroupId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fkEnterpriseId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fkPracticeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Form_FilledQuestionnaire" Member="FilledQuestionnaires" ThisKey="FormId" OtherKey="FormId" Type="FilledQuestionnaire" />
+      <Association Name="Form_ProjectDocument" Member="ProjectDocuments" ThisKey="FormId" OtherKey="FormId" Type="ProjectDocument" />
+      <Association Name="Form_ProjectSection" Member="ProjectSections" ThisKey="FormId" OtherKey="FormId" Type="ProjectSection" />
+      <Association Name="AccessLevel_Form" Member="AccessLevel" ThisKey="AccessLevelId" OtherKey="AccessLevelId" Type="AccessLevel" IsForeignKey="true" />
+      <Association Name="Enterprise_Form" Member="Enterprise" ThisKey="fkEnterpriseId" OtherKey="EnterpriseId" Type="Enterprise" IsForeignKey="true" />
+      <Association Name="MedicalGroup_Form" Member="MedicalGroup" ThisKey="fkMedicalGroupId" OtherKey="MedicalGroupId" Type="MedicalGroup" IsForeignKey="true" />
+      <Association Name="Practice_Form" Member="Practice" ThisKey="fkPracticeId" OtherKey="PracticeId" Type="Practice" IsForeignKey="true" />
+      <Association Name="ToolLevel_Form" Member="ToolLevel" ThisKey="ToolLevelId" OtherKey="ToolLevelId" Type="ToolLevel" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KnowledgeBase" Member="KnowledgeBases">
+    <Type Name="KnowledgeBase">
+      <Column Name="KnowledgeBaseId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="KnowledgeBaseTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="TabName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DisplayName" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="InstructionText" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="AccessId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MustPass" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="KnowledgeBase_KnowledgeBaseTemplate" Member="KnowledgeBaseTemplates" ThisKey="KnowledgeBaseId" OtherKey="KnowledgeBaseId" Type="KnowledgeBaseTemplate" />
+      <Association Name="KnowledgeBase_KnowledgeBaseTemplate1" Member="KnowledgeBaseTemplates1" ThisKey="KnowledgeBaseId" OtherKey="ParentKnowledgeBaseId" Type="KnowledgeBaseTemplate" />
+      <Association Name="AccessLevel_KnowledgeBase" Member="AccessLevel" ThisKey="AccessId" OtherKey="AccessLevelId" Type="AccessLevel" IsForeignKey="true" />
+      <Association Name="KnowledgeBaseType_KnowledgeBase" Member="KnowledgeBaseType" ThisKey="KnowledgeBaseTypeId" OtherKey="KnowledgeBaseTypeId" Type="KnowledgeBaseType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KnowledgeBaseTemplate" Member="KnowledgeBaseTemplates">
+    <Type Name="KnowledgeBaseTemplate">
+      <Column Name="KnowledgeBaseTemplateId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="KnowledgeBaseId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TemplateId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ParentKnowledgeBaseId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Sequence" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AnswerTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaxPoints" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsCritical" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CriticalTooltip" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="IsDataBox" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DataBoxHeader" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="IsCorporateElement" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsInfoDocEnable" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ReferencePages" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="KnowledgeBaseTemplate_AnswerTypeWeightage" Member="AnswerTypeWeightages" ThisKey="KnowledgeBaseTemplateId" OtherKey="KnowledgeBaseTemplateId" Type="AnswerTypeWeightage" />
+      <Association Name="KnowledgeBaseTemplate_CorporateKnowledgeBaseElement" Member="CorporateKnowledgeBaseElements" ThisKey="KnowledgeBaseTemplateId" OtherKey="KnowledgeBaseTemplateId" Type="CorporateKnowledgeBaseElement" />
+      <Association Name="KnowledgeBaseTemplate_FilledAnswer" Member="FilledAnswers" ThisKey="KnowledgeBaseTemplateId" OtherKey="KnowledgeBaseTemplateId" Type="FilledAnswer" />
+      <Association Name="KnowledgeBaseTemplate_FilledAnswersOption" Member="FilledAnswersOptions" ThisKey="KnowledgeBaseTemplateId" OtherKey="KnowledgebaseTemplateId" Type="FilledAnswersOption" />
+      <Association Name="KnowledgeBaseTemplate_FilledTemplateDocument" Member="FilledTemplateDocuments" ThisKey="KnowledgeBaseTemplateId" OtherKey="KnowledgeBaseTemplateId" Type="FilledTemplateDocument" />
+      <Association Name="KnowledgeBaseTemplate_ScoringRule" Member="ScoringRules" ThisKey="KnowledgeBaseTemplateId" OtherKey="KnowledgeBaseTemplateId" Type="ScoringRule" />
+      <Association Name="AnswerType_KnowledgeBaseTemplate" Member="AnswerType" ThisKey="AnswerTypeId" OtherKey="AnswerTypeId" Type="AnswerType" IsForeignKey="true" />
+      <Association Name="KnowledgeBase_KnowledgeBaseTemplate" Member="KnowledgeBase" ThisKey="KnowledgeBaseId" OtherKey="KnowledgeBaseId" Type="KnowledgeBase" IsForeignKey="true" />
+      <Association Name="KnowledgeBase_KnowledgeBaseTemplate1" Member="KnowledgeBase1" ThisKey="ParentKnowledgeBaseId" OtherKey="KnowledgeBaseId" Type="KnowledgeBase" IsForeignKey="true" />
+      <Association Name="Template_KnowledgeBaseTemplate" Member="Template" ThisKey="TemplateId" OtherKey="TemplateId" Type="Template" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KnowledgeBaseType" Member="KnowledgeBaseTypes">
+    <Type Name="KnowledgeBaseType">
+      <Column Name="KnowledgeBaseTypeId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="KnowledgeBaseType" Member="KnowledgeBaseType1" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TemplateTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="KnowledgeBaseType_KnowledgeBase" Member="KnowledgeBases" ThisKey="KnowledgeBaseTypeId" OtherKey="KnowledgeBaseTypeId" Type="KnowledgeBase" />
+      <Association Name="TemplateType_KnowledgeBaseType" Member="TemplateType" ThisKey="TemplateTypeId" OtherKey="TemplateTypeId" Type="TemplateType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LibraryDocument" Member="LibraryDocuments">
+    <Type Name="LibraryDocument">
+      <Column Name="LibraryDocumentId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LibrarySectionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Link" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="UploadedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UploadedBy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Image" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="PracticeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="LibrarySection_LibraryDocument" Member="LibrarySection" ThisKey="LibrarySectionId" OtherKey="LibrarySectionId" Type="LibrarySection" IsForeignKey="true" />
+      <Association Name="Practice_LibraryDocument" Member="Practice" ThisKey="PracticeId" OtherKey="PracticeId" Type="Practice" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LibrarySection" Member="LibrarySections">
+    <Type Name="LibrarySection">
+      <Column Name="LibrarySectionId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ParentLibrarySectionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ContentType" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MedicalGroupId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="LibrarySection_EnterpriseLibrarySection" Member="EnterpriseLibrarySections" ThisKey="LibrarySectionId" OtherKey="LibrarySectionId" Type="EnterpriseLibrarySection" />
+      <Association Name="LibrarySection_LibraryDocument" Member="LibraryDocuments" ThisKey="LibrarySectionId" OtherKey="LibrarySectionId" Type="LibraryDocument" />
+      <Association Name="LibrarySection_LibrarySection" Member="LibrarySections" ThisKey="LibrarySectionId" OtherKey="ParentLibrarySectionId" Type="LibrarySection" />
+      <Association Name="LibrarySection_LibrarySection" Member="LibrarySection1" ThisKey="ParentLibrarySectionId" OtherKey="LibrarySectionId" Type="LibrarySection" IsForeignKey="true" />
+      <Association Name="MedicalGroup_LibrarySection" Member="MedicalGroup" ThisKey="MedicalGroupId" OtherKey="MedicalGroupId" Type="MedicalGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LoginRecord" Member="LoginRecords">
+    <Type Name="LoginRecord">
+      <Column Name="LoginRecordId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LoginTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="User_LoginRecord" Member="User" ThisKey="UserId" OtherKey="UserId" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MedicalGroup" Member="MedicalGroups">
+    <Type Name="MedicalGroup">
+      <Column Name="MedicalGroupId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EnterpriseId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="AddressId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="MedicalGroup_EnterpriseLibrarySection" Member="EnterpriseLibrarySections" ThisKey="MedicalGroupId" OtherKey="MedicalGroupId" Type="EnterpriseLibrarySection" />
+      <Association Name="MedicalGroup_EnterpriseReportSection" Member="EnterpriseReportSections" ThisKey="MedicalGroupId" OtherKey="MedicalGroupId" Type="EnterpriseReportSection" />
+      <Association Name="MedicalGroup_EnterpriseToolSection" Member="EnterpriseToolSections" ThisKey="MedicalGroupId" OtherKey="MedicalGroupId" Type="EnterpriseToolSection" />
+      <Association Name="MedicalGroup_Form" Member="Forms" ThisKey="MedicalGroupId" OtherKey="fkMedicalGroupId" Type="Form" />
+      <Association Name="MedicalGroup_LibrarySection" Member="LibrarySections" ThisKey="MedicalGroupId" OtherKey="MedicalGroupId" Type="LibrarySection" />
+      <Association Name="MedicalGroup_Practice" Member="Practices" ThisKey="MedicalGroupId" OtherKey="MedicalGroupId" Type="Practice" />
+      <Association Name="MedicalGroup_ProjectAssignment" Member="ProjectAssignments" ThisKey="MedicalGroupId" OtherKey="MedicalGroupId" Type="ProjectAssignment" />
+      <Association Name="MedicalGroup_Template" Member="Templates" ThisKey="MedicalGroupId" OtherKey="MedicalGroupId" Type="Template" />
+      <Association Name="MedicalGroup_TemplateOptionAssignment" Member="TemplateOptionAssignments" ThisKey="MedicalGroupId" OtherKey="MedicalGroupId" Type="TemplateOptionAssignment" />
+      <Association Name="MedicalGroup_ToolSection" Member="ToolSections" ThisKey="MedicalGroupId" OtherKey="MedicalGroupId" Type="ToolSection" />
+      <Association Name="Address_MedicalGroup" Member="Address" ThisKey="AddressId" OtherKey="AddressId" Type="Address" IsForeignKey="true" />
+      <Association Name="Enterprise_MedicalGroup" Member="Enterprise" ThisKey="EnterpriseId" OtherKey="EnterpriseId" Type="Enterprise" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NCQASubmissionRequest" Member="NCQASubmissionRequests">
+    <Type Name="NCQASubmissionRequest">
+      <Column Name="ISSLicenseNumber" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="StatusId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RequestedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LastUpdated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="updatedby" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Completedon" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ProjectUsageId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PracticeSiteId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="User_NCQASubmissionRequest" Member="User" ThisKey="updatedby" OtherKey="UserId" Type="User" IsForeignKey="true" />
+      <Association Name="PracticeSite_NCQASubmissionRequest" Member="PracticeSite" ThisKey="PracticeSiteId" OtherKey="PracticeSiteId" Type="PracticeSite" IsForeignKey="true" />
+      <Association Name="ProjectUsage_NCQASubmissionRequest" Member="ProjectUsage" ThisKey="ProjectUsageId" OtherKey="ProjectUsageId" Type="ProjectUsage" IsForeignKey="true" />
+      <Association Name="SubmissionStatus_NCQASubmissionRequest" Member="SubmissionStatus" ThisKey="StatusId" OtherKey="SubmissionStatusId" Type="SubmissionStatus" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Page" Member="Pages">
+    <Type Name="Page">
+      <Column Name="PageId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="RoleId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Configurable" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EnterpriseId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Page_PageContent" Member="PageContents" ThisKey="PageId" OtherKey="PageId" Type="PageContent" />
+      <Association Name="Enterprise_Page" Member="Enterprise" ThisKey="EnterpriseId" OtherKey="EnterpriseId" Type="Enterprise" IsForeignKey="true" />
+      <Association Name="Role_Page" Member="Role" ThisKey="RoleId" OtherKey="RoleId" Type="Role" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PageContent" Member="PageContents">
+    <Type Name="PageContent">
+      <Column Name="PageContentId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PageId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Content" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LastUpdatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdatedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PostDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Page_PageContent" Member="Page" ThisKey="PageId" OtherKey="PageId" Type="Page" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Practice" Member="Practices">
+    <Type Name="Practice">
+      <Column Name="PracticeId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MedicalGroupId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="AddressId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PracticeSizeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SpecialityId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ContactName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PracticeSiteId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsCorporate" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Practice_ConsultingUserAccess" Member="ConsultingUserAccesses" ThisKey="PracticeId" OtherKey="PracticeId" Type="ConsultingUserAccess" />
+      <Association Name="Practice_CorporateElementSubmission" Member="CorporateElementSubmissions" ThisKey="PracticeId" OtherKey="PracticeId" Type="CorporateElementSubmission" />
+      <Association Name="Practice_CorporateKnowledgeBaseElement" Member="CorporateKnowledgeBaseElements" ThisKey="PracticeId" OtherKey="PracticeId" Type="CorporateKnowledgeBaseElement" />
+      <Association Name="Practice_Form" Member="Forms" ThisKey="PracticeId" OtherKey="fkPracticeId" Type="Form" />
+      <Association Name="Practice_LibraryDocument" Member="LibraryDocuments" ThisKey="PracticeId" OtherKey="PracticeId" Type="LibraryDocument" />
+      <Association Name="Practice_PracticeSite" Member="PracticeSites" ThisKey="PracticeId" OtherKey="PracticeId" Type="PracticeSite" />
+      <Association Name="Practice_PracticeUser" Member="PracticeUsers" ThisKey="PracticeId" OtherKey="PracticeId" Type="PracticeUser" />
+      <Association Name="Practice_ProjectAssignment" Member="ProjectAssignments" ThisKey="PracticeId" OtherKey="PracticeId" Type="ProjectAssignment" />
+      <Association Name="Practice_ProjectUsage" Member="ProjectUsages" ThisKey="PracticeId" OtherKey="PracticeId" Type="ProjectUsage" />
+      <Association Name="Practice_Template" Member="Templates" ThisKey="PracticeId" OtherKey="PracticeId" Type="Template" />
+      <Association Name="Practice_TemplateOptionAssignment" Member="TemplateOptionAssignments" ThisKey="PracticeId" OtherKey="PracticeId" Type="TemplateOptionAssignment" />
+      <Association Name="Practice_ToolDocument" Member="ToolDocuments" ThisKey="PracticeId" OtherKey="PraticeId" Type="ToolDocument" />
+      <Association Name="Address_Practice" Member="Address" ThisKey="AddressId" OtherKey="AddressId" Type="Address" IsForeignKey="true" />
+      <Association Name="MedicalGroup_Practice" Member="MedicalGroup" ThisKey="MedicalGroupId" OtherKey="MedicalGroupId" Type="MedicalGroup" IsForeignKey="true" />
+      <Association Name="PracticeSize_Practice" Member="PracticeSize" ThisKey="PracticeSizeId" OtherKey="PracticeSizeId" Type="PracticeSize" IsForeignKey="true" />
+      <Association Name="Speciality_Practice" Member="Speciality" ThisKey="SpecialityId" OtherKey="SpecialityId" Type="Speciality" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PracticeConsultant" Member="PracticeConsultants">
+    <Type Name="PracticeConsultant">
+      <Column Name="PracticeConsultantId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PracticeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ConsultantId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RelationshipId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="XmlData" Type="System.Xml.Linq.XElement" DbType="Xml" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="Relationship_PracticeConsultant" Member="Relationship" ThisKey="RelationshipId" OtherKey="RelationshipId" Type="Relationship" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PracticeRole" Member="PracticeRoles">
+    <Type Name="PracticeRole">
+      <Column Name="PracticeRoleId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="PracticeRole_PracticeUser" Member="PracticeUsers" ThisKey="PracticeRoleId" OtherKey="PracticeRoleId" Type="PracticeUser" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PracticeSite" Member="PracticeSites">
+    <Type Name="PracticeSite">
+      <Column Name="PracticeSiteId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PracticeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="AddressId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SpecialityId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NumberOfProviders" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SiteGroupNPI" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IsMainSite" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ContactName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="PracticeSite_FilledAnswer" Member="FilledAnswers" ThisKey="PracticeSiteId" OtherKey="PracticeSiteId" Type="FilledAnswer" />
+      <Association Name="PracticeSite_FilledQuestionnaire" Member="FilledQuestionnaires" ThisKey="PracticeSiteId" OtherKey="PracticeSiteId" Type="FilledQuestionnaire" />
+      <Association Name="PracticeSite_NCQASubmissionRequest" Member="NCQASubmissionRequests" ThisKey="PracticeSiteId" OtherKey="PracticeSiteId" Type="NCQASubmissionRequest" />
+      <Association Name="PracticeSite_PracticeUser" Member="PracticeUsers" ThisKey="PracticeSiteId" OtherKey="PracticeSiteId" Type="PracticeUser" />
+      <Association Name="Practice_PracticeSite" Member="Practice" ThisKey="PracticeId" OtherKey="PracticeId" Type="Practice" IsForeignKey="true" />
+      <Association Name="Address_PracticeSite" Member="Address" ThisKey="AddressId" OtherKey="AddressId" Type="Address" IsForeignKey="true" />
+      <Association Name="Speciality_PracticeSite" Member="Speciality" ThisKey="SpecialityId" OtherKey="SpecialityId" Type="Speciality" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PracticeSiteSubmission" Member="PracticeSiteSubmissions">
+    <Type Name="PracticeSiteSubmission">
+      <Column Name="PracticeSiteSubmissionId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PracticeSiteId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TemplateId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Reviewed" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Submitted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Recognized" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="SubmittedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="RecognizedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="RecognizedLevel" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="StatusId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="APICredentials" Type="System.Xml.Linq.XElement" DbType="Xml" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="RequestedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="updatedby" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Completedon" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="User_PracticeSiteSubmission" Member="User" ThisKey="updatedby" OtherKey="UserId" Type="User" IsForeignKey="true" />
+      <Association Name="SubmissionStatus_PracticeSiteSubmission" Member="SubmissionStatus" ThisKey="StatusId" OtherKey="SubmissionStatusId" Type="SubmissionStatus" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PracticeSize" Member="PracticeSizes">
+    <Type Name="PracticeSize">
+      <Column Name="PracticeSizeId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PracticeSize" Member="PracticeSize1" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="PracticeSize_Practice" Member="Practices" ThisKey="PracticeSizeId" OtherKey="PracticeSizeId" Type="Practice" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PracticeUser" Member="PracticeUsers">
+    <Type Name="PracticeUser">
+      <Column Name="UserId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="LastName" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="ProviderTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CredentialId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SpecialityId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PracticeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BPRPExpiryDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DRPExpiryDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="HSRPExpiryDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PracticeSiteId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PracticeRoleId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Practice_PracticeUser" Member="Practice" ThisKey="PracticeId" OtherKey="PracticeId" Type="Practice" IsForeignKey="true" />
+      <Association Name="PracticeRole_PracticeUser" Member="PracticeRole" ThisKey="PracticeRoleId" OtherKey="PracticeRoleId" Type="PracticeRole" IsForeignKey="true" />
+      <Association Name="PracticeSite_PracticeUser" Member="PracticeSite" ThisKey="PracticeSiteId" OtherKey="PracticeSiteId" Type="PracticeSite" IsForeignKey="true" />
+      <Association Name="Credential_PracticeUser" Member="Credential" ThisKey="CredentialId" OtherKey="CredentialId" Type="Credential" IsForeignKey="true" />
+      <Association Name="User_PracticeUser" Member="User" ThisKey="UserId" OtherKey="UserId" Type="User" IsForeignKey="true" />
+      <Association Name="ProviderType_PracticeUser" Member="ProviderType" ThisKey="ProviderTypeId" OtherKey="ProviderTypeId" Type="ProviderType" IsForeignKey="true" />
+      <Association Name="Speciality_PracticeUser" Member="Speciality" ThisKey="SpecialityId" OtherKey="SpecialityId" Type="Speciality" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Project" Member="Projects">
+    <Type Name="Project">
+      <Column Name="ProjectId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LastUpdatedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastUpdatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AccessLevelId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Project_ProjectAssignment" Member="ProjectAssignments" ThisKey="ProjectId" OtherKey="ProjectId" Type="ProjectAssignment" />
+      <Association Name="Project_ProjectSection" Member="ProjectSections" ThisKey="ProjectId" OtherKey="ProjectId" Type="ProjectSection" />
+      <Association Name="Project_ProjectUsage" Member="ProjectUsages" ThisKey="ProjectId" OtherKey="ProjectId" Type="ProjectUsage" />
+      <Association Name="AccessLevel_Project" Member="AccessLevel" ThisKey="AccessLevelId" OtherKey="AccessLevelId" Type="AccessLevel" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProjectAssignment" Member="ProjectAssignments">
+    <Type Name="ProjectAssignment">
+      <Column Name="ProjectAssignmentId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProjectId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProjectSectionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EnterpriseId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MedicalGroupId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PracticeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Enterprise_ProjectAssignment" Member="Enterprise" ThisKey="EnterpriseId" OtherKey="EnterpriseId" Type="Enterprise" IsForeignKey="true" />
+      <Association Name="MedicalGroup_ProjectAssignment" Member="MedicalGroup" ThisKey="MedicalGroupId" OtherKey="MedicalGroupId" Type="MedicalGroup" IsForeignKey="true" />
+      <Association Name="Practice_ProjectAssignment" Member="Practice" ThisKey="PracticeId" OtherKey="PracticeId" Type="Practice" IsForeignKey="true" />
+      <Association Name="Project_ProjectAssignment" Member="Project" ThisKey="ProjectId" OtherKey="ProjectId" Type="Project" IsForeignKey="true" />
+      <Association Name="ProjectSection_ProjectAssignment" Member="ProjectSection" ThisKey="ProjectSectionId" OtherKey="ProjectSectionId" Type="ProjectSection" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProjectDocument" Member="ProjectDocuments">
+    <Type Name="ProjectDocument">
+      <Column Name="ProjectDocumentId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProjectSectionId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="Link" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Image" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="UploadedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UploadedBy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TemplateId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FormId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProjectUsageId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Form_ProjectDocument" Member="Form" ThisKey="FormId" OtherKey="FormId" Type="Form" IsForeignKey="true" />
+      <Association Name="ProjectSection_ProjectDocument" Member="ProjectSection" ThisKey="ProjectSectionId" OtherKey="ProjectSectionId" Type="ProjectSection" IsForeignKey="true" />
+      <Association Name="ProjectUsage_ProjectDocument" Member="ProjectUsage" ThisKey="ProjectUsageId" OtherKey="ProjectUsageId" Type="ProjectUsage" IsForeignKey="true" />
+      <Association Name="Template_ProjectDocument" Member="Template" ThisKey="TemplateId" OtherKey="TemplateId" Type="Template" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProjectSection" Member="ProjectSections">
+    <Type Name="ProjectSection">
+      <Column Name="ProjectSectionId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ParentProjectSectionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ProjectId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SectionTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TemplateId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FormId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AccessLevelId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ToolLevelId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SequenceNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fkTemplateOptionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ProjectSection_ProjectAssignment" Member="ProjectAssignments" ThisKey="ProjectSectionId" OtherKey="ProjectSectionId" Type="ProjectAssignment" />
+      <Association Name="ProjectSection_ProjectDocument" Member="ProjectDocuments" ThisKey="ProjectSectionId" OtherKey="ProjectSectionId" Type="ProjectDocument" />
+      <Association Name="ProjectSection_ProjectSection" Member="ProjectSections" ThisKey="ProjectSectionId" OtherKey="ParentProjectSectionId" Type="ProjectSection" />
+      <Association Name="AccessLevel_ProjectSection" Member="AccessLevel" ThisKey="AccessLevelId" OtherKey="AccessLevelId" Type="AccessLevel" IsForeignKey="true" />
+      <Association Name="Form_ProjectSection" Member="Form" ThisKey="FormId" OtherKey="FormId" Type="Form" IsForeignKey="true" />
+      <Association Name="ProjectSection_ProjectSection" Member="ProjectSection1" ThisKey="ParentProjectSectionId" OtherKey="ProjectSectionId" Type="ProjectSection" IsForeignKey="true" />
+      <Association Name="Project_ProjectSection" Member="Project" ThisKey="ProjectId" OtherKey="ProjectId" Type="Project" IsForeignKey="true" />
+      <Association Name="SectionType_ProjectSection" Member="SectionType" ThisKey="SectionTypeId" OtherKey="SectionTypeId" Type="SectionType" IsForeignKey="true" />
+      <Association Name="Template_ProjectSection" Member="Template" ThisKey="TemplateId" OtherKey="TemplateId" Type="Template" IsForeignKey="true" />
+      <Association Name="TemplateOption_ProjectSection" Member="TemplateOption" ThisKey="fkTemplateOptionId" OtherKey="TemplateOptionId" Type="TemplateOption" IsForeignKey="true" />
+      <Association Name="ToolLevel_ProjectSection" Member="ToolLevel" ThisKey="ToolLevelId" OtherKey="ToolLevelId" Type="ToolLevel" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProjectUsage" Member="ProjectUsages">
+    <Type Name="ProjectUsage">
+      <Column Name="ProjectUsageId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProjectId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PracticeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SequenceNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsVisible" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="ProjectUsage_FilledAnswer" Member="FilledAnswers" ThisKey="ProjectUsageId" OtherKey="ProjectUsageId" Type="FilledAnswer" />
+      <Association Name="ProjectUsage_FilledQuestionnaire" Member="FilledQuestionnaires" ThisKey="ProjectUsageId" OtherKey="ProjectUsageId" Type="FilledQuestionnaire" />
+      <Association Name="ProjectUsage_NCQASubmissionRequest" Member="NCQASubmissionRequests" ThisKey="ProjectUsageId" OtherKey="ProjectUsageId" Type="NCQASubmissionRequest" />
+      <Association Name="ProjectUsage_ProjectDocument" Member="ProjectDocuments" ThisKey="ProjectUsageId" OtherKey="ProjectUsageId" Type="ProjectDocument" />
+      <Association Name="Practice_ProjectUsage" Member="Practice" ThisKey="PracticeId" OtherKey="PracticeId" Type="Practice" IsForeignKey="true" />
+      <Association Name="Project_ProjectUsage" Member="Project" ThisKey="ProjectId" OtherKey="ProjectId" Type="Project" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProviderType" Member="ProviderTypes">
+    <Type Name="ProviderType">
+      <Column Name="ProviderTypeId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="ProviderType_PracticeUser" Member="PracticeUsers" ThisKey="ProviderTypeId" OtherKey="ProviderTypeId" Type="PracticeUser" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Relationship" Member="Relationships">
+    <Type Name="Relationship">
+      <Column Name="RelationshipId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Relationship_PracticeConsultant" Member="PracticeConsultants" ThisKey="RelationshipId" OtherKey="RelationshipId" Type="PracticeConsultant" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ReportSection" Member="ReportSections">
+    <Type Name="ReportSection">
+      <Column Name="ReportSectionId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ParentReportSectionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ContentType" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MedicalGroupId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Role" Member="Roles">
+    <Type Name="Role">
+      <Column Name="RoleId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Role_User" Member="Users" ThisKey="RoleId" OtherKey="RoleId" Type="User" />
+      <Association Name="Role_Page" Member="Pages" ThisKey="RoleId" OtherKey="RoleId" Type="Page" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ScoringRule" Member="ScoringRules">
+    <Type Name="ScoringRule">
+      <Column Name="ScoringRuleId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="KnowledgeBaseTemplateId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Score" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="MinYesFactor" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaxYesFactor" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MustPresentFactorSequence" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="AbsentFactorSequence" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MustPassFactorSequence" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="KnowledgeBaseTemplate_ScoringRule" Member="KnowledgeBaseTemplate" ThisKey="KnowledgeBaseTemplateId" OtherKey="KnowledgeBaseTemplateId" Type="KnowledgeBaseTemplate" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SectionType" Member="SectionTypes">
+    <Type Name="SectionType">
+      <Column Name="SectionTypeId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SectionName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="SectionType_ProjectSection" Member="ProjectSections" ThisKey="SectionTypeId" OtherKey="SectionTypeId" Type="ProjectSection" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Speciality" Member="Specialities">
+    <Type Name="Speciality">
+      <Column Name="SpecialityId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Speciality_Practice" Member="Practices" ThisKey="SpecialityId" OtherKey="SpecialityId" Type="Practice" />
+      <Association Name="Speciality_PracticeSite" Member="PracticeSites" ThisKey="SpecialityId" OtherKey="SpecialityId" Type="PracticeSite" />
+      <Association Name="Speciality_PracticeUser" Member="PracticeUsers" ThisKey="SpecialityId" OtherKey="SpecialityId" Type="PracticeUser" />
+    </Type>
+  </Table>
+  <Table Name="dbo.StandardDocument" Member="StandardDocuments">
+    <Type Name="StandardDocument">
+      <Column Name="StandardDocumentId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StandardFolderId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="Link" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Image" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="UploadedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UploadedBy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="StandardFolder_StandardDocument" Member="StandardFolder" ThisKey="StandardFolderId" OtherKey="StandardFolderId" Type="StandardFolder" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.StandardFolder" Member="StandardFolders">
+    <Type Name="StandardFolder">
+      <Column Name="StandardFolderId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="StandardFolder_StandardDocument" Member="StandardDocuments" ThisKey="StandardFolderId" OtherKey="StandardFolderId" Type="StandardDocument" />
+      <Association Name="StandardFolder_Template" Member="Templates" ThisKey="StandardFolderId" OtherKey="StandardFolderId" Type="Template" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SubmissionStatus" Member="SubmissionStatus">
+    <Type Name="SubmissionStatus">
+      <Column Name="SubmissionStatusId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="SubmissionStatus_NCQASubmissionRequest" Member="NCQASubmissionRequests" ThisKey="SubmissionStatusId" OtherKey="StatusId" Type="NCQASubmissionRequest" />
+      <Association Name="SubmissionStatus_PracticeSiteSubmission" Member="PracticeSiteSubmissions" ThisKey="SubmissionStatusId" OtherKey="StatusId" Type="PracticeSiteSubmission" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SystemInfo" Member="SystemInfos">
+    <Type Name="SystemInfo">
+      <Column Name="SystemInfoId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="[Key]" Member="Key" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Value" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="EnterpriseId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Enterprise_SystemInfo" Member="Enterprise" ThisKey="EnterpriseId" OtherKey="EnterpriseId" Type="Enterprise" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Template" Member="Templates">
+    <Type Name="Template">
+      <Column Name="TemplateId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="ShortName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="TemplateTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TemplateCategoryId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AccessLevelId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LastUpdatedBy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LastUpdatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PracticeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EnterpriseId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MedicalGroupId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SubmitActionId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsCorporate" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DocPath" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="ToolLevelId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HasStandardFolder" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="StandardFolderId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HasDocumentStore" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DocumentStoreName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Template_KnowledgeBaseTemplate" Member="KnowledgeBaseTemplates" ThisKey="TemplateId" OtherKey="TemplateId" Type="KnowledgeBaseTemplate" />
+      <Association Name="Template_ProjectDocument" Member="ProjectDocuments" ThisKey="TemplateId" OtherKey="TemplateId" Type="ProjectDocument" />
+      <Association Name="Template_ProjectSection" Member="ProjectSections" ThisKey="TemplateId" OtherKey="TemplateId" Type="ProjectSection" />
+      <Association Name="Template_TemplateOption" Member="TemplateOptions" ThisKey="TemplateId" OtherKey="fkTemplateId" Type="TemplateOption" />
+      <Association Name="StandardFolder_Template" Member="StandardFolder" ThisKey="StandardFolderId" OtherKey="StandardFolderId" Type="StandardFolder" IsForeignKey="true" />
+      <Association Name="Enterprise_Template" Member="Enterprise" ThisKey="EnterpriseId" OtherKey="EnterpriseId" Type="Enterprise" IsForeignKey="true" />
+      <Association Name="MedicalGroup_Template" Member="MedicalGroup" ThisKey="MedicalGroupId" OtherKey="MedicalGroupId" Type="MedicalGroup" IsForeignKey="true" />
+      <Association Name="Practice_Template" Member="Practice" ThisKey="PracticeId" OtherKey="PracticeId" Type="Practice" IsForeignKey="true" />
+      <Association Name="AccessLevel_Template" Member="AccessLevel" ThisKey="AccessLevelId" OtherKey="AccessLevelId" Type="AccessLevel" IsForeignKey="true" />
+      <Association Name="TemplateCategory_Template" Member="TemplateCategory" ThisKey="TemplateCategoryId" OtherKey="TemplateCategoryId" Type="TemplateCategory" IsForeignKey="true" />
+      <Association Name="TemplateSubmitAction_Template" Member="TemplateSubmitAction" ThisKey="SubmitActionId" OtherKey="TemplateSubmitActionId" Type="TemplateSubmitAction" IsForeignKey="true" />
+      <Association Name="TemplateType_Template" Member="TemplateType" ThisKey="TemplateTypeId" OtherKey="TemplateTypeId" Type="TemplateType" IsForeignKey="true" />
+      <Association Name="ToolLevel_Template" Member="ToolLevel" ThisKey="ToolLevelId" OtherKey="ToolLevelId" Type="ToolLevel" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TemplateCategory" Member="TemplateCategories">
+    <Type Name="TemplateCategory">
+      <Column Name="TemplateCategoryId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TemplateCategory" Member="TemplateCategory1" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="TemplateCategory_Template" Member="Templates" ThisKey="TemplateCategoryId" OtherKey="TemplateCategoryId" Type="Template" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TemplateDocument" Member="TemplateDocuments">
+    <Type Name="TemplateDocument">
+      <Column Name="DocumentId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="ReferencePages" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Path" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="RelevencyLevel" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DocumentType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="TemplateDocument_FilledTemplateDocument" Member="FilledTemplateDocuments" ThisKey="DocumentId" OtherKey="DocumentId" Type="FilledTemplateDocument" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TemplateOption" Member="TemplateOptions">
+    <Type Name="TemplateOption">
+      <Column Name="TemplateOptionId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="AccessLevelId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fkTemplateId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="TemplateOption_FilledAnswersOption" Member="FilledAnswersOptions" ThisKey="TemplateOptionId" OtherKey="OptionId" Type="FilledAnswersOption" />
+      <Association Name="TemplateOption_ProjectSection" Member="ProjectSections" ThisKey="TemplateOptionId" OtherKey="fkTemplateOptionId" Type="ProjectSection" />
+      <Association Name="TemplateOption_TemplateOptionAssignment" Member="TemplateOptionAssignments" ThisKey="TemplateOptionId" OtherKey="TemplateOptionId" Type="TemplateOptionAssignment" />
+      <Association Name="AccessLevel_TemplateOption" Member="AccessLevel" ThisKey="AccessLevelId" OtherKey="AccessLevelId" Type="AccessLevel" IsForeignKey="true" />
+      <Association Name="Template_TemplateOption" Member="Template" ThisKey="fkTemplateId" OtherKey="TemplateId" Type="Template" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TemplateOptionAssignment" Member="TemplateOptionAssignments">
+    <Type Name="TemplateOptionAssignment">
+      <Column Name="TemplateOptionAssignmentId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TemplateOptionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EnterpriseId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MedicalGroupId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PracticeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Enterprise_TemplateOptionAssignment" Member="Enterprise" ThisKey="EnterpriseId" OtherKey="EnterpriseId" Type="Enterprise" IsForeignKey="true" />
+      <Association Name="MedicalGroup_TemplateOptionAssignment" Member="MedicalGroup" ThisKey="MedicalGroupId" OtherKey="MedicalGroupId" Type="MedicalGroup" IsForeignKey="true" />
+      <Association Name="Practice_TemplateOptionAssignment" Member="Practice" ThisKey="PracticeId" OtherKey="PracticeId" Type="Practice" IsForeignKey="true" />
+      <Association Name="TemplateOption_TemplateOptionAssignment" Member="TemplateOption" ThisKey="TemplateOptionId" OtherKey="TemplateOptionId" Type="TemplateOption" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TemplateSubmitAction" Member="TemplateSubmitActions">
+    <Type Name="TemplateSubmitAction">
+      <Column Name="TemplateSubmitActionId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SubmitTo" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="SubmitButtonText" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SubmitType" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="SubmitAddress" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="TemplateSubmitAction_Template" Member="Templates" ThisKey="TemplateSubmitActionId" OtherKey="SubmitActionId" Type="Template" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TemplateType" Member="TemplateTypes">
+    <Type Name="TemplateType">
+      <Column Name="TemplateTypeId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TemplateType" Member="TemplateType1" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Association Name="TemplateType_KnowledgeBaseType" Member="KnowledgeBaseTypes" ThisKey="TemplateTypeId" OtherKey="TemplateTypeId" Type="KnowledgeBaseType" />
+      <Association Name="TemplateType_Template" Member="Templates" ThisKey="TemplateTypeId" OtherKey="TemplateTypeId" Type="Template" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ToolDocument" Member="ToolDocuments">
+    <Type Name="ToolDocument">
+      <Column Name="ToolDocumentId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ToolSectionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Link" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="UploadedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UploadedBy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="Image" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="PraticeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Practice_ToolDocument" Member="Practice" ThisKey="PraticeId" OtherKey="PracticeId" Type="Practice" IsForeignKey="true" />
+      <Association Name="ToolSection_ToolDocument" Member="ToolSection" ThisKey="ToolSectionId" OtherKey="ToolSectionId" Type="ToolSection" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ToolLevel" Member="ToolLevels">
+    <Type Name="ToolLevel">
+      <Column Name="ToolLevelId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ToolLevelName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="ToolLevel_Form" Member="Forms" ThisKey="ToolLevelId" OtherKey="ToolLevelId" Type="Form" />
+      <Association Name="ToolLevel_ProjectSection" Member="ProjectSections" ThisKey="ToolLevelId" OtherKey="ToolLevelId" Type="ProjectSection" />
+      <Association Name="ToolLevel_Template" Member="Templates" ThisKey="ToolLevelId" OtherKey="ToolLevelId" Type="Template" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ToolSection" Member="ToolSections">
+    <Type Name="ToolSection">
+      <Column Name="ToolSectionId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ParentToolSectionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ContentType" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MedicalGroupId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ToolSection_EnterpriseToolSection" Member="EnterpriseToolSections" ThisKey="ToolSectionId" OtherKey="ToolSectionId" Type="EnterpriseToolSection" />
+      <Association Name="ToolSection_ToolDocument" Member="ToolDocuments" ThisKey="ToolSectionId" OtherKey="ToolSectionId" Type="ToolDocument" />
+      <Association Name="ToolSection_ToolSection" Member="ToolSections" ThisKey="ToolSectionId" OtherKey="ParentToolSectionId" Type="ToolSection" />
+      <Association Name="MedicalGroup_ToolSection" Member="MedicalGroup" ThisKey="MedicalGroupId" OtherKey="MedicalGroupId" Type="MedicalGroup" IsForeignKey="true" />
+      <Association Name="ToolSection_ToolSection" Member="ToolSection1" ThisKey="ParentToolSectionId" OtherKey="ToolSectionId" Type="ToolSection" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.usp_Get_All_KnowledgeBase_Template" Method="usp_Get_All_KnowledgeBase_Template">
+    <Parameter Name="param_TemplateId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="param_ProjectUsageId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="param_SiteId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="param_ParentId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="usp_Get_All_KnowledgeBase_TemplateResult">
+      <Column Name="KnowledgeBaseTemplateId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="KnowledgeBaseId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TemplateId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ParentKnowledgeBaseId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Sequence" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AnswerTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaxPoints" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsCritical" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CriticalToolTip" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="IsDataBox" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DataBoxHeader" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="IsCorporateElement" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsInfoDocEnable" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ReferencePages" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="DisplayName" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="InstructionText" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MustPass" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="FilledAnswersId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AnswerTypeEnumId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Complete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DataBoxComments" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DefaultScore" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="PoliciesDocumentCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ReportsDocumentCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ScreenShotsDocumentCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LogsOrToolsDocumentCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OtherDocumentsCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PrivateNotes" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ReviewNotes" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="EvaluationNotes" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DiscreteValue" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.usp_Save_FilledAnswers" Method="usp_Save_FilledAnswers">
+    <Parameter Name="param_TemplateId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="param_ProjectUsageId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="param_SiteId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="param_ParentKnowledgeBaseId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="param_InsertParent" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.usp_Get_All_Template_Documents" Method="usp_Get_All_Template_Documents">
+    <Parameter Name="param_TemplateId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="param_ProjectUsageId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="param_SiteId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="usp_Get_All_Template_DocumentsResult">
+      <Column Name="Name" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="ReferencePages" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DocPath" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="RelevencyLevel" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DocumentType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="KnowledgeBaseTemplateId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="KnowledgeBaseId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TemplateId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ParentKnowledgeBaseId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Sequence" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DataBoxHeader" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="DataBoxComments" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PrivateNotes" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ReviewNotes" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="EvaluationNotes" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.usp_Get_Answer_Type_Weightage" Method="usp_Get_Answer_Type_Weightage">
+    <Parameter Name="param_AnsTypeId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="param_ProjectUsageId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="param_SiteId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="param_KBTempId" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.usp_Get_Group_Project_Status" Method="usp_Get_Group_Project_Status">
+    <Parameter Name="param_Factors" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="param_ConsultantIds" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="param_PracticeSizeId" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="param_MedicalGroupId" Type="System.Int32" DbType="Int" />
+  </Function>
+  <Function Name="dbo.usp_Get_OverAll_Project_Status" Method="usp_Get_OverAll_Project_Status">
+    <Parameter Name="param_Factors" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="param_ConsultantIds" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="param_MedicalGroupId" Type="System.Int32" DbType="Int" />
+  </Function>
+  <Function Name="dbo.usp_Get_OverAllBar_Project_Status" Method="usp_Get_OverAllBar_Project_Status">
+    <Parameter Name="param_Factors" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="param_ConsultantIds" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="param_PracticeSizeId" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="param_MedicalGroupId" Type="System.Int32" DbType="Int" />
+  </Function>
+  <Function Name="dbo.usp_Get_PCMH_Report_Data" Method="usp_Get_PCMH_Report_Data">
+    <Parameter Name="param_Factors" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="param_ConsultantIds" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="param_PracticeSizeId" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="param_PercentComplete" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="param_MedicalGroupId" Type="System.Int32" DbType="Int" />
+  </Function>
+  <Function Name="dbo.usp_Get_Practice_Details" Method="usp_Get_Practice_Details">
+    <Parameter Name="param_EnterpriseId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="param_UserId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="param_UserType" Type="System.String" DbType="VarChar(100)" />
+    <ElementType Name="usp_Get_Practice_DetailsResult">
+      <Column Name="SecurePracticeId" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="PracticeName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="ProjectUsageId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PracticeSiteId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SiteName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Points" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Documents" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="LastActivity" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ContactName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="ContactPhone" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="EmailText" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="DateForeColor" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>

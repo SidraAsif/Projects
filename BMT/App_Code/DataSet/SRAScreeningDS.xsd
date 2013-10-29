@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SRAScreeningDS" targetNamespace="http://tempuri.org/SRAScreeningDS.xsd" xmlns:mstns="http://tempuri.org/SRAScreeningDS.xsd" xmlns="http://tempuri.org/SRAScreeningDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SRAScreeningDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="SRAScreeningDS" msprop:Generator_UserDSName="SRAScreeningDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SRAScreeningDT" msprop:Generator_TableClassName="SRAScreeningDTDataTable" msprop:Generator_TableVarName="tableSRAScreeningDT" msprop:Generator_TablePropName="SRAScreeningDT" msprop:Generator_RowDeletingName="SRAScreeningDTRowDeleting" msprop:Generator_UserTableName="SRAScreeningDT" msprop:Generator_RowChangingName="SRAScreeningDTRowChanging" msprop:Generator_RowEvHandlerName="SRAScreeningDTRowChangeEventHandler" msprop:Generator_RowDeletedName="SRAScreeningDTRowDeleted" msprop:Generator_RowEvArgName="SRAScreeningDTRowChangeEvent" msprop:Generator_RowChangedName="SRAScreeningDTRowChanged" msprop:Generator_RowClassName="SRAScreeningDTRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Topic" msprop:Generator_ColumnVarNameInTable="columnTopic" msprop:Generator_ColumnPropNameInRow="Topic" msprop:Generator_ColumnPropNameInTable="TopicColumn" msprop:Generator_UserColumnName="Topic" type="xs:string" minOccurs="0" />
+              <xs:element name="Questions" msprop:Generator_ColumnVarNameInTable="columnQuestions" msprop:Generator_ColumnPropNameInRow="Questions" msprop:Generator_ColumnPropNameInTable="QuestionsColumn" msprop:Generator_UserColumnName="Questions" type="xs:string" minOccurs="0" />
+              <xs:element name="Response" msprop:Generator_ColumnVarNameInTable="columnResponse" msprop:Generator_ColumnPropNameInRow="Response" msprop:Generator_ColumnPropNameInTable="ResponseColumn" msprop:Generator_UserColumnName="Response" type="xs:string" minOccurs="0" />
+              <xs:element name="ThreatVulnerability" msprop:Generator_ColumnVarNameInTable="columnThreatVulnerability" msprop:Generator_ColumnPropNameInRow="ThreatVulnerability" msprop:Generator_ColumnPropNameInTable="ThreatVulnerabilityColumn" msprop:Generator_UserColumnName="ThreatVulnerability" type="xs:string" minOccurs="0" />
+              <xs:element name="PeopleOrProcess" msprop:Generator_ColumnVarNameInTable="columnPeopleOrProcess" msprop:Generator_ColumnPropNameInRow="PeopleOrProcess" msprop:Generator_ColumnPropNameInTable="PeopleOrProcessColumn" msprop:Generator_UserColumnName="PeopleOrProcess" type="xs:string" minOccurs="0" />
+              <xs:element name="Technology" msprop:Generator_ColumnVarNameInTable="columnTechnology" msprop:Generator_ColumnPropNameInRow="Technology" msprop:Generator_ColumnPropNameInTable="TechnologyColumn" msprop:Generator_UserColumnName="Technology" type="xs:string" minOccurs="0" />
+              <xs:element name="ElementId" msprop:Generator_ColumnVarNameInTable="columnElementId" msprop:Generator_ColumnPropNameInRow="ElementId" msprop:Generator_ColumnPropNameInTable="ElementIdColumn" msprop:Generator_UserColumnName="ElementId" type="xs:int" minOccurs="0" />
+              <xs:element name="ElementName" msprop:Generator_ColumnVarNameInTable="columnElementName" msprop:Generator_ColumnPropNameInRow="ElementName" msprop:Generator_ColumnPropNameInTable="ElementNameColumn" msprop:Generator_UserColumnName="ElementName" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

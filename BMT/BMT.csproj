@@ -1,0 +1,1251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A7041BE8-730F-4E76-A904-8FAE642DAC70}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BMT</RootNamespace>
+    <AssemblyName>BMT</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <UseIISExpress>true</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <FilesToIncludeForPublish>OnlyFilesToRunTheApp</FilesToIncludeForPublish>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <FilesToIncludeForPublish>OnlyFilesToRunTheApp</FilesToIncludeForPublish>
+    <ExcludeGeneratedDebugSymbol>true</ExcludeGeneratedDebugSymbol>
+    <ExcludeApp_Data>true</ExcludeApp_Data>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp, Version=5.3.2.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\BMT\assembly files\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BMTBLL\bin\Release\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Ncqa.Iss.DocumentService.Interface, Version=1.0.0.0, Culture=neutral, PublicKeyToken=18203cdebc38c506, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\BMT\assembly files\Ncqa.Iss.DocumentService.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="Ncqa.Library, Version=1.0.0.0, Culture=neutral, PublicKeyToken=2f928a6fc3ae59a7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\BMT\assembly files\Ncqa.Library.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\ChangePassword.aspx" />
+    <Content Include="Account\ForgotPassword.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Error\FileNotFound.htm" />
+    <Content Include="Error\GenericErrorPage.htm" />
+    <Content Include="Error\NoAccess.htm" />
+    <Content Include="favicon.ico" />
+    <Content Include="FileUpload.aspx" />
+    <Content Include="GenericFileUpload.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="LogoUploader.aspx" />
+    <Content Include="MOReFileUpload.aspx" />
+    <Content Include="ProjectFileUpload.aspx" />
+    <Content Include="Scripts\commonDoc.js" />
+    <Content Include="Scripts\configureProjects.js" />
+    <Content Include="Scripts\consultant.js" />
+    <Content Include="Scripts\corporateSubmission.js" />
+    <Content Include="Scripts\dashboard.js" />
+    <Content Include="Scripts\jgcharts.js" />
+    <Content Include="Scripts\jgcharts.pack.js" />
+    <Content Include="Scripts\JQChart\excanvas.js" />
+    <Content Include="Scripts\JQChart\jquery-1.5.1.min.js" />
+    <Content Include="Scripts\JQChart\jquery.jqChart.min.js" />
+    <Content Include="Scripts\jquery.contextMenu.js" />
+    <Content Include="Scripts\jquery.liveQuery.js" />
+    <Content Include="Scripts\ajaxfileupload.js" />
+    <Content Include="Scripts\apprise-1.5.min.js" />
+    <Content Include="Scripts\bmtMaster.js" />
+    <Content Include="Scripts\common.js" />
+    <Content Include="Scripts\expressAssessment.js" />
+    <Content Include="Scripts\expressAssessmentResult.js" />
+    <Content Include="Scripts\field-waterEffect.js" />
+    <Content Include="Scripts\fileUpload.js" />
+    <Content Include="Scripts\general.js" />
+    <Content Include="Scripts\jquery-1.7.1.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.12.custom.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.16.custom.min.js" />
+    <Content Include="Scripts\jquery.markitup.js" />
+    <Content Include="Scripts\jquery.maxLength-min.js" />
+    <Content Include="Scripts\jquery.numeric.js" />
+    <Content Include="Scripts\jquery.reverseorder.js" />
+    <Content Include="Scripts\jquery.reverseorder.packed.js" />
+    <Content Include="Scripts\jquery.tools.min.js" />
+    <Content Include="Scripts\knowledgeBase.js" />
+    <Content Include="Scripts\library.js" />
+    <Content Include="Scripts\markitup.set.js" />
+    <Content Include="Scripts\MORe.js" />
+    <Content Include="Scripts\MORecorporateSubmission.js" />
+    <Content Include="Scripts\MOReFileUpload.js" />
+    <Content Include="Scripts\MOReRequirements.js" />
+    <Content Include="Scripts\MOReSummary.js" />
+    <Content Include="Scripts\MOReUploadedDocs.js" />
+    <Content Include="Scripts\ncqaRequirements.js" />
+    <Content Include="Scripts\ncqaSubmission.js" />
+    <Content Include="Scripts\ncqaSummary.js" />
+    <Content Include="Scripts\ncqaUploadedDocs.js" />
+    <Content Include="Scripts\pcmh.js" />
+    <Content Include="Scripts\pcmhReports.js" />
+    <Content Include="Scripts\priceCalculator.js" />
+    <Content Include="Scripts\priceComparison.js" />
+    <Content Include="Scripts\project.js" />
+    <Content Include="Scripts\querystring-0.9.0.js" />
+    <Content Include="Scripts\ScoringRules.js" />
+    <Content Include="Scripts\settings.js" />
+    <Content Include="Scripts\SRA.js" />
+    <Content Include="Scripts\SRAInventory.js" />
+    <Content Include="Scripts\Templates.js" />
+    <Content Include="Scripts\toolBox.js" />
+    <Content Include="Scripts\tree.js" />
+    <Content Include="Themes\apprise.min.css" />
+    <Content Include="Themes\display-message.css" />
+    <Content Include="Themes\error.css" />
+    <Content Include="Themes\ExpressAssessment.css" />
+    <Content Include="Themes\field-waterEffect.css" />
+    <Content Include="Themes\fileUpload.css" />
+    <Content Include="Themes\Icons\01.png" />
+    <Content Include="Themes\Icons\02.png" />
+    <Content Include="Themes\Icons\03.png" />
+    <Content Include="Themes\Icons\04.png" />
+    <Content Include="Themes\Icons\05.png" />
+    <Content Include="Themes\Icons\06.png" />
+    <Content Include="Themes\Icons\07.png" />
+    <Content Include="Themes\Icons\08.png" />
+    <Content Include="Themes\Icons\09.png" />
+    <Content Include="Themes\Icons\10.png" />
+    <Content Include="Themes\Icons\11.png" />
+    <Content Include="Themes\Icons\12.png" />
+    <Content Include="Themes\Icons\13.png" />
+    <Content Include="Themes\Icons\14.png" />
+    <Content Include="Themes\Icons\15.png" />
+    <Content Include="Themes\Icons\16.png" />
+    <Content Include="Themes\Icons\17.png" />
+    <Content Include="Themes\Icons\18.png" />
+    <Content Include="Themes\Icons\19.png" />
+    <Content Include="Themes\Icons\20.png" />
+    <Content Include="Themes\Icons\21.png" />
+    <Content Include="Themes\Icons\22.png" />
+    <Content Include="Themes\Icons\23.png" />
+    <Content Include="Themes\Icons\24.png" />
+    <Content Include="Themes\Icons\25.png" />
+    <Content Include="Themes\Icons\26.png" />
+    <Content Include="Themes\Icons\27.png" />
+    <Content Include="Themes\Icons\28.png" />
+    <Content Include="Themes\Icons\29.png" />
+    <Content Include="Themes\Icons\30.png" />
+    <Content Include="Themes\Icons\31.png" />
+    <Content Include="Themes\Icons\32.png" />
+    <Content Include="Themes\Icons\33.png" />
+    <Content Include="Themes\Icons\34.png" />
+    <Content Include="Themes\Icons\35.png" />
+    <Content Include="Themes\Icons\36.png" />
+    <Content Include="Themes\Icons\37.png" />
+    <Content Include="Themes\Icons\38.png" />
+    <Content Include="Themes\Icons\39.png" />
+    <Content Include="Themes\Icons\40.png" />
+    <Content Include="Themes\Icons\41.png" />
+    <Content Include="Themes\Icons\42.png" />
+    <Content Include="Themes\Icons\43.png" />
+    <Content Include="Themes\Icons\44.png" />
+    <Content Include="Themes\Icons\45.png" />
+    <Content Include="Themes\Icons\46.png" />
+    <Content Include="Themes\Icons\47.png" />
+    <Content Include="Themes\Icons\48.png" />
+    <Content Include="Themes\Icons\49.png" />
+    <Content Include="Themes\Icons\50.png" />
+    <Content Include="Themes\Icons\51.png" />
+    <Content Include="Themes\Icons\52.png" />
+    <Content Include="Themes\Icons\53.png" />
+    <Content Include="Themes\Icons\54.png" />
+    <Content Include="Themes\Icons\55.png" />
+    <Content Include="Themes\Icons\56.png" />
+    <Content Include="Themes\Icons\57.png" />
+    <Content Include="Themes\Icons\58.png" />
+    <Content Include="Themes\Icons\59.png" />
+    <Content Include="Themes\Icons\60.png" />
+    <Content Include="Themes\Icons\61.png" />
+    <Content Include="Themes\Icons\62.png" />
+    <Content Include="Themes\Icons\63.png" />
+    <Content Include="Themes\Icons\64.png" />
+    <Content Include="Themes\Icons\65.png" />
+    <Content Include="Themes\Icons\66.png" />
+    <Content Include="Themes\Icons\ICI.png" />
+    <Content Include="Themes\Icons\UMH.png" />
+    <Content Include="Themes\Icons\WFD.png" />
+    <Content Include="Themes\Images\1.png" />
+    <Content Include="Themes\Images\add.png" />
+    <Content Include="Themes\Images\addcomment.png" />
+    <Content Include="Themes\Images\AddRootFolder.png" />
+    <Content Include="Themes\Images\admin-menu-hover.png" />
+    <Content Include="Themes\Images\admin-menu.png" />
+    <Content Include="Themes\Images\ajax-mini-loader.gif" />
+    <Content Include="Themes\Images\arrow-down-disable.png" />
+    <Content Include="Themes\Images\arrow-down.png" />
+    <Content Include="Themes\Images\arrow-up-disable.png" />
+    <Content Include="Themes\Images\arrow-up.png" />
+    <Content Include="Themes\Images\arrownext.png" />
+    <Content Include="Themes\Images\asc-desc.png" />
+    <Content Include="Themes\Images\asc.png" />
+    <Content Include="Themes\Images\bg-editor-bbcode.png" />
+    <Content Include="Themes\Images\bg-editor-html.png" />
+    <Content Include="Themes\Images\bg-editor-markdown.png" />
+    <Content Include="Themes\Images\bg-editor-textile.png" />
+    <Content Include="Themes\Images\bg-editor-wiki.png" />
+    <Content Include="Themes\Images\bold.png" />
+    <Content Include="Themes\Images\bubble-1a.gif" />
+    <Content Include="Themes\Images\bubble-1aa.gif" />
+    <Content Include="Themes\Images\bubble-1ab.gif" />
+    <Content Include="Themes\Images\bubble-1b.gif" />
+    <Content Include="Themes\Images\bubble-1c.gif" />
+    <Content Include="Themes\Images\bubble-2a.gif" />
+    <Content Include="Themes\Images\bubble-2b.gif" />
+    <Content Include="Themes\Images\bubble-2c.gif" />
+    <Content Include="Themes\Images\bubble-3a.gif" />
+    <Content Include="Themes\Images\bubble-3b.gif" />
+    <Content Include="Themes\Images\bubble-3c.gif" />
+    <Content Include="Themes\Images\bubble.gif" />
+    <Content Include="Themes\Images\bubble_filler-1a.gif" />
+    <Content Include="Themes\Images\bubble_filler-1aa.gif" />
+    <Content Include="Themes\Images\bubble_filler-1ab.gif" />
+    <Content Include="Themes\Images\bubble_filler-1b.gif" />
+    <Content Include="Themes\Images\bubble_filler-1c.gif" />
+    <Content Include="Themes\Images\bubble_filler-2a.gif" />
+    <Content Include="Themes\Images\bubble_filler-2b.gif" />
+    <Content Include="Themes\Images\bubble_filler-2c.gif" />
+    <Content Include="Themes\Images\bubble_filler-3a.gif" />
+    <Content Include="Themes\Images\bubble_filler-3b.gif" />
+    <Content Include="Themes\Images\bubble_filler-3c.gif" />
+    <Content Include="Themes\Images\bubble_filler.gif" />
+    <Content Include="Themes\Images\button.png" />
+    <Content Include="Themes\Images\calendar.gif" />
+    <Content Include="Themes\Images\but-bg.png" />
+    <Content Include="Themes\Images\but-bg02.png" />
+    <Content Include="Themes\Images\caution.png" />
+    <Content Include="Themes\Images\clean.png" />
+    <Content Include="Themes\Images\close.png" />
+    <Content Include="Themes\Images\cancel-cross.png" />
+    <Content Include="Themes\Images\cms-menu-hover.png" />
+    <Content Include="Themes\Images\cms-menu.png" />
+    <Content Include="Themes\Images\consultant-simple.png" />
+    <Content Include="Themes\Images\consultant-hover.png" />
+    <Content Include="Themes\Images\dashboard-hover.png" />
+    <Content Include="Themes\Images\dashboard.png" />
+    <Content Include="Themes\Images\dd.jpg" />
+    <Content Include="Themes\Images\delete.png" />
+    <Content Include="Themes\Images\desc.png" />
+    <Content Include="Themes\Images\doc-link.png" />
+    <Content Include="Themes\Images\Download.png" />
+    <Content Include="Themes\Images\edit-16.png" />
+    <Content Include="Themes\Images\edit-Disabled-16.png" />
+    <Content Include="Themes\Images\edit.png" />
+    <Content Include="Themes\Images\ehr-logo.png" />
+    <Content Include="Themes\Images\element-note.png" />
+    <Content Include="Themes\Images\email-icon.png" />
+    <Content Include="Themes\Images\error.png" />
+    <Content Include="Themes\Images\element-note-empty.png" />
+    <Content Include="Themes\Images\factor-note-empty.png" />
+    <Content Include="Themes\Images\factor-note.png" />
+    <Content Include="Themes\Images\from-botm.png" />
+    <Content Include="Themes\Images\from-cnt.png" />
+    <Content Include="Themes\Images\from-top.png" />
+    <Content Include="Themes\Images\from-top2.png" />
+    <Content Include="Themes\Images\GenericFileUploaderImage.png" />
+    <Content Include="Themes\Images\highrisk-2.png" />
+    <Content Include="Themes\Images\highrisk.png" />
+    <Content Include="Themes\Images\icon-help.png" />
+    <Content Include="Themes\Images\icon-home-hover.png" />
+    <Content Include="Themes\Images\icon-home.png" />
+    <Content Include="Themes\Images\icon-library-hover.png" />
+    <Content Include="Themes\Images\icon-library.png" />
+    <Content Include="Themes\Images\icon-prj.png" />
+    <Content Include="Themes\Images\icon-projects-hover.png" />
+    <Content Include="Themes\Images\icon-projects.png" />
+    <Content Include="Themes\Images\icon-search-small.png" />
+    <Content Include="Themes\Images\icon-search.png" />
+    <Content Include="Themes\Images\icon-settings-hover.png" />
+    <Content Include="Themes\Images\icon-settings.png" />
+    <Content Include="Themes\Images\icon-toolbox-hover.png" />
+    <Content Include="Themes\Images\icon-toolbox.png" />
+    <Content Include="Themes\Images\image.png" />
+    <Content Include="Themes\Images\import.png" />
+    <Content Include="Themes\Images\info.png" />
+    <Content Include="Themes\Images\italic.png" />
+    <Content Include="Themes\Images\left1.png" />
+    <Content Include="Themes\Images\leftdim.png" />
+    <Content Include="Themes\Images\link.png" />
+    <Content Include="Themes\Images\list-bullet.png" />
+    <Content Include="Themes\Images\list-numeric.png" />
+    <Content Include="Themes\Images\list-style.png" />
+    <Content Include="Themes\Images\loading.gif" />
+    <Content Include="Themes\Images\logo-bizmed.png" />
+    <Content Include="Themes\Images\logo-bizmed02.png" />
+    <Content Include="Themes\Images\lowrisk-2.png" />
+    <Content Include="Themes\Images\lowrisk.png" />
+    <Content Include="Themes\Images\mediumrisk-2.png" />
+    <Content Include="Themes\Images\mediumrisk.png" />
+    <Content Include="Themes\Images\minus-1.png" />
+    <Content Include="Themes\Images\Minus.png" />
+    <Content Include="Themes\Images\ncqa-info-ico.png" />
+    <Content Include="Themes\Images\NormalFolder.ico" />
+    <Content Include="Themes\Images\note-empty.png" />
+    <Content Include="Themes\Images\note.png" />
+    <Content Include="Themes\Images\Null.png" />
+    <Content Include="Themes\Images\ok.png" />
+    <Content Include="Themes\Images\picture.png" />
+    <Content Include="Themes\Images\plus-1.png" />
+    <Content Include="Themes\Images\Plus.png" />
+    <Content Include="Themes\Images\preview.png" />
+    <Content Include="Themes\Images\remove-16.png" />
+    <Content Include="Themes\Images\rename.jpg" />
+    <Content Include="Themes\Images\replace.png" />
+    <Content Include="Themes\Images\report-hover.png" />
+    <Content Include="Themes\Images\report.png" />
+    <Content Include="Themes\Images\right1.png" />
+    <Content Include="Themes\Images\rightdim.png" />
+    <Content Include="Themes\Images\RxOutreachBanner.png" />
+    <Content Include="Themes\Images\save-16.png" />
+    <Content Include="Themes\Images\save.png" />
+    <Content Include="Themes\Images\sp.png" />
+    <Content Include="Themes\Images\sra-tab-hover.png" />
+    <Content Include="Themes\Images\sra-tab.png" />
+    <Content Include="Themes\Images\stroke.png" />
+    <Content Include="Themes\Images\submenu.png" />
+    <Content Include="Themes\Images\submission-hover.png" />
+    <Content Include="Themes\Images\submission-simple.png" />
+    <Content Include="Themes\Images\submit-16.png" />
+    <Content Include="Themes\Images\Submit-Disabled-16.png" />
+    <Content Include="Themes\Images\success.png" />
+    <Content Include="Themes\Images\tab-01.png" />
+    <Content Include="Themes\Images\tab-02.png" />
+    <Content Include="Themes\Images\tab-Hover.png" />
+    <Content Include="Themes\Images\tab.png" />
+    <Content Include="Themes\Images\Template-hover.png" />
+    <Content Include="Themes\Images\Template.png" />
+    <Content Include="Themes\Images\top-header-wrapper-bg.png" />
+    <Content Include="Themes\Images\transformedAd.png" />
+    <Content Include="Themes\Images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Themes\Images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Themes\Images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Themes\Images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Themes\Images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="Themes\Images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Themes\Images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Themes\Images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Themes\Images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="Themes\Images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="Themes\Images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Themes\Images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Themes\Images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="Themes\Images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Themes\Images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Themes\Images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="Themes\Images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Themes\Images\ui-icons_217bc0_256x240.png" />
+    <Content Include="Themes\Images\ui-icons_222222_256x240.png" />
+    <Content Include="Themes\Images\ui-icons_228ef1_256x240.png" />
+    <Content Include="Themes\Images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Themes\Images\ui-icons_469bdd_256x240.png" />
+    <Content Include="Themes\Images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="Themes\Images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Themes\Images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Themes\Images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Themes\Images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="Themes\Images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Themes\Images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Themes\Images\upload.png" />
+    <Content Include="Themes\Images\uploadimg.png" />
+    <Content Include="Themes\Images\uploading-hover.png" />
+    <Content Include="Themes\Images\uploading.gif" />
+    <Content Include="Themes\Images\warning.png" />
+    <Content Include="Themes\Images\warning2.png" />
+    <Content Include="Themes\jquery-ui-1.8.12.custom.css" />
+    <Content Include="Themes\jquery-ui-1.8.16.custom.css" />
+    <Content Include="Themes\jquery.contextMenu.css" />
+    <Content Include="Themes\loading-panel.css" />
+    <Content Include="Themes\markitupstyle.css" />
+    <Content Include="Themes\NCQA.css" />
+    <Content Include="Themes\PCMH.css" />
+    <Content Include="Themes\popup.css" />
+    <Content Include="Themes\priceCalculator.css" />
+    <Content Include="Themes\SRA.css" />
+    <Content Include="Themes\style.css" />
+    <Content Include="UserControls\ConfigureProjectTemplate.ascx" />
+    <Content Include="UserControls\CreateEditTemplate.ascx" />
+    <Content Include="UserControls\CreateProject.ascx" />
+    <Content Include="UserControls\DisplayMessage.ascx" />
+    <Content Include="UserControls\DocumentVista.ascx" />
+    <Content Include="UserControls\EditTemplate.ascx" />
+    <Content Include="UserControls\ExpressAssessment.ascx" />
+    <Content Include="UserControls\ExpressAssessmentResult.ascx" />
+    <Content Include="UserControls\General.ascx" />
+    <Content Include="UserControls\ITConsultant.ascx" />
+    <Content Include="UserControls\LoadingPanel.ascx" />
+    <Content Include="UserControls\MORe.ascx" />
+    <Content Include="UserControls\MOReGeneral.ascx" />
+    <Content Include="UserControls\MOReRequirements.ascx" />
+    <Content Include="UserControls\MOReSummary.ascx" />
+    <Content Include="UserControls\NCQARequirements.ascx" />
+    <Content Include="UserControls\NCQASubmission.ascx" />
+    <Content Include="UserControls\NCQASummary.ascx" />
+    <Content Include="UserControls\PCMH.ascx" />
+    <Content Include="UserControls\PriceCalculator.ascx" />
+    <Content Include="UserControls\PriceComparison.ascx" />
+    <Content Include="UserControls\ScoringRules.ascx" />
+    <Content Include="UserControls\SecurityRiskAssessment.ascx" />
+    <Content Include="UserControls\SRAFindings.ascx" />
+    <Content Include="UserControls\SRAFollowup.ascx" />
+    <Content Include="UserControls\SRAInventory.ascx" />
+    <Content Include="UserControls\SRAProcess.ascx" />
+    <Content Include="UserControls\SRAScreening.ascx" />
+    <Content Include="UserControls\SRASummary.ascx" />
+    <Content Include="UserControls\SRATechnology.ascx" />
+    <Content Include="UserControls\TreeView.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Webforms\About.aspx" />
+    <Content Include="Webforms\ConsultingUser.aspx" />
+    <Content Include="Webforms\CorporateSubmission.aspx" />
+    <Content Include="Webforms\Dashboard.aspx" />
+    <Content Include="Webforms\DeleteFiles.aspx" />
+    <Content Include="Webforms\Editor.aspx" />
+    <Content Include="Webforms\Home.aspx" />
+    <Content Include="Webforms\InviteFriend.aspx" />
+    <Content Include="Webforms\KnowledgeBaseViewer.aspx" />
+    <Content Include="Webforms\Library.aspx" />
+    <Content Include="Webforms\LicenseAgreement.aspx" />
+    <Content Include="Webforms\MOReCorporateSubmission.aspx" />
+    <Content Include="Webforms\MOReDeleteFiles.aspx" />
+    <Content Include="Webforms\MOReUploadedDocs.aspx" />
+    <Content Include="Webforms\NCQASubmission.aspx" />
+    <Content Include="Webforms\NCQAUploadedDocs.aspx" />
+    <Content Include="Webforms\PrintReport.aspx" />
+    <Content Include="Webforms\PrivacyPolicy.aspx" />
+    <Content Include="Webforms\Projects.aspx" />
+    <Content Include="Webforms\Reports.aspx" />
+    <Content Include="Webforms\Requesthelp.aspx" />
+    <Content Include="Webforms\Settings.aspx" />
+    <Content Include="Webforms\SubmitFeedback.aspx" />
+    <Content Include="Webforms\Templates.aspx" />
+    <Content Include="Webforms\ToolBox.aspx" />
+    <Content Include="WebServices\DocumentService.asmx" />
+    <Content Include="WebServices\KBServices.asmx" />
+    <Content Include="WebServices\NCQAService.asmx" />
+    <Content Include="WebServices\FolderManipulation.asmx" />
+    <Content Include="WebServices\ReportService.asmx" />
+    <Content Include="WebServices\SRAServices.asmx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ForgotPassword.aspx.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ForgotPassword.aspx.designer.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Content Include="App_Code\DataSet\SRASummaryDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SRASummaryDS.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Code\DataSet\SRAScreeningDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SRAScreeningDS.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Code\DataSet\SRARiskDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SRARiskDS.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Code\DataSet\SRAFindingsDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SRAFindingsDS.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Code\DataSet\SRAInventoryDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SRAInventoryDS.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Code\DataSet\SRAInventoryDS.cs">
+      <DependentUpon>SRAInventoryDS.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Code\DataSet\PCMHGeneralStatusReport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PCMHGeneralStatusReport.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Code\DataSet\NCQANotesDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NCQANotesDS.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Code\DataSet\PriceComparisonDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PriceComparisonDS.xsd</DependentUpon>
+    </Content>
+    <Compile Include="App_Code\Validation\RegExValidate.cs" />
+    <Compile Include="LogoHandler.ashx.cs">
+      <DependentUpon>LogoHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="LogoUploader.aspx.cs">
+      <DependentUpon>LogoUploader.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LogoUploader.aspx.designer.cs">
+      <DependentUpon>LogoUploader.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MOReFileHandler.ashx.cs">
+      <DependentUpon>MOReFileHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="MOReFileUpload.aspx.cs">
+      <DependentUpon>MOReFileUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MOReFileUpload.aspx.designer.cs">
+      <DependentUpon>MOReFileUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectFileHandler.ashx.cs">
+      <DependentUpon>ProjectFileHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectFileUpload.aspx.cs">
+      <DependentUpon>ProjectFileUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProjectFileUpload.aspx.designer.cs">
+      <DependentUpon>ProjectFileUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ConfigureProjectTemplate.ascx.cs">
+      <DependentUpon>ConfigureProjectTemplate.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ConfigureProjectTemplate.ascx.designer.cs">
+      <DependentUpon>ConfigureProjectTemplate.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CreateEditTemplate.ascx.cs">
+      <DependentUpon>CreateEditTemplate.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\CreateEditTemplate.ascx.designer.cs">
+      <DependentUpon>CreateEditTemplate.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CreateProject.ascx.cs">
+      <DependentUpon>CreateProject.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\CreateProject.ascx.designer.cs">
+      <DependentUpon>CreateProject.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DocumentVista.ascx.cs">
+      <DependentUpon>DocumentVista.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\DocumentVista.ascx.designer.cs">
+      <DependentUpon>DocumentVista.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\EditTemplate.ascx.cs">
+      <DependentUpon>EditTemplate.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\EditTemplate.ascx.designer.cs">
+      <DependentUpon>EditTemplate.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ITConsultant.ascx.cs">
+      <DependentUpon>ITConsultant.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ITConsultant.ascx.designer.cs">
+      <DependentUpon>ITConsultant.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MORe.ascx.cs">
+      <DependentUpon>MORe.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\MORe.ascx.designer.cs">
+      <DependentUpon>MORe.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MOReGeneral.ascx.cs">
+      <DependentUpon>MOReGeneral.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\MOReGeneral.ascx.designer.cs">
+      <DependentUpon>MOReGeneral.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MOReRequirements.ascx.cs">
+      <DependentUpon>MOReRequirements.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\MOReRequirements.ascx.designer.cs">
+      <DependentUpon>MOReRequirements.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MOReSummary.ascx.cs">
+      <DependentUpon>MOReSummary.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\MOReSummary.ascx.designer.cs">
+      <DependentUpon>MOReSummary.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PriceCalculator.ascx.cs">
+      <DependentUpon>PriceCalculator.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\PriceCalculator.ascx.designer.cs">
+      <DependentUpon>PriceCalculator.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PriceComparison.ascx.cs">
+      <DependentUpon>PriceComparison.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\PriceComparison.ascx.designer.cs">
+      <DependentUpon>PriceComparison.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ScoringRules.ascx.cs">
+      <DependentUpon>ScoringRules.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ScoringRules.ascx.designer.cs">
+      <DependentUpon>ScoringRules.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SecurityRiskAssessment.ascx.cs">
+      <DependentUpon>SecurityRiskAssessment.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\SecurityRiskAssessment.ascx.designer.cs">
+      <DependentUpon>SecurityRiskAssessment.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SRAFindings.ascx.cs">
+      <DependentUpon>SRAFindings.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\SRAFindings.ascx.designer.cs">
+      <DependentUpon>SRAFindings.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SRAFollowup.ascx.cs">
+      <DependentUpon>SRAFollowup.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\SRAFollowup.ascx.designer.cs">
+      <DependentUpon>SRAFollowup.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SRAInventory.ascx.cs">
+      <DependentUpon>SRAInventory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\SRAInventory.ascx.designer.cs">
+      <DependentUpon>SRAInventory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SRAProcess.ascx.cs">
+      <DependentUpon>SRAProcess.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\SRAProcess.ascx.designer.cs">
+      <DependentUpon>SRAProcess.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SRAScreening.ascx.cs">
+      <DependentUpon>SRAScreening.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\SRAScreening.ascx.designer.cs">
+      <DependentUpon>SRAScreening.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SRASummary.ascx.cs">
+      <DependentUpon>SRASummary.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\SRASummary.ascx.designer.cs">
+      <DependentUpon>SRASummary.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SRATechnology.ascx.cs">
+      <DependentUpon>SRATechnology.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\SRATechnology.ascx.designer.cs">
+      <DependentUpon>SRATechnology.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Webforms\CorporateSubmission.aspx.cs">
+      <DependentUpon>CorporateSubmission.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Webforms\CorporateSubmission.aspx.designer.cs">
+      <DependentUpon>CorporateSubmission.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Webforms\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Webforms\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Webforms\KnowledgeBaseViewer.aspx.cs">
+      <DependentUpon>KnowledgeBaseViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Webforms\KnowledgeBaseViewer.aspx.designer.cs">
+      <DependentUpon>KnowledgeBaseViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Webforms\MOReCorporateSubmission.aspx.cs">
+      <DependentUpon>MOReCorporateSubmission.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Webforms\MOReCorporateSubmission.aspx.designer.cs">
+      <DependentUpon>MOReCorporateSubmission.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Webforms\MOReDeleteFiles.aspx.cs">
+      <DependentUpon>MOReDeleteFiles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Webforms\MOReDeleteFiles.aspx.designer.cs">
+      <DependentUpon>MOReDeleteFiles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Webforms\MOReUploadedDocs.aspx.cs">
+      <DependentUpon>MOReUploadedDocs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Webforms\MOReUploadedDocs.aspx.designer.cs">
+      <DependentUpon>MOReUploadedDocs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Webforms\NCQASubmission.aspx.cs">
+      <DependentUpon>NCQASubmission.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Webforms\NCQASubmission.aspx.designer.cs">
+      <DependentUpon>NCQASubmission.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Webforms\NCQAUploadedDocs.aspx.cs">
+      <DependentUpon>NCQAUploadedDocs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Webforms\NCQAUploadedDocs.aspx.designer.cs">
+      <DependentUpon>NCQAUploadedDocs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Webforms\Reports.aspx.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Webforms\Reports.aspx.designer.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Webforms\Templates.aspx.cs">
+      <DependentUpon>Templates.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Webforms\Templates.aspx.designer.cs">
+      <DependentUpon>Templates.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebServices\DocumentService.asmx.cs">
+      <DependentUpon>DocumentService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WebServices\KBServices.asmx.cs">
+      <DependentUpon>KBServices.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WebServices\NCQAService.asmx.cs">
+      <DependentUpon>NCQAService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WebServices\FolderManipulation.asmx.cs">
+      <DependentUpon>FolderManipulation.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WebServices\ReportService.asmx.cs">
+      <DependentUpon>ReportService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WebServices\SRAServices.asmx.cs">
+      <DependentUpon>SRAServices.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Content Include="App_Code\DataSet\NCQASubmissionDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NCQASubmissionDS.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Code\DataSet\ExpressAssessmentDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ExpressAssessmentDS.xsd</DependentUpon>
+    </Content>
+    <Compile Include="App_Code\Logger.cs" />
+    <Compile Include="App_Code\SessionHandling.cs" />
+    <Compile Include="App_Code\Util.cs" />
+    <Compile Include="BMTMaster.Master.cs">
+      <DependentUpon>BMTMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BMTMaster.Master.designer.cs">
+      <DependentUpon>BMTMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FileHandler.ashx.cs">
+      <DependentUpon>FileHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="FileUpload.aspx.cs">
+      <DependentUpon>FileUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileUpload.aspx.designer.cs">
+      <DependentUpon>FileUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GenericFileHandler.ashx.cs">
+      <DependentUpon>GenericFileHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GenericFileUpload.aspx.cs">
+      <DependentUpon>GenericFileUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GenericFileUpload.aspx.designer.cs">
+      <DependentUpon>GenericFileUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\DisplayMessage.ascx.cs">
+      <DependentUpon>DisplayMessage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\DisplayMessage.ascx.designer.cs">
+      <DependentUpon>DisplayMessage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ExpressAssessment.ascx.cs">
+      <DependentUpon>ExpressAssessment.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ExpressAssessment.ascx.designer.cs">
+      <DependentUpon>ExpressAssessment.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ExpressAssessmentResult.ascx.cs">
+      <DependentUpon>ExpressAssessmentResult.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ExpressAssessmentResult.ascx.designer.cs">
+      <DependentUpon>ExpressAssessmentResult.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\General.ascx.cs">
+      <DependentUpon>General.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\General.ascx.designer.cs">
+      <DependentUpon>General.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\LoadingPanel.ascx.cs">
+      <DependentUpon>LoadingPanel.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\LoadingPanel.ascx.designer.cs">
+      <DependentUpon>LoadingPanel.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\NCQARequirements.ascx.cs">
+      <DependentUpon>NCQARequirements.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\NCQARequirements.ascx.designer.cs">
+      <DependentUpon>NCQARequirements.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\NCQASubmission.ascx.cs">
+      <DependentUpon>NCQASubmission.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\NCQASubmission.ascx.designer.cs">
+      <DependentUpon>NCQASubmission.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\NCQASummary.ascx.cs">
+      <DependentUpon>NCQASummary.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\NCQASummary.ascx.designer.cs">
+      <DependentUpon>NCQASummary.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PCMH.ascx.cs">
+      <DependentUpon>PCMH.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\PCMH.ascx.designer.cs">
+      <DependentUpon>PCMH.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TreeView.ascx.cs">
+      <DependentUpon>TreeView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\TreeView.ascx.designer.cs">
+      <DependentUpon>TreeView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Webforms\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Webforms\About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Webforms\ConsultingUser.aspx.cs">
+      <DependentUpon>ConsultingUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Webforms\ConsultingUser.aspx.designer.cs">
+      <DependentUpon>ConsultingUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Webforms\DeleteFiles.aspx.cs">
+      <DependentUpon>DeleteFiles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Webforms\DeleteFiles.aspx.designer.cs">
+      <DependentUpon>DeleteFiles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Webforms\Editor.aspx.cs">
+      <DependentUpon>Editor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Webforms\Editor.aspx.designer.cs">
+      <DependentUpon>Editor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Webforms\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Webforms\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Webforms\InviteFriend.aspx.cs">
+      <DependentUpon>InviteFriend.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Webforms\InviteFriend.aspx.designer.cs">
+      <DependentUpon>InviteFriend.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Webforms\Library.aspx.cs">
+      <DependentUpon>Library.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Webforms\Library.aspx.designer.cs">
+      <DependentUpon>Library.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Webforms\LicenseAgreement.aspx.cs">
+      <DependentUpon>LicenseAgreement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Webforms\LicenseAgreement.aspx.designer.cs">
+      <DependentUpon>LicenseAgreement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Webforms\PrintReport.aspx.cs">
+      <DependentUpon>PrintReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Webforms\PrintReport.aspx.designer.cs">
+      <DependentUpon>PrintReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Webforms\PrivacyPolicy.aspx.cs">
+      <DependentUpon>PrivacyPolicy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Webforms\PrivacyPolicy.aspx.designer.cs">
+      <DependentUpon>PrivacyPolicy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Webforms\Projects.aspx.cs">
+      <DependentUpon>Projects.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Webforms\Projects.aspx.designer.cs">
+      <DependentUpon>Projects.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Webforms\Requesthelp.aspx.cs">
+      <DependentUpon>Requesthelp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Webforms\Requesthelp.aspx.designer.cs">
+      <DependentUpon>Requesthelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Webforms\Settings.aspx.cs">
+      <DependentUpon>Settings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Webforms\Settings.aspx.designer.cs">
+      <DependentUpon>Settings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Webforms\SubmitFeedback.aspx.cs">
+      <DependentUpon>SubmitFeedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Webforms\SubmitFeedback.aspx.designer.cs">
+      <DependentUpon>SubmitFeedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Webforms\ToolBox.aspx.cs">
+      <DependentUpon>ToolBox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Webforms\ToolBox.aspx.designer.cs">
+      <DependentUpon>ToolBox.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BMTMaster.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FileHandler.ashx" />
+    <Content Include="GenericFileHandler.ashx" />
+    <None Include="App_Code\DataSet\ExpressAssessmentDS.xsc">
+      <DependentUpon>ExpressAssessmentDS.xsd</DependentUpon>
+    </None>
+    <None Include="App_Code\DataSet\ExpressAssessmentDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ExpressAssessmentDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="App_Code\DataSet\ExpressAssessmentDS.xss">
+      <DependentUpon>ExpressAssessmentDS.xsd</DependentUpon>
+    </None>
+    <None Include="App_Code\DataSet\NCQANotesDS.xsc">
+      <DependentUpon>NCQANotesDS.xsd</DependentUpon>
+    </None>
+    <None Include="App_Code\DataSet\NCQANotesDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NCQANotesDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Code\DataSet\NCQANotesDS.xss">
+      <DependentUpon>NCQANotesDS.xsd</DependentUpon>
+    </None>
+    <None Include="App_Code\DataSet\NCQASubmissionDS.xsc">
+      <DependentUpon>NCQASubmissionDS.xsd</DependentUpon>
+    </None>
+    <None Include="App_Code\DataSet\NCQASubmissionDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NCQASubmissionDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="App_Code\DataSet\NCQASubmissionDS.xss">
+      <DependentUpon>NCQASubmissionDS.xsd</DependentUpon>
+    </None>
+    <None Include="App_Code\DataSet\PCMHGeneralStatusReport.xsc">
+      <DependentUpon>PCMHGeneralStatusReport.xsd</DependentUpon>
+    </None>
+    <None Include="App_Code\DataSet\PCMHGeneralStatusReport.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PCMHGeneralStatusReport.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Code\DataSet\PCMHGeneralStatusReport.xss">
+      <DependentUpon>PCMHGeneralStatusReport.xsd</DependentUpon>
+    </None>
+    <None Include="App_Code\DataSet\PriceComparisonDS.xsc">
+      <DependentUpon>PriceComparisonDS.xsd</DependentUpon>
+    </None>
+    <None Include="App_Code\DataSet\PriceComparisonDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PriceComparisonDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Code\DataSet\PriceComparisonDS.xss">
+      <DependentUpon>PriceComparisonDS.xsd</DependentUpon>
+    </None>
+    <None Include="App_Code\DataSet\SRAFindingsDS.xsc">
+      <DependentUpon>SRAFindingsDS.xsd</DependentUpon>
+    </None>
+    <None Include="App_Code\DataSet\SRAFindingsDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SRAFindingsDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="App_Code\DataSet\SRAFindingsDS.xss">
+      <DependentUpon>SRAFindingsDS.xsd</DependentUpon>
+    </None>
+    <None Include="App_Code\DataSet\SRAInventoryDS.xsc">
+      <DependentUpon>SRAInventoryDS.xsd</DependentUpon>
+    </None>
+    <None Include="App_Code\DataSet\SRAInventoryDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SRAInventoryDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="App_Code\DataSet\SRAInventoryDS.xss">
+      <DependentUpon>SRAInventoryDS.xsd</DependentUpon>
+    </None>
+    <None Include="App_Code\DataSet\SRARiskDS.xsc">
+      <DependentUpon>SRARiskDS.xsd</DependentUpon>
+    </None>
+    <None Include="App_Code\DataSet\SRARiskDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SRARiskDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="App_Code\DataSet\SRARiskDS.xss">
+      <DependentUpon>SRARiskDS.xsd</DependentUpon>
+    </None>
+    <None Include="App_Code\DataSet\SRAScreeningDS.xsc">
+      <DependentUpon>SRAScreeningDS.xsd</DependentUpon>
+    </None>
+    <None Include="App_Code\DataSet\SRAScreeningDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SRAScreeningDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="App_Code\DataSet\SRAScreeningDS.xss">
+      <DependentUpon>SRAScreeningDS.xsd</DependentUpon>
+    </None>
+    <None Include="App_Code\DataSet\SRASummaryDS.xsc">
+      <DependentUpon>SRASummaryDS.xsd</DependentUpon>
+    </None>
+    <None Include="App_Code\DataSet\SRASummaryDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SRASummaryDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="App_Code\DataSet\SRASummaryDS.xss">
+      <DependentUpon>SRASummaryDS.xsd</DependentUpon>
+    </None>
+    <Content Include="LogoHandler.ashx" />
+    <Content Include="MOReFileHandler.ashx" />
+    <Content Include="ProjectFileHandler.ashx" />
+    <None Include="Themes\Images\Untitled-4.psd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Reports\rptExpressAssessment.rdlc" />
+    <Content Include="Reports\rptNCQASummary.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Reports\rptPriceComparison.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Reports\rptSRAFindings.rdlc" />
+    <Content Include="Reports\rptSRARisk.rdlc" />
+    <Content Include="Reports\rptSRAScreening.rdlc" />
+    <Content Include="Reports\rptSRASummary.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Reports\rptSRAInventory.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Reports\rptNCQANotes.rdlc" />
+    <EmbeddedResource Include="Reports\rptOverAllBarReport.rdlc" />
+    <EmbeddedResource Include="Reports\rptPCMHGroupReport.rdlc" />
+    <EmbeddedResource Include="Reports\rptPCMHStatusReport.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>6</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BMTBLL\BMTBLL.csproj">
+      <Project>{90CFB600-DDD5-4BE1-8B89-73CD98934D5F}</Project>
+      <Name>BMTBLL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54029</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50098/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

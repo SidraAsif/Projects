@@ -1,0 +1,426 @@
+﻿.heading1, .heading2, heading3
+{
+    clear: both;
+    float: left;
+    font-family: Segoe UI;
+    width: 100%;
+    min-width: 100%;
+    height: auto;
+}
+
+.heading1
+{
+    color: #C10000;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.heading2
+{
+    padding-left: 0px;
+    color: #000000;
+    font-size: 12px;
+    font-style: italic;
+    padding-bottom: 25px;
+}
+
+.heading3
+{
+    color: #000000;
+    font-size: 14px;
+    font-weight: bold;
+    padding-top: 35px;
+}
+
+.systemSelection
+{
+    clear: both;
+    float: left;
+    min-width: 240px;
+    width: 240px;
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.systemInfo
+{
+    text-decoration: underline;
+    color: #5880B5;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.system
+{
+    float: left;
+    min-width: 240px;
+    width: 240px;
+    height: auto;
+    margin-top: 10px;
+}
+
+.selection
+{
+    float: right;
+    padding: 0px 10px 10px;
+    width: 470px;
+    min-width: 470px;
+}
+
+.selection-title
+{
+    color: #C10000;
+    text-align: left;
+}
+.asterik
+{
+    color: #C10000;
+    font-size: 11px;
+}
+
+tr.table-headerMain
+{
+    height: 30px;
+}
+
+
+.OngoingFees
+{
+    clear: both;
+}
+.OngoingFees, .OneTimeFees
+{
+    float: left;
+    min-width: 720px;
+    width: 720px;
+    height: auto;
+}
+
+.OneTimeFees
+{
+    margin-left: 5px;
+}
+
+.operation
+{
+    clear: both;
+    width: 720px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+.operation table
+{
+    margin-left: 10%;
+}
+
+/******************************* FEE TABLES SETTINGS ******************************/
+td.cell1
+{
+    font-family: "Segoe UI";
+    width: 150px;
+    min-width: 150px;
+}
+
+td.cell2
+{
+    font-family: "Segoe UI";
+    width: 75px;
+    min-width: 75px;
+}
+
+td.cell3
+{
+    font-family: "Segoe UI";
+    width: 160px;
+    min-width: 160px;
+}
+
+td.cell4
+{
+    font-family: "Segoe UI";
+    width: 50px;
+    min-width: 50px;
+}
+
+td.cell5
+{
+    font-family: "Segoe UI";
+    width: 160px;
+    min-width: 160px;
+}
+
+
+td.common-cell1
+{
+    font-family: "Segoe UI";
+    width: 235px;
+    min-width: 235px;
+}
+
+
+td.common-cell2
+{
+    font-family: "Segoe UI";
+    width: 345px;
+    min-width: 345px;
+}
+
+/***************************** CONTROL SETTINGS *********************************/
+.label-fee-title
+{
+    padding-right: 3px;
+    font-weight: bold;
+}
+
+
+.txt-fee, .txt-normal, .ddl-fee, .txt-quantity, .txt-Amount, .txt-Other
+{
+    font-size: 12px;
+    font-family: "Segoe UI";
+}
+
+.txt-fee, .txt-quantity, .txt-Amount, .txt-Other
+{
+    width: 50px;
+    min-width: 50px;
+    height: 15px;
+    border: #727272 solid 1px;
+}
+
+.txt-normal
+{
+    width: 125px;
+    min-width: 125px;
+    height: 18px;
+    border: #727272 solid 1px;
+}
+
+.ddl-fee
+{
+    width: 150px;
+    min-width: 150px;
+    height: 19px;
+    border: #727272 solid 1px;
+}
+.link-fee
+{
+    color: Blue;
+    margin-left: -5px;
+    text-decoration: underline;
+}
+
+.link-fee:hover
+{
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.fee-title
+{
+    font-size: 14px;
+    font-weight: bold;
+    color: Black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.tabs
+{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    min-width: 700px;
+    height: auto;
+    text-align: center;
+}
+.tabs li
+{
+    display: inline;
+    width: 7.5em;
+    height: 27px;
+    text-align: center;
+    vertical-align: middle;
+    float: left;
+    background-image: url(Images/tab.png);
+    background-repeat: no-repeat;
+}
+.tabs li a
+{
+    text-decoration: none;
+    color: Black;
+    vertical-align: middle;
+    padding-top: 3px; /*To keep text in center of tab*/
+}
+
+.tabs li:hover
+{
+    background-image: url(Images/tab-Hover.png);
+    background-repeat: no-repeat;
+    height: 27px;
+}
+.tabs li:hover a
+{
+    color: White;
+}
+
+.tabs li.activeTab
+{
+    background-image: url(Images/tab-Hover.png);
+    background-repeat: no-repeat;
+    height: 27px;
+    color: White;
+}
+
+.tabs li.activeTab a
+{
+    color: White;
+}
+
+.tabs li.inactiveTab
+{
+    display: none;
+}
+
+img
+{
+    padding-right: 3px;
+    border: none;
+}
+
+/******************************************** Pirce Comparison **********************************************/
+.typeSummary
+{
+    clear: both;
+    float: left;
+    width: 100%;
+    min-width: 100%;
+    margin-top: 10px;
+    margin-left: 3px;
+    font-weight: bold;
+}
+
+.typeSummary ul li
+{
+    display: inline;
+    padding-right: 50px;
+}
+
+.tocTitle
+{
+    clear: both;
+    float: left;
+    padding-top: 100px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#priceComparison
+{
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-bottom: 15px;
+}
+
+.yearTitle
+{
+    clear: both;
+    float: right;
+    padding-right: 300px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.lbl-payment
+{
+    height: 19px;
+    min-width: 150px;
+    width: 150px;
+    padding-left: 12px;
+}
+
+.lbl-payment2
+{
+    height: 19px;
+    min-width: 150px;
+    width: 150px;
+}
+.lbl-payment3
+{
+    height: 19px;
+    min-width: 150px;
+    width: 150px;
+    text-align: left;
+}
+
+.headerAmount
+{
+    float: left;
+    width: 60px;
+    min-width: 60px;
+    padding-right: 15px;
+}
+
+/* grid css */
+.gvpriceComparison
+{
+}
+
+/* Client Side generic control css*/
+div#row
+{
+    float: left;
+    min-width: 100%;
+    width: 100%;
+}
+
+div#field-title01
+{
+    float: left;
+    min-width: 25%;
+    width: 25%;
+}
+
+div#field-title02
+{
+    float: left;
+    min-width: 38.5%;
+    width: 38.5%;
+}
+
+div#field-Qty01
+{
+    float: left;
+    min-width: 13.5%;
+    width: 13.5%;
+}
+
+div#field-Type01
+{
+    float: left;
+    min-width: 31.8%;
+    width: 31.8%;
+}
+
+div#field-Amount01
+{
+    float: left;
+    min-width: 10.2%;
+    width: 10.2%;
+}
+
+div#field-paymentMethod01
+{
+    float: left;
+    min-width: 19.5%;
+    width: 19.5%;
+}
+
+img.imgRemove
+{
+    width: 8px;
+    height: 8px;
+}

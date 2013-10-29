@@ -1,0 +1,144 @@
+﻿
+.TopHeaderText
+{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#score-info
+{
+    width: auto;
+    height: 50px;
+    position: relative;
+    margin-top: 10px;
+}
+.Warning-message
+{
+    clear: both;
+    width: auto;
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 50px;
+    margin-top: 10px;
+}
+#result-progress-bar
+{
+    float: left;
+    width: 300px;
+    margin-top: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 0;
+}
+#warning-logo
+{
+    float: left;
+    width: 70px;
+    margin-top: 15px;
+    margin-left: 20px;
+    margin-right: 10px;
+    padding: 0;
+    background: url(../Themes/Images/warning2.png) no-repeat;
+    height: 32px;
+}
+#result-progress-message
+{
+    float: left;
+    width: 350px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 0;
+}
+
+#warning-message
+{
+    float: left;
+    width: 500px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 0;
+}
+.warning-message
+{
+    clear: both;
+    float: left;
+    width: 550px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    font-size: 13px;
+    font-weight: bold;
+    height: auto;
+}
+
+.warning-text
+{
+    float: left;
+    width: 550px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    font-size: 13px;
+    font-weight: bold;
+}
+.result-message
+{
+    float: left;
+    width: 350px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.seperator
+{
+    clear: both;
+    border-bottom: 1px solid #5880b3;
+}
+
+.question-label
+{
+    width: auto;
+    text-align: left;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: Trebuchet MS;
+    padding-right: 20px;
+}
+.answer-label
+{
+    width: 100px;
+    text-align: left;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: Trebuchet MS;
+}
+.critical-deficiencies
+{
+    width: 150px;
+    text-align: left;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: Trebuchet MS;
+    color: Red;
+}
+td
+{
+    height: 25px;
+}
+
+#result-progress
+{
+    margin-left: 15px;
+}
+
+.progress-bar
+{
+    margin-left: 100px;
+    font-weight: bold;
+    font-size: 18px;
+}

@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PCMHGeneralStatusReport" targetNamespace="http://tempuri.org/PCMHGeneralStatusReport.xsd" xmlns:mstns="http://tempuri.org/PCMHGeneralStatusReport.xsd" xmlns="http://tempuri.org/PCMHGeneralStatusReport.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PCMHGeneralStatusReport" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="PCMHGeneralStatusReport" msprop:Generator_UserDSName="PCMHGeneralStatusReport">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PCMHGeneralStatusDT" msprop:Generator_TableClassName="PCMHGeneralStatusDTDataTable" msprop:Generator_TableVarName="tablePCMHGeneralStatusDT" msprop:Generator_TablePropName="PCMHGeneralStatusDT" msprop:Generator_RowDeletingName="PCMHGeneralStatusDTRowDeleting" msprop:Generator_UserTableName="PCMHGeneralStatusDT" msprop:Generator_RowChangingName="PCMHGeneralStatusDTRowChanging" msprop:Generator_RowEvHandlerName="PCMHGeneralStatusDTRowChangeEventHandler" msprop:Generator_RowDeletedName="PCMHGeneralStatusDTRowDeleted" msprop:Generator_RowEvArgName="PCMHGeneralStatusDTRowChangeEvent" msprop:Generator_RowChangedName="PCMHGeneralStatusDTRowChanged" msprop:Generator_RowClassName="PCMHGeneralStatusDTRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ConsultantId" msprop:Generator_ColumnVarNameInTable="columnConsultantId" msprop:Generator_ColumnPropNameInRow="ConsultantId" msprop:Generator_ColumnPropNameInTable="ConsultantIdColumn" msprop:Generator_UserColumnName="ConsultantId" type="xs:string" minOccurs="0" />
+              <xs:element name="ConsultantName" msprop:Generator_ColumnVarNameInTable="columnConsultantName" msprop:Generator_ColumnPropNameInRow="ConsultantName" msprop:Generator_ColumnPropNameInTable="ConsultantNameColumn" msprop:Generator_UserColumnName="ConsultantName" type="xs:string" minOccurs="0" />
+              <xs:element name="PracticeName" msprop:Generator_ColumnVarNameInTable="columnPracticeName" msprop:Generator_ColumnPropNameInRow="PracticeName" msprop:Generator_ColumnPropNameInTable="PracticeNameColumn" msprop:Generator_UserColumnName="PracticeName" type="xs:int" minOccurs="0" />
+              <xs:element name="SiteName" msprop:Generator_ColumnVarNameInTable="columnSiteName" msprop:Generator_ColumnPropNameInRow="SiteName" msprop:Generator_ColumnPropNameInTable="SiteNameColumn" msprop:Generator_UserColumnName="SiteName" type="xs:string" minOccurs="0" />
+              <xs:element name="ProvidersAtSite" msprop:Generator_ColumnVarNameInTable="columnProvidersAtSite" msprop:Generator_ColumnPropNameInRow="ProvidersAtSite" msprop:Generator_ColumnPropNameInTable="ProvidersAtSiteColumn" msprop:Generator_UserColumnName="ProvidersAtSite" type="xs:int" minOccurs="0" />
+              <xs:element name="ProjectId" msprop:Generator_ColumnVarNameInTable="columnProjectId" msprop:Generator_ColumnPropNameInRow="ProjectId" msprop:Generator_ColumnPropNameInTable="ProjectIdColumn" msprop:Generator_UserColumnName="ProjectId" type="xs:string" minOccurs="0" />
+              <xs:element name="TotalComplete" msprop:Generator_ColumnVarNameInTable="columnTotalComplete" msprop:Generator_ColumnPropNameInRow="TotalComplete" msprop:Generator_ColumnPropNameInTable="TotalCompleteColumn" msprop:Generator_UserColumnName="TotalComplete" type="xs:int" minOccurs="0" />
+              <xs:element name="TotalElements" msprop:Generator_ColumnVarNameInTable="columnTotalElements" msprop:Generator_ColumnPropNameInRow="TotalElements" msprop:Generator_ColumnPropNameInTable="TotalElementsColumn" msprop:Generator_UserColumnName="TotalElements" type="xs:string" minOccurs="0" />
+              <xs:element name="PercentScoreFinal" msprop:Generator_ColumnVarNameInTable="columnPercentScoreFinal" msprop:Generator_ColumnPropNameInRow="PercentScoreFinal" msprop:Generator_ColumnPropNameInTable="PercentScoreFinalColumn" msprop:Generator_UserColumnName="PercentScoreFinal" type="xs:int" minOccurs="0" />
+              <xs:element name="Reviewed" msprop:Generator_ColumnVarNameInTable="columnReviewed" msprop:Generator_ColumnPropNameInRow="Reviewed" msprop:Generator_ColumnPropNameInTable="ReviewedColumn" msprop:Generator_UserColumnName="Reviewed" type="xs:string" minOccurs="0" />
+              <xs:element name="Submitted" msprop:Generator_ColumnVarNameInTable="columnSubmitted" msprop:Generator_ColumnPropNameInRow="Submitted" msprop:Generator_ColumnPropNameInTable="SubmittedColumn" msprop:Generator_UserColumnName="Submitted" type="xs:string" minOccurs="0" />
+              <xs:element name="Recognized" msprop:Generator_ColumnVarNameInTable="columnRecognized" msprop:Generator_ColumnPropNameInRow="Recognized" msprop:Generator_ColumnPropNameInTable="RecognizedColumn" msprop:Generator_UserColumnName="Recognized" type="xs:string" minOccurs="0" />
+              <xs:element name="LastActivity" msprop:Generator_ColumnVarNameInTable="columnLastActivity" msprop:Generator_ColumnPropNameInRow="LastActivity" msprop:Generator_ColumnPropNameInTable="LastActivityColumn" msprop:Generator_UserColumnName="LastActivity" type="xs:string" minOccurs="0" />
+              <xs:element name="MustPass" msprop:Generator_ColumnVarNameInTable="columnMustPass" msprop:Generator_ColumnPropNameInRow="MustPass" msprop:Generator_ColumnPropNameInTable="MustPassColumn" msprop:Generator_UserColumnName="MustPass" type="xs:string" minOccurs="0" />
+              <xs:element name="PointsEarned" msprop:Generator_ColumnVarNameInTable="columnPointsEarned" msprop:Generator_ColumnPropNameInRow="PointsEarned" msprop:Generator_ColumnPropNameInTable="PointsEarnedColumn" msprop:Generator_UserColumnName="PointsEarned" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DocumentsUploaded" msprop:Generator_ColumnVarNameInTable="columnDocumentsUploaded" msprop:Generator_ColumnPropNameInRow="DocumentsUploaded" msprop:Generator_ColumnPropNameInTable="DocumentsUploadedColumn" msprop:Generator_UserColumnName="DocumentsUploaded" type="xs:int" minOccurs="0" />
+              <xs:element name="PercentInComplete" msprop:Generator_ColumnVarNameInTable="columnPercentInComplete" msprop:Generator_ColumnPropNameInRow="PercentInComplete" msprop:Generator_ColumnPropNameInTable="PercentInCompleteColumn" msprop:Generator_UserColumnName="PercentInComplete" type="xs:int" minOccurs="0" />
+              <xs:element name="PracticeSizeId" msprop:Generator_ColumnVarNameInTable="columnPracticeSizeId" msprop:Generator_ColumnPropNameInRow="PracticeSizeId" msprop:Generator_ColumnPropNameInTable="PracticeSizeIdColumn" msprop:Generator_UserColumnName="PracticeSizeId" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="OverAllProjectStatusDT" msprop:Generator_TableClassName="OverAllProjectStatusDTDataTable" msprop:Generator_TableVarName="tableOverAllProjectStatusDT" msprop:Generator_TablePropName="OverAllProjectStatusDT" msprop:Generator_RowDeletingName="OverAllProjectStatusDTRowDeleting" msprop:Generator_UserTableName="OverAllProjectStatusDT" msprop:Generator_RowChangingName="OverAllProjectStatusDTRowChanging" msprop:Generator_RowEvHandlerName="OverAllProjectStatusDTRowChangeEventHandler" msprop:Generator_RowDeletedName="OverAllProjectStatusDTRowDeleted" msprop:Generator_RowEvArgName="OverAllProjectStatusDTRowChangeEvent" msprop:Generator_RowChangedName="OverAllProjectStatusDTRowChanged" msprop:Generator_RowClassName="OverAllProjectStatusDTRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" msprop:Generator_UserColumnName="Status" type="xs:string" minOccurs="0" />
+              <xs:element name="NumberOfPractices" msprop:Generator_ColumnVarNameInTable="columnNumberOfPractices" msprop:Generator_ColumnPropNameInRow="NumberOfPractices" msprop:Generator_ColumnPropNameInTable="NumberOfPracticesColumn" msprop:Generator_UserColumnName="NumberOfPractices" type="xs:string" minOccurs="0" />
+              <xs:element name="Category" msprop:Generator_ColumnVarNameInTable="columnCategory" msprop:Generator_ColumnPropNameInRow="Category" msprop:Generator_ColumnPropNameInTable="CategoryColumn" msprop:Generator_UserColumnName="Category" type="xs:string" minOccurs="0" />
+              <xs:element name="TotalPractices" msprop:Generator_ColumnVarNameInTable="columnTotalPractices" msprop:Generator_ColumnPropNameInRow="TotalPractices" msprop:Generator_ColumnPropNameInTable="TotalPracticesColumn" msprop:Generator_UserColumnName="TotalPractices" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="GroupProjectStatusDT" msprop:Generator_TableClassName="GroupProjectStatusDTDataTable" msprop:Generator_TableVarName="tableGroupProjectStatusDT" msprop:Generator_TablePropName="GroupProjectStatusDT" msprop:Generator_RowDeletingName="GroupProjectStatusDTRowDeleting" msprop:Generator_UserTableName="GroupProjectStatusDT" msprop:Generator_RowChangingName="GroupProjectStatusDTRowChanging" msprop:Generator_RowEvHandlerName="GroupProjectStatusDTRowChangeEventHandler" msprop:Generator_RowDeletedName="GroupProjectStatusDTRowDeleted" msprop:Generator_RowEvArgName="GroupProjectStatusDTRowChangeEvent" msprop:Generator_RowChangedName="GroupProjectStatusDTRowChanged" msprop:Generator_RowClassName="GroupProjectStatusDTRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" msprop:Generator_UserColumnName="Status" type="xs:string" minOccurs="0" />
+              <xs:element name="NumberOfPractices" msprop:Generator_ColumnVarNameInTable="columnNumberOfPractices" msprop:Generator_ColumnPropNameInRow="NumberOfPractices" msprop:Generator_ColumnPropNameInTable="NumberOfPracticesColumn" msprop:Generator_UserColumnName="NumberOfPractices" type="xs:string" minOccurs="0" />
+              <xs:element name="Category" msprop:Generator_ColumnVarNameInTable="columnCategory" msprop:Generator_ColumnPropNameInRow="Category" msprop:Generator_ColumnPropNameInTable="CategoryColumn" msprop:Generator_UserColumnName="Category" type="xs:string" minOccurs="0" />
+              <xs:element name="ConsultantId" msprop:Generator_ColumnVarNameInTable="columnConsultantId" msprop:Generator_ColumnPropNameInRow="ConsultantId" msprop:Generator_ColumnPropNameInTable="ConsultantIdColumn" msprop:Generator_UserColumnName="ConsultantId" type="xs:string" minOccurs="0" />
+              <xs:element name="ConsultantName" msprop:Generator_ColumnVarNameInTable="columnConsultantName" msprop:Generator_ColumnPropNameInRow="ConsultantName" msprop:Generator_ColumnPropNameInTable="ConsultantNameColumn" msprop:Generator_UserColumnName="ConsultantName" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="OverAllBarProjectStatusDT" msprop:Generator_TableClassName="OverAllBarProjectStatusDTDataTable" msprop:Generator_TableVarName="tableOverAllBarProjectStatusDT" msprop:Generator_TablePropName="OverAllBarProjectStatusDT" msprop:Generator_RowDeletingName="OverAllBarProjectStatusDTRowDeleting" msprop:Generator_UserTableName="OverAllBarProjectStatusDT" msprop:Generator_RowChangingName="OverAllBarProjectStatusDTRowChanging" msprop:Generator_RowEvHandlerName="OverAllBarProjectStatusDTRowChangeEventHandler" msprop:Generator_RowDeletedName="OverAllBarProjectStatusDTRowDeleted" msprop:Generator_RowEvArgName="OverAllBarProjectStatusDTRowChangeEvent" msprop:Generator_RowChangedName="OverAllBarProjectStatusDTRowChanged" msprop:Generator_RowClassName="OverAllBarProjectStatusDTRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" msprop:Generator_UserColumnName="Status" type="xs:string" minOccurs="0" />
+              <xs:element name="NumberOfPractices" msprop:Generator_ColumnVarNameInTable="columnNumberOfPractices" msprop:Generator_ColumnPropNameInRow="NumberOfPractices" msprop:Generator_ColumnPropNameInTable="NumberOfPracticesColumn" msprop:Generator_UserColumnName="NumberOfPractices" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

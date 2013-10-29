@@ -1,0 +1,544 @@
+﻿.tabs
+{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    min-width: 700px;
+    height: auto;
+    text-align: center;
+}
+.tabs li
+{
+    display: inline;
+    width: 8.5em;
+    height: 27px;
+    text-align: center;
+    vertical-align: middle;
+    float: left;
+    background-image: url(Images/sra-tab.png);
+    background-repeat: no-repeat;
+}
+.tabs li a
+{
+    text-decoration: none;
+    color: Black;
+    vertical-align: middle;
+    padding-top: 3px; /*To keep text in center of tab*/
+}
+
+.tabs li:hover
+{
+    background-image: url(Images/sra-tab-Hover.png);
+    background-repeat: no-repeat;
+    height: 27px;
+}
+.tabs li:hover a
+{
+    color: White;
+}
+
+.tabs li.activeTab
+{
+    background-image: url(Images/sra-tab-Hover.png);
+    background-repeat: no-repeat;
+    height: 27px;
+    color: White;
+}
+
+.tabs li.activeTab a
+{
+    color: White;
+}
+
+.site-title
+{
+    clear: both;
+    float: left;
+    color: #C10000;
+    font-family: Segoe UI;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.standard-title
+{
+    color: #6E6E6E;
+    font-family: Segoe UI;
+    font-size: 15px;
+    font-weight: bold;
+    height: 25px;
+}
+
+.element-title
+{
+    color: #5880B3;
+    font-family: Segoe UI;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.contributors-text
+{
+    font-family: Segoe UI;
+}
+
+.header
+{
+    background-color: #5880B3;
+    color: White;
+    text-align: center;
+    vertical-align: middle;
+    height: 25px;
+}
+
+.NewAssessmentNote
+{
+    color: Black;
+    font-family: Arial;
+    font-style: italic;
+    font-size: 10px;
+    line-height: 12px;
+    vertical-align: top;
+}
+.titleDesc
+{
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 10px;
+    height: 3px;
+}
+
+.riskfound
+{
+    color: Black;
+    font-family: Segoe UI;
+    font-size: 15px;
+    font-weight: bold;
+    height: 25px;
+}
+
+.summary-details
+{
+    font-family: Segoe UI;
+    font-size: 12px;
+    font-weight: bold;
+    height: 30px;
+    width: 10.5em;
+}
+
+.summary-task
+{
+    color: #6E6E6E;
+    font-family: Segoe UI;
+    font-size: 13px;
+    font-weight: bold;
+    height: 30px;
+    width: 10.5em;
+}
+
+.element-table
+{
+    height: auto;
+    width: 720px;
+}
+
+.element-label
+{
+    background-color: #5880B3;
+    color: White;
+    height: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.assettype
+{
+    font-family: calibri;
+    height: 20px;
+    width: 125px;
+}
+
+
+.assetdesc
+{
+    font-family: calibri;
+    width: 280px;
+    min-height: 20px;
+    padding-left: 0px;
+    line-height: 15px;
+}
+
+.assetdesc input
+{
+    padding-left: 0px;
+}
+
+.practicenotes
+{
+    font-family: calibri;
+    width: 150px;
+    min-height: 20px;
+    padding-left: 2px;
+    line-height: 15px;
+}
+
+.practicenotes input
+{
+    padding-left: 0px;
+}
+
+.reviewnotes
+{
+    font-family: calibri;
+    width: 150px;
+    min-height: 20px;
+    padding-left: 2px;
+    line-height: 15px;
+}
+
+.reviewnotes input
+{
+    padding-left: 0px;
+}
+
+.screen-topic
+{
+    color: #6E6E6E;
+    font-family: Segoe UI;
+    font-size: 13px;
+    min-height: 14px;
+    font-weight: bold;
+    line-height: 15px;
+}
+
+.screen-questions
+{
+    font-family: calibri;
+    width: 170px;
+    min-height: 14px;
+    padding-left: 2px;
+    background-color: #f2f2f2;
+    line-height: 15px;
+}
+
+.screen-threat
+{
+    font-family: calibri;
+    width: 115px;
+    min-height: 14px;
+    padding-left: 2px;
+    background-color: #f2f2f2;
+    line-height: 15px;
+}
+
+
+.screen-technology-disable
+{
+    font-family: calibri;
+    width: 115px;
+    min-height: 20px;
+    padding-left: 2px;
+    background-color: #f2f2f2;
+    line-height: 15px;
+}
+
+.screen-people
+{
+    font-family: calibri;
+    width: 97px;
+    min-height: 20px;
+    padding-left: 0px;
+    line-height: 15px;
+}
+
+.screen-people input
+{
+    padding-left: 0px;
+}
+
+
+.screen-technology
+{
+    font-family: calibri;
+    width: 97px;
+    min-height: 20px;
+    padding-left: 2px;
+    line-height: 15px;
+}
+
+.screen-technology input
+{
+    padding-left: 0px;
+}
+
+.process-threat
+{
+    font-family: calibri;
+    width: 115px;
+    min-height: 14px;
+    padding-left: 0px;
+    background-color: #f2f2f2;
+    line-height: 15px;
+}
+
+.process-recommended
+{
+    font-family: calibri;
+    width: 170px;
+    min-height: 14px;
+    padding-left: 0px;
+    background-color: #f2f2f2;
+    line-height: 15px;
+}
+
+
+.process-editable
+{
+    font-family: calibri;
+    min-height: 20px;
+    padding-left: 0px;
+    line-height: 15px;
+}
+
+.process-editable input
+{
+    padding-left: 0px;
+}
+
+.process-existing
+{
+    font-family: calibri;
+    width: 95px;
+    min-height: 14px;
+    padding-left: 0px;
+    line-height: 15px;
+    background-color: #f2f2f2;
+}
+
+.screen-response
+{
+    font-family: calibri;
+    height: 20px;
+    width: 110px;
+}
+
+
+.process-existingeffective
+{
+    font-family: calibri;
+    height: 20px;
+    width: 100px;
+}
+
+.process-likelihood
+{
+    font-family: calibri;
+    height: 20px;
+    width: 70px;
+}
+
+.process-impact
+{
+    font-family: calibri;
+    height: 20px;
+    width: 70px;
+}
+
+.process-riskrating
+{
+    padding-left: 10px;
+}
+
+.process-exposurepotential
+{
+    padding-right: 13px;
+    padding-left: 13px;
+}
+
+.div-Open-Review-Notes
+{
+    width: 320px;
+    position: absolute;
+}
+
+.div-Close-Review-Notes
+{
+    width: 320px;
+    height: 130px;
+    position: absolute;
+    display: none;
+}
+
+.div-comments
+{
+    background-color: white;
+    border: 2px solid #D8D8D8;
+    font-family: calibri;
+    font-size: 11px;
+    height: 76px;
+    line-height: 12px;
+    overflow-y: scroll;
+    width: 310px;
+}
+
+.div-txtbox-comments
+{
+    width: 275px;
+    font-family: calibri;
+    line-height: 15px;
+    min-height: 14px;
+}
+
+.risk-header
+{
+    color: #C10000;
+    background-color: #f2f2f2;
+    float: left;
+    font-family: Segoe UI;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.findings-owner
+{
+    font-family: calibri;
+    width: 80px;
+    min-height: 20px;
+    padding-left: 0px;
+    line-height: 15px;
+}
+
+.findings-remediation
+{
+    font-family: calibri;
+    width: 140px;
+    min-height: 20px;
+    padding-left: 0px;
+    line-height: 15px;
+}
+
+.datepicker
+{
+    font-family: calibri;
+    width: 70px;
+    min-height: 14px;
+    padding-left: 0px;
+    line-height: 15px;
+}
+
+.findings-riskfound
+{
+    font-family: calibri;
+    width: 125px;
+    min-height: 14px;
+    padding-left: 0px;
+    background-color: #f2f2f2;
+    line-height: 15px;
+}
+
+.findings-riskrating
+{
+    padding-left: 7px;
+    padding-right: 8px;
+}
+
+.findings-existing
+{
+    font-family: calibri;
+    width: 100px;
+    min-height: 14px;
+    padding-left: 0px;
+    line-height: 15px;
+    background-color: #f2f2f2;
+}
+
+.findings-fixed-owner
+{
+    font-family: calibri;
+    width: 75px;
+    min-height: 14px;
+    padding-left: 0px;
+    line-height: 15px;
+    background-color: #f2f2f2;
+}
+
+.findings-fixed-remediation
+{
+    font-family: calibri;
+    width: 125px;
+    min-height: 14px;
+    padding-left: 0px;
+    line-height: 15px;
+    background-color: #f2f2f2;
+}
+
+.fixed-datepicker
+{
+    font-family: calibri;
+    width: 65px;
+    min-height: 14px;
+    padding-left: 0px;
+    line-height: 15px;
+    background-color: #f2f2f2;
+}
+
+
+.findings-fixed-owner-input
+{
+    font-family: calibri;
+    width: 75px;
+    min-height: 20px;
+    padding-left: 0px;
+    line-height: 15px;
+}
+
+.findings-fixed-remediation-input
+{
+    font-family: calibri;
+    width: 125px;
+    min-height: 20px;
+    padding-left: 0px;
+    line-height: 15px;
+}
+
+
+.fixed-datepicker-input
+{
+    font-family: calibri;
+    width: 66px;
+    min-height: 14px;
+    padding-left: 0px;
+    line-height: 15px;
+}
+
+
+.finding-userinfo
+{
+    font-style: italic;
+    font-family: Arial;
+    font-size: 11px;
+    vertical-align: top;
+    line-height: 13px;
+}
+
+
+.assessment-warning
+{
+    color: #C10000;
+    font-family: Segoe UI;
+    font-weight: bold;
+}
+
+
+.asset-Parent
+{        
+    font-style:italic;
+    font-size: 13px;   
+}
+
+.is-disabled 
+{
+    background-color: #FFFFFF;
+    color: black !important;   
+}

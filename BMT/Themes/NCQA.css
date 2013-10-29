@@ -1,0 +1,491 @@
+﻿/*############## Practice Name ################*/
+.master-title
+{
+    clear: both;
+    float: left;
+    color: #C10000;
+    font-family: Segoe UI;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.child-title1
+{
+    color: #6E6E6E;
+    font-family: Segoe UI;
+    font-size: 18px;
+    font-weight: bold;
+    width:60%;
+    position:relative;
+    float:left;
+}
+.child-title12
+{
+    color: #6E6E6E;
+    font-family: Segoe UI;
+    font-size: 11px;
+    width:20%;
+    float:left;
+    position:relative;
+}
+
+/*############## Screen Name ################*/
+.child-title01
+{
+    color: #6E6E6E;
+    font-family: Segoe UI;
+    font-size: 15px;
+    font-weight: bold;
+    height: 50px;
+}
+/*############## Standard Name ################*/
+.child-title02
+{
+    text-align: left;
+    color: #000000;
+    font-family: Segoe UI;
+    font-size: 11px;
+    width: 300px;
+}
+.child-title02 img
+{
+    float: left;
+}
+div.child-title02-head
+{
+    float: left;
+    overflow: hidden;
+}
+div.child-title02-desc
+{
+    margin-left: 65px;
+    float: inherit;
+    min-width: 230px;
+}
+/*############## Element Name ################*/
+.child-title03
+{
+    text-align: left;
+    color: #000000;
+    font-family: Segoe UI;
+    font-size: 11px;
+    width: 320px;
+    padding-left: 21px;
+}
+div.child-title03-head
+{
+    float: left;
+    overflow: hidden;
+}
+div.child-title03-desc
+{
+    margin-left: 60px;
+    float: inherit;
+}
+
+/*############## All column expcept first two Name ################*/
+.cell03, .cell04, .cell05, .cell06, .cell07, .cell08, .cell09
+{
+    text-align: left;
+    color: #000000;
+    font-family: Segoe UI;
+    font-size: 11px;
+    text-align: center;
+    vertical-align: middle;
+    min-width: 50px;
+}
+.cell
+{
+    text-align: left;
+    color: #000000;
+    font-family: Segoe UI;
+    font-size: 11px;
+    text-align: center;
+    vertical-align: middle;
+    min-width: 50px;
+}
+.no-cell
+{
+    text-align: left;
+    color: #000000;
+    font-family: Segoe UI;
+    font-size: 11px;
+    text-align: center;
+    vertical-align: middle;
+    min-width: 50px;
+    color: #BD0E27;
+}
+
+/*############## Image toggle ################*/
+.img-toggle
+{
+    padding-right: 10px;
+}
+
+/*############## Table Header ################*/
+.header
+{
+    background-color: #5880B3;
+    color: White;
+    text-align: center;
+    vertical-align: middle;
+}
+.header1
+{
+    background-color: #5880B3;
+    color: White;
+    text-align: center;
+    vertical-align: middle;
+    width: 60px;
+}
+.header-02
+{
+    background-color: #5880B3;
+    color: White;
+    text-align: left;
+    vertical-align: middle;
+}
+td.empty-header
+{
+    width: 10px;
+}
+
+/*############## Table handling ################*/
+table#masterTable
+{
+    width: 95%;
+}
+table#masterTable table tr.row-elementdesc /*Row for summary elements*/
+{
+    background-color: #F2F2F2;
+}
+
+table#masterTable table.element-table /*Element table*/
+{
+    margin-left: 14px;
+    width: 98.5%;
+}
+
+table#masterTable table.element-factortable /*Element table*/
+{
+    margin-left: 14px;
+    width: 98.5%;
+}
+
+
+table#masterTable table.element-factortable tr:nth-child(even)
+{
+    background-color: #eaeff5;
+}
+
+table#NCQASubmissionTable table
+{
+    display: none;
+}
+
+table#NCQASubmissionTable table.element-table /*Element table*/
+{
+    margin-left: 14px;
+    width: 98.5%;
+}
+
+table#NCQASubmissionTable table.element-factortable /*Element table*/
+{
+    margin-left: 14px;
+    width: 98.5%;
+}
+
+
+table#NCQASubmissionTable table.element-factortable tr:nth-child(even)
+{
+    background-color: #eaeff5;
+}
+
+table.element-table table.factor-table /*Factor table*/
+{
+    margin-left: 20px;
+    width: 95%;
+}
+
+table.factor-table table.factorChild-table /*Factor child table*/
+{
+    margin-left: 20px;
+    width: 95%;
+}
+table.factorChild-table table.factorChildAttr-table /*Factor child attribute table*/
+{
+    margin-left: 20px;
+    width: 95%;
+}
+
+table#masterTable table.element-table tr.row-elementTitle span /*Title of element*/
+{
+    color: #39789F;
+    font-weight: bold;
+}
+table.element-table table.factor-table tr.row-factorTitle /*Row of Factor's title*/
+{
+    background-color: #FFFFFF;
+}
+table.factor-table table.factorChild-table tr.row-factorChildTitle /*Row of Child Factor's title*/
+{
+    background-color: #FFFFFF;
+    color: #573F2B;
+}
+
+.NCQA-Note
+{
+    background-repeat: repeat;
+    background-color: #EDEDDD;
+    min-width: 395px;
+    min-height: 100px;
+    margin-bottom: 30px;
+    margin-top: 35px;
+    font-size: 12px;
+}
+
+.user-info
+{
+    clear: both;
+    float: right;
+    padding-bottom: 5px;
+    font-size: 9px;
+}
+
+/*Documents list*/
+td li:hover
+{
+    background-color: #EAEAEA;
+    cursor: pointer;
+}
+table.factorChildAttr-table ul
+{
+    border: 1px solid #D8D8D8;
+}
+table.factorChildAttr-table li
+{
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #D8D8D8;
+    list-style: none;
+    height: 18px;
+    vertical-align: middle;
+    padding-bottom: 8px;
+    font-size: smaller;
+    margin-left: -38px;
+    margin-top: 3px;
+}
+table.factorChildAttr-table li a
+{
+    text-decoration: none;
+    color: Blue;
+}
+table.factorChildAttr-table li span
+{
+    margin-top: 20px;
+}
+div.link
+{
+    clear: both;
+    float: right;
+    height: 16px;
+}
+div.link img
+{
+    margin-top: 4px;
+    vertical-align: bottom;
+    height: 12px;
+    z-index: 0;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+/*UnAssociated Documents list*/
+table.element-table ul
+{
+    border: 1px solid #D8D8D8;
+}
+table.element-table li
+{
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #D8D8D8;
+    list-style: none;
+    height: 18px;
+    vertical-align: middle;
+    padding-bottom: 8px;
+    font-size: smaller;
+    margin-left: -38px;
+}
+table.element-table li a
+{
+    text-decoration: none;
+    color: Blue;
+}
+table.element-table li span
+{
+    margin-top: 20px;
+}
+
+/*When file deleted*/
+li.empty
+{
+    text-decoration: line-through;
+}
+li.empty img
+{
+    display: none;
+    height: 12px;
+}
+
+
+table#masterTable tr.grandtotal
+{
+    background-color: #D0CFCF;
+    font-weight: bold;
+}
+table#masterTable table
+{
+    display: none;
+}
+
+td#headerCell2
+{
+    width: 300px;
+}
+/*############## Mark Critical ################*/
+.none
+{
+    color: #BD0E27;
+}
+
+/*############# Progress bar ######################*/
+#progress-points-title
+{
+    float: left;
+    margin-top: 5px;
+    margin-left: 150px;
+    padding: 0;
+}
+#result-progress-bar-points
+{
+    width: 200px;
+    margin-top: 0px;
+    margin-left: 200px;
+    margin-right: 10px;
+    padding: 0;
+}
+#progress-docs-title
+{
+    float: left;
+    margin-top: 5px;
+    padding: 0;
+}
+#result-progress-bar-docs
+{
+    float: right;
+    width: 200px;
+    margin-top: 0px;
+    margin-left: 10px;
+    padding: 0;
+}
+
+.hide-Underline
+{
+    text-decoration: none;
+}
+
+.element-label
+{
+    background-color: #5880B3;
+    color: White;
+    height: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.element-elementlabel
+{
+    background-color: #eaeff5;
+    color: black;
+    height: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.image-table
+{
+    text-align: center;
+}
+.element-cell
+{
+    word-break: break-all;
+    word-wrap: break-word;
+    white-space:pre-wrap;
+    white-space:normal;
+    
+}
+
+.subheaders-table
+{
+    margin-left: 18px;
+    width: 96.5%;
+    background-color: #f2f2f2;
+}
+
+.scoring-rules
+{
+    font-size:10px;    
+}
+.scoring-rules-subh-header
+{
+    font-size:11px;    
+}
+
+.scoring-rules-subh-header-mustpass
+{
+    font-size:11px;
+    font-weight:bold;  
+}
+
+.scoring-rules-dropdown
+{
+    font-size:11px; 
+}
+.scoring-rules-listbox
+{
+    font-size:11px; 
+    height:42px;
+    width:50px;    
+}
+.scoring-rules-textbox
+{
+    height:10px;
+    width:19px;
+    font-size:11px;
+}
+    .simple-sum-textbox
+{
+    height:10px;
+    width:15px;
+}
+
+.template-title
+{
+    clear: both;
+    float: left;
+    color: #C10000;
+    font-family: Segoe UI;
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+.edit-score-title
+{
+    clear: both;
+    float: left;
+    font-family: Segoe UI;
+    font-size: 24px;
+    font-weight: bold;
+    
+}

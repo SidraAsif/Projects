@@ -1,0 +1,321 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="BMTMaster.master.cs"
+    Inherits="BMT.BMTMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>BizMed Toolbox</title>
+    <link rel="shortcut icon" type="image/x-icon" href="~/favicon.ico" />
+    <link rel="Stylesheet" type="text/css" href="Themes/style.css" media="all" />
+    <link rel="Stylesheet" type="text/css" href="Themes/popup.css" media="all" />
+    <link rel="Stylesheet" type="text/css" href="Themes/apprise.min.css" media="all" />
+    <script type="text/javascript" src="<%= Page.ResolveClientUrl("~/Scripts/jQuery-1.7.1.min.js") %>"></script>
+    <script type="text/javascript" src="<%= Page.ResolveClientUrl("~/Scripts/bmtMaster.js") %>"></script>
+    <script type="text/javascript" src="<%= Page.ResolveClientUrl("~/Scripts/common.js") %>"></script>
+    <script type="text/javascript">
+        var timeout = "<%= Session.Timeout %>";
+        timeout = parseInt(timeout);
+        var timeoutInterval = 60;
+
+        var interval = setInterval('CheckSessionTimeout()', 60000);
+
+
+        function CheckSessionTimeout() {
+            timeout--;
+            if (timeout <= 2) {
+                $('#reportLightbox, .reportLightbox').fadeOut(300);
+                $('.UpdateProgressContent').hide();
+                $('#btnSignout').hide();
+                $(".sessionWarning, .sessionWarning-popup").fadeIn(300);
+                $('#lblWarningMessage').text('Your session is about to expire!');
+                $('#lblWarningQuestion').text('Do you want to stay signed in and prevent loss of unsaved data?');
+                setInterval('TickInterval()', 1000);
+            }
+        }
+
+        function TickInterval() {
+            timeoutInterval--;
+            $('#lblRemainingSecs').text('You will be logged out in ' + timeoutInterval + ' seconds');
+
+            if (timeoutInterval <= 1) {
+                $('#lblWarningMessage').css('font-size', '14px');
+                $('#lblWarningMessage').css('font-weight', 'normal');
+                $('#lblWarningMessage').text('For security reasons and protection of your personal data, your session timed out due to inactivity . Please log in again.');
+                $('#lblRemainingSecs').text('');
+                $('#lblWarningQuestion').text('');
+                $('#btnSignout').show();
+                $('#btnSignout').val('OK');
+                $('#btnKeepAlive').hide();
+
+            }
+        }
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>   
+    <div id="lightbox-popup-Master" class="sessionWarning-popup" style="border: 1px solid #5880B3;
+        height: auto;">
+        <table width="100%">
+            <tr>
+                <td>
+                    <img src="../Themes/Images/caution.png" alt="caution" />
+                </td>
+                <td style="font-size: 16px; font-weight: bold;">
+                    <asp:Label ID="lblWarningMessage" ClientIDMode="Static" runat="server"></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td style="font-size: 14px;">
+                    <asp:Label ID="lblRemainingSecs" ClientIDMode="Static" runat="server"></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td style="font-size: 14px;">
+                    <asp:Label ID="lblWarningQuestion" ClientIDMode="Static" runat="server"></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <br />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="button" id="btnKeepAlive" value="Yes, Keep me signed in" class="button" />
+                    <%--&nbsp;&nbsp;&nbsp;--%>
+                    <input type="button" id="btnSignout" <%--value="No, Sign me out"--%> class="button" />
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!-- /lightbox-panel -->
+    <div id="lightbox" class="sessionWarning">
+    </div>
+    <div id="lightbox-popup-Master" class="request-popup" style="border: 1px solid #5880B3;
+        height: auto;">
+        <div id="popupHeaderText">
+            <table width="100%">
+                <tr>
+                    <td class="trow">
+                    </td>
+                    <td width="80%" align="center" valign="middle">
+                        <b>Request Help</b>
+                    </td>
+                    <td width="20%" align="right" valign="middle">
+                        <a id="close-popup-Request" href="#" style="text-decoration: none; font-size: 16px;
+                            color: White;">close[x]</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <iframe scrolling="no" id="iFrameRequestHelp" style="height: 285px; min-height: 200px;
+            width: 100%; overflow: hidden;" src="Requesthelp.aspx" frameborder="0"></iframe>
+    </div>
+    <!-- /lightbox-panel -->
+    <div id="lightbox" class="request">
+    </div>
+    <div id="lightbox-popup-Master" class="Submit-popup" style="border: 1px solid #5880B3;
+        height: auto;">
+        <div id="popupHeaderText">
+            <table width="100%">
+                <tr>
+                    <td class="trow">
+                    </td>
+                    <td width="80%" align="center" valign="middle">
+                        <b>Submit Feedback</b>
+                    </td>
+                    <td width="20%" align="right" valign="middle">
+                        <a id="close-popup1" href="#" style="text-decoration: none; font-size: 16px; color: White;">
+                            close[x]</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <iframe scrolling="no" id="iFrameSubmitFeedBack" style="height: 285px; min-height: 200px;
+            width: 100%; overflow: hidden;" src="SubmitFeedback.aspx" frameborder="0"></iframe>
+    </div>
+    <!-- /lightbox-panel -->
+    <div id="lightbox" class="Submit">
+    </div>
+    <div id="lightbox-popup-Master" class="Invitefriend-popup" style="border: 1px solid #5880B3;
+        height: auto;">
+        <div id="popupHeaderText">
+            <table width="100%">
+                <tr>
+                    <td class="trow">
+                    </td>
+                    <td width="80%" align="center" valign="middle">
+                        <b>Invite Friend</b>
+                    </td>
+                    <td width="20%" align="right" valign="middle">
+                        <a id="close-popup2" href="#" style="text-decoration: none; font-size: 16px; color: White;">
+                            close[x]</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <iframe scrolling="no" id="Iframe1" style="height: 250px; min-height: 200px; width: 100%;
+            overflow: hidden;" src="InviteFriend.aspx" frameborder="0"></iframe>
+    </div>
+    <!-- /lightbox-panel -->
+    <div id="lightbox" class="Invite">
+    </div>
+    <div id="lightbox-popup-Master" class="About-popup" style="border: 1px solid #5880B3;
+        height: auto;">
+        <div id="popupHeaderText">
+            <table width="100%">
+                <tr>
+                    <td class="trow">
+                    </td>
+                    <td width="80%" align="center" valign="middle">
+                        <b>About</b>
+                    </td>
+                    <td width="20%" align="right" valign="middle">
+                        <a id="close-popup3" href="#" style="text-decoration: none; font-size: 16px; color: White;">
+                            close[x]</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <iframe scrolling="no" id="Iframe2" style="height: auto; min-height: 200px; width: 100%;
+            overflow: hidden;" src="About.aspx" frameborder="0"></iframe>
+    </div>
+    <!-- /lightbox-panel -->
+    <div id="lightbox" class="About">
+    </div>
+    <form id="form1" runat="server">
+    <asp:HiddenField ID="hdnCurrentAdIndex" runat="server" ClientIDMode="Static" />
+    <asp:HiddenField ID="hdnAdRotatorList" runat="server" ClientIDMode="Static" />
+     <asp:Button ID="btnResetSession" runat="server" ClientIDMode="Static" Style="display: none;"
+        Text="Save" OnClick="btnResetSession_Click" />
+    <asp:ScriptManager ID="ScriptManager" runat="server" EnablePartialRendering="true"
+        AsyncPostBackTimeout="10000000" EnablePageMethods="true">
+    </asp:ScriptManager>
+    <!-- wrapper start here -->
+    <div id="pnlMaster" class="wrapper">
+        <table width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+                <td>
+                    <!-- header container start here -->
+                    <div class="inner-header-container">
+                        <div class="inner-logo">
+                        </div>
+                        <div class="right-top-text-container">
+                            <div class="right-top-text">
+                                <a id="About" href="#">About</a> |
+                                <asp:LinkButton ID="btnLogOut" runat="server" Text="Log off" OnClick="btnLogOut_Click"
+                                    ClientIDMode="Static" CausesValidation="false"></asp:LinkButton></div>
+                            <div class="right-top-text">
+                                <a id="Requesthelp" href="#">Request Help</a> | <a id="Submitfeedback" href="#">Submit
+                                    Feedback</a> | <a id="Invitefriend" href="#">Invite a Friend</a></div>
+                            <div class="right-top-text">
+                                <asp:Label ID="lblWelcomeSuperUser" runat="server" Text=""></asp:Label></div>
+                            <div class="right-top-text">
+                                <asp:LinkButton ID="lbChangePassword" runat="server" Text="Change the password" Visible="false"
+                                    OnClick="lbChangepassword_Click" CausesValidation="false" ClientIDMode="Static"></asp:LinkButton></div>
+                        </div>
+                        <div class="powered-by-logo">
+                        </div>
+                    </div>
+                    <!-- header container close here -->
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="inner-menu-header-container">
+                        <!-- menu start here -->
+                        <div class="inner-icon-menu">
+                            <div class="inner-icon-menu-home">
+                                <ul>
+                                    <li><a href="Home.aspx">Home</a>
+                                        <asp:Panel ID="pnlNestedMenu" runat="server" Visible="false">
+                                            <ul>
+                                                <li class="dashboard-menu"><a href="Dashboard.aspx">Dashboard</a></li>
+                                                <li id="hideReport" class="report-menu" runat="server"><a href="Reports.aspx">Reports</a></li>
+                                            </ul>
+                                        </asp:Panel>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="inner-icon-menu-projects">
+                                <ul>
+                                    <li><a href="Projects.aspx">My Projects</a></li>
+                                </ul>
+                            </div>
+                            <div class="inner-icon-menu-toolbox">
+                                <ul>
+                                    <li><a href="ToolBox.aspx">Toolbox</a></li>
+                                </ul>
+                            </div>
+                            <div class="inner-icon-menu-library">
+                                <ul>
+                                    <li><a href="Library.aspx">Library</a></li>
+                                </ul>
+                            </div>
+                            <asp:Panel ID="pnlUserMenu" runat="server" Visible="false">
+                                <div class="inner-icon-menu-settings">
+                                    <ul>
+                                        <li><a href="Settings.aspx">Settings</a></li>
+                                    </ul>
+                                </div>
+                            </asp:Panel>
+                            <asp:Panel ID="pnlAdminMenu" runat="server" Visible="false">
+                                <div class="inner-icon-menu-admin">
+                                    <ul>
+                                        <li><a href="#">Admin</a>
+                                            <ul>
+                                                <li class="cms-menu"><a href="Editor.aspx">CMS</a></li>
+                                                <li class="consultant-menu"><a href="ConsultingUser.aspx">Consultants</a></li>
+                                                <li class="submission-menu"><a href="NCQASubmission.aspx">Submissions</a></li>
+                                                <li class="template-menu" id="templateMenu" runat="server"><a href="Templates.aspx">Templates</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </asp:Panel>
+                        </div>
+                        <!-- menu close here -->
+                        <asp:Panel ID="pnlWelcomeUser" runat="server" Visible="false">
+                            <div class="right-welcome-text">
+                                <asp:Label ID="lblWelcomeUser" runat="server" Text="Welcome, " ClientIDMode="Static"></asp:Label>
+                            </div>
+                        </asp:Panel>
+                    </div>
+                    <!-- menu wrapper close here -->
+                </td>
+            </tr>
+            <tr>
+                <td height="40" bgcolor="#5880b3">
+                    <asp:ContentPlaceHolder ID="innerMenuConatiner" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td height="300" valign="top">
+                    <asp:ContentPlaceHolder ID="bodyContainer" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <!-- Footer container start here -->
+                    <div class="footer-container">
+                        <div class="footer-text">
+                            <asp:HyperLink ID="footerAd" ClientIDMode="Static" runat="server" Target="_blank">
+                                <asp:Image ID="footerImg" runat="server" ClientIDMode="Static" Height="80px" Width="1000px" />
+                            </asp:HyperLink>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!-- wrapper close here -->
+    </form>
+</body>
+</html>

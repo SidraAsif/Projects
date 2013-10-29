@@ -1,0 +1,16 @@
+﻿
+/*===== Css Class of input fields  */
+.bodytxt-field
+{
+    font-family: "Segoe UI";
+    color: gray;
+}
+
+.bodytxt-field-duplicate
+{
+    font-size: 12px;
+    font-family: "Segoe UI";
+    border: #727272 solid 1px;
+    margin: 0px 0px 0px 0px;
+    padding: 1px 5px 1px 5px;
+}

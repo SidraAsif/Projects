@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SRAInventoryDS" targetNamespace="http://tempuri.org/SRAInventory.xsd" xmlns:mstns="http://tempuri.org/SRAInventory.xsd" xmlns="http://tempuri.org/SRAInventory.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SRAInventoryDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="SRAInventoryDS" msprop:Generator_UserDSName="SRAInventoryDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SRAInventoryDT" msprop:Generator_TableClassName="SRAInventoryDTDataTable" msprop:Generator_TableVarName="tableSRAInventoryDT" msprop:Generator_TablePropName="SRAInventoryDT" msprop:Generator_RowDeletingName="SRAInventoryDTRowDeleting" msprop:Generator_UserTableName="SRAInventoryDT" msprop:Generator_RowChangingName="SRAInventoryDTRowChanging" msprop:Generator_RowEvHandlerName="SRAInventoryDTRowChangeEventHandler" msprop:Generator_RowDeletedName="SRAInventoryDTRowDeleted" msprop:Generator_RowEvArgName="SRAInventoryDTRowChangeEvent" msprop:Generator_RowChangedName="SRAInventoryDTRowChanged" msprop:Generator_RowClassName="SRAInventoryDTRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AssetCategoryId" msprop:Generator_ColumnVarNameInTable="columnAssetCategoryId" msprop:Generator_ColumnPropNameInRow="AssetCategoryId" msprop:Generator_ColumnPropNameInTable="AssetCategoryIdColumn" msprop:Generator_UserColumnName="AssetCategoryId" type="xs:string" minOccurs="0" />
+              <xs:element name="AssetCategory" msprop:Generator_ColumnVarNameInTable="columnAssetCategory" msprop:Generator_ColumnPropNameInRow="AssetCategory" msprop:Generator_ColumnPropNameInTable="AssetCategoryColumn" msprop:Generator_UserColumnName="AssetCategory" type="xs:string" minOccurs="0" />
+              <xs:element name="AssetType" msprop:Generator_ColumnVarNameInTable="columnAssetType" msprop:Generator_ColumnPropNameInRow="AssetType" msprop:Generator_ColumnPropNameInTable="AssetTypeColumn" msprop:Generator_UserColumnName="AssetType" type="xs:string" minOccurs="0" />
+              <xs:element name="AssetDescription" msprop:Generator_ColumnVarNameInTable="columnAssetDescription" msprop:Generator_ColumnPropNameInRow="AssetDescription" msprop:Generator_ColumnPropNameInTable="AssetDescriptionColumn" msprop:Generator_UserColumnName="AssetDescription" type="xs:string" minOccurs="0" />
+              <xs:element name="PracticeNotes" msprop:Generator_ColumnVarNameInTable="columnPracticeNotes" msprop:Generator_ColumnPropNameInRow="PracticeNotes" msprop:Generator_ColumnPropNameInTable="PracticeNotesColumn" msprop:Generator_UserColumnName="PracticeNotes" type="xs:string" minOccurs="0" />
+              <xs:element name="ReviewNotes" msprop:Generator_ColumnVarNameInTable="columnReviewNotes" msprop:Generator_ColumnPropNameInRow="ReviewNotes" msprop:Generator_ColumnPropNameInTable="ReviewNotesColumn" msprop:Generator_UserColumnName="ReviewNotes" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

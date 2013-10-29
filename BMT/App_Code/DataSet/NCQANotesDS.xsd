@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="NCQANotesDS" targetNamespace="http://tempuri.org/NCQANotesDS.xsd" xmlns:mstns="http://tempuri.org/NCQANotesDS.xsd" xmlns="http://tempuri.org/NCQANotesDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="NCQANotesDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="NCQANotesDS" msprop:Generator_UserDSName="NCQANotesDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="NCQANotesDT" msprop:Generator_TableClassName="NCQANotesDTDataTable" msprop:Generator_TableVarName="tableNCQANotesDT" msprop:Generator_TablePropName="NCQANotesDT" msprop:Generator_RowDeletingName="NCQANotesDTRowDeleting" msprop:Generator_UserTableName="NCQANotesDT" msprop:Generator_RowChangingName="NCQANotesDTRowChanging" msprop:Generator_RowEvHandlerName="NCQANotesDTRowChangeEventHandler" msprop:Generator_RowDeletedName="NCQANotesDTRowDeleted" msprop:Generator_RowEvArgName="NCQANotesDTRowChangeEvent" msprop:Generator_RowChangedName="NCQANotesDTRowChanged" msprop:Generator_RowClassName="NCQANotesDTRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PCMHId" msprop:Generator_ColumnVarNameInTable="columnPCMHId" msprop:Generator_ColumnPropNameInRow="PCMHId" msprop:Generator_ColumnPropNameInTable="PCMHIdColumn" msprop:Generator_UserColumnName="PCMHId" type="xs:string" minOccurs="0" />
+              <xs:element name="ElementId" msprop:Generator_ColumnVarNameInTable="columnElementId" msprop:Generator_ColumnPropNameInRow="ElementId" msprop:Generator_ColumnPropNameInTable="ElementIdColumn" msprop:Generator_UserColumnName="ElementId" type="xs:string" minOccurs="0" />
+              <xs:element name="Type" msprop:Generator_ColumnVarNameInTable="columnType" msprop:Generator_ColumnPropNameInRow="Type" msprop:Generator_ColumnPropNameInTable="TypeColumn" msprop:Generator_UserColumnName="Type" type="xs:string" minOccurs="0" />
+              <xs:element name="Notes" msprop:Generator_ColumnVarNameInTable="columnNotes" msprop:Generator_ColumnPropNameInRow="Notes" msprop:Generator_ColumnPropNameInTable="NotesColumn" msprop:Generator_UserColumnName="Notes" type="xs:string" minOccurs="0" />
+              <xs:element name="PCMHTitle" msprop:Generator_ColumnVarNameInTable="columnPCMHTitle" msprop:Generator_ColumnPropNameInRow="PCMHTitle" msprop:Generator_ColumnPropNameInTable="PCMHTitleColumn" msprop:Generator_UserColumnName="PCMHTitle" type="xs:string" minOccurs="0" />
+              <xs:element name="ElementTitle" msprop:Generator_ColumnVarNameInTable="columnElementTitle" msprop:Generator_ColumnPropNameInRow="ElementTitle" msprop:Generator_ColumnPropNameInTable="ElementTitleColumn" msprop:Generator_UserColumnName="ElementTitle" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SRASummaryDS" targetNamespace="http://tempuri.org/SRASummaryDS.xsd" xmlns:mstns="http://tempuri.org/SRASummaryDS.xsd" xmlns="http://tempuri.org/SRASummaryDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SRASummaryDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="SRASummaryDS" msprop:Generator_UserDSName="SRASummaryDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SRASummaryDT" msprop:Generator_TableClassName="SRASummaryDTDataTable" msprop:Generator_TableVarName="tableSRASummaryDT" msprop:Generator_TablePropName="SRASummaryDT" msprop:Generator_RowDeletingName="SRASummaryDTRowDeleting" msprop:Generator_UserTableName="SRASummaryDT" msprop:Generator_RowChangingName="SRASummaryDTRowChanging" msprop:Generator_RowEvHandlerName="SRASummaryDTRowChangeEventHandler" msprop:Generator_RowDeletedName="SRASummaryDTRowDeleted" msprop:Generator_RowEvArgName="SRASummaryDTRowChangeEvent" msprop:Generator_RowChangedName="SRASummaryDTRowChanged" msprop:Generator_RowClassName="SRASummaryDTRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="task" msprop:Generator_ColumnVarNameInTable="columntask" msprop:Generator_ColumnPropNameInRow="task" msprop:Generator_ColumnPropNameInTable="taskColumn" msprop:Generator_UserColumnName="task" type="xs:string" minOccurs="0" />
+              <xs:element name="items" msprop:Generator_ColumnVarNameInTable="columnitems" msprop:Generator_ColumnPropNameInRow="items" msprop:Generator_ColumnPropNameInTable="itemsColumn" msprop:Generator_UserColumnName="items" type="xs:string" minOccurs="0" />
+              <xs:element name="itemCompleted" msprop:Generator_ColumnVarNameInTable="columnitemCompleted" msprop:Generator_ColumnPropNameInRow="itemCompleted" msprop:Generator_ColumnPropNameInTable="itemCompletedColumn" msprop:Generator_UserColumnName="itemCompleted" type="xs:string" minOccurs="0" />
+              <xs:element name="percentComplete" msprop:Generator_ColumnVarNameInTable="columnpercentComplete" msprop:Generator_ColumnPropNameInRow="percentComplete" msprop:Generator_ColumnPropNameInTable="percentCompleteColumn" msprop:Generator_UserColumnName="percentComplete" type="xs:string" minOccurs="0" />
+              <xs:element name="reviewNotes" msprop:Generator_ColumnVarNameInTable="columnreviewNotes" msprop:Generator_ColumnPropNameInRow="reviewNotes" msprop:Generator_ColumnPropNameInTable="reviewNotesColumn" msprop:Generator_UserColumnName="reviewNotes" type="xs:string" minOccurs="0" />
+              <xs:element name="status" msprop:Generator_ColumnVarNameInTable="columnstatus" msprop:Generator_ColumnPropNameInRow="status" msprop:Generator_ColumnPropNameInTable="statusColumn" msprop:Generator_UserColumnName="status" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
